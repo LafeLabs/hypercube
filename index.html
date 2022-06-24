@@ -377,7 +377,6 @@ function loadimagefeed(){
             document.getElementById("scrollscroll").style.display = "none";
         
             document.getElementById("canbox").style.display = "none";
-            document.getElementById("square3d").style.display = "none";
 
     
             
@@ -410,7 +409,6 @@ var httpc10 = new XMLHttpRequest();
                 document.getElementById("mainmap").style.display = "none";
                 document.getElementById("scrollscroll").style.display = "none";
                 document.getElementById("canbox").style.display = "none";
-                document.getElementById("square3d").style.display = "none";
 
                 
             }
@@ -444,7 +442,6 @@ var httpc11 = new XMLHttpRequest();
                 document.getElementById("scrollscroll").style.display = "none";
             
                 document.getElementById("canbox").style.display = "none";
-                document.getElementById("square3d").style.display = "none";
 
                 
             }
@@ -653,11 +650,12 @@ function loadcoinfeed(){
         newdiv.appendChild(datadiv);
         newdiv.onclick = function(){
             glyph = this.getElementsByClassName("data")[0].innerHTML;
-
-            //make this the coin for coin studio
-            coin = glyph;
+            document.getElementById("square3d").style.display = "block";
             
-         //   document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(glyph) + "\";\n\n" + arduinocode;
+            mainGVM.glyph = glyph;
+            redraw();
+
+
         }
         
         
@@ -718,7 +716,7 @@ function redraw(){
     y = 0.0;
     z = 0.0;
     side = 0.25;
-    solidColor = "1 0 0";
+    solidColor = "0 0 0";
     currentTrans = 0.0;
     drawGlyph(mainGVM.glyph);
 
@@ -1067,7 +1065,6 @@ h1,h2,h3,h4{
     top:0px;
     right:0px;
     bottom:0px;
-    background-color:grey;
 }
 
 @media only screen and (orientation: landscape) {
