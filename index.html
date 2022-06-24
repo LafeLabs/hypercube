@@ -57,7 +57,9 @@
 </div>
 
 <div id = "margin1">
-    <div id = "imagescroll"></div>
+    <div id = "imagescroll">
+        <img src = "iconsymbols/delete.svg" id = "imageclearbutton" class=  "button"/>
+    </div>
     <div id = "scrollsbox"></div>
     <div id = "mapsbox"></div>
     <div id = "filesbox"></div>
@@ -354,12 +356,62 @@ function loadimagefeed(){
         var newimg = document.createElement("IMG");
         newimg.src = "uploadimages/" + uploadImages[index];
         document.getElementById("imagescroll").appendChild(newimg);
+        newimg.classList.add("button");
+        newimg.onclick = function(){
+            document.getElementById("mainimage").src=  this.src;
+            document.getElementById("mainimage").style = "block";
+            
+            document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+            document.getElementById("mainimage").style.width = square.toString() + "px";     
+    
+    
+            
+        }
     }    
 }
 
 
 //load all the images in data/textfeed.txt
 //load all the images in data/globalimagefeed.txt
+
+textfeed = {};
+var httpc10 = new XMLHttpRequest();
+    httpc10.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+        textfeed = JSON.parse(this.responseText);
+        //un comment for math
+        //MathJax.Hub.Typeset();
+        textfeedimages  = textfeed.src;
+        for(var index = textfeedimages.length - 1;index >= 0;index--) {
+            var newimg = document.createElement("IMG");
+            newimg.src = textfeedimages[index];
+            document.getElementById("imagescroll").appendChild(newimg);
+            newimg.classList.add("button");
+            newimg.onclick = function(){
+                document.getElementById("mainimage").src=  this.src;
+                document.getElementById("mainimage").style = "block";
+                
+                document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";     
+        
+        
+                
+            }
+        }    
+    }
+};
+httpc10.open("GET", "fileloader.php?filename=data/textfeed.txt", true);
+httpc10.send();
+
+
+
+
+
+
+document.getElementById("imageclearbutton").onclick = function(){
+    document.getElementById("mainimage").style.display = "none";
+}
 
 </script>
 <style>
