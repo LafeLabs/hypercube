@@ -62,18 +62,23 @@
     </div>
     <div id = "scrollsbox"></div>
     <div id = "mapsbox"></div>
-    <div id = "filesbox"></div>
+    <div id = "mediascroll"></div>
 </div>
 <div id = "margin2">
-    <div id = "iconsbox"></div>
+    <div id = "iconsbox">
+        <textarea id = "arduinocode"></textarea>
+    </div>
     <div id = "symbolsbox"></div>
     <div id = "voxelbox"></div>
 </div>
 
 <script>
 
+feedwidth = 100;
+
 if(innerWidth>innerHeight){
     marginWidth = 0.5*(innerWidth - innerHeight);
+    feedwidth = marginWidth;
     square = innerHeight;
     document.getElementById("scrollscroll").style.left = marginWidth.toString() + "px";
     document.getElementById("scrollscroll").style.right = marginWidth.toString() + "px";
@@ -90,6 +95,11 @@ if(innerWidth>innerHeight){
 
     document.getElementById("mainimage").style.width = square.toString() + "px";     
     
+    document.getElementById("square3d").style.left = marginWidth.toString() + "px";     
+
+    document.getElementById("square3d").style.width = square.toString() + "px";         
+    document.getElementById("square3d").style.height = square.toString() + "px";         
+        
     document.getElementById("canbox").style.left = marginWidth.toString() +"px";     
     document.getElementById("canbox").style.top = "0px";     
 
@@ -363,16 +373,18 @@ function loadimagefeed(){
             
             document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
             document.getElementById("mainimage").style.width = square.toString() + "px";     
-    
+            document.getElementById("mainmap").style.display = "none";
+            document.getElementById("scrollscroll").style.display = "none";
+        
+            document.getElementById("canbox").style.display = "none";
+            document.getElementById("square3d").style.display = "none";
+
     
             
         }
     }    
 }
 
-
-//load all the images in data/textfeed.txt
-//load all the images in data/globalimagefeed.txt
 
 textfeed = {};
 var httpc10 = new XMLHttpRequest();
@@ -395,7 +407,11 @@ var httpc10 = new XMLHttpRequest();
                 document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
                 document.getElementById("mainimage").style.width = square.toString() + "px";     
         
-        
+                document.getElementById("mainmap").style.display = "none";
+                document.getElementById("scrollscroll").style.display = "none";
+                document.getElementById("canbox").style.display = "none";
+                document.getElementById("square3d").style.display = "none";
+
                 
             }
         }    
@@ -404,6 +420,39 @@ var httpc10 = new XMLHttpRequest();
 httpc10.open("GET", "fileloader.php?filename=data/textfeed.txt", true);
 httpc10.send();
 
+globalimagefeed = [];
+var httpc11 = new XMLHttpRequest();
+    httpc11.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+        globalimagefeed = JSON.parse(this.responseText);
+        //un comment for math
+        //MathJax.Hub.Typeset();
+        for(var index = globalimagefeed.length - 1;index >= 0;index--) {
+            var newimg = document.createElement("IMG");
+            newimg.src = globalimagefeed[index];
+            document.getElementById("imagescroll").appendChild(newimg);
+            newimg.classList.add("button");
+            newimg.onclick = function(){
+                document.getElementById("mainimage").src=  this.src;
+                document.getElementById("mainimage").style = "block";
+                
+                document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";     
+        
+                document.getElementById("mainmap").style.display = "none";
+                document.getElementById("scrollscroll").style.display = "none";
+            
+                document.getElementById("canbox").style.display = "none";
+                document.getElementById("square3d").style.display = "none";
+
+                
+            }
+        }    
+    }
+};
+httpc11.open("GET", "fileloader.php?filename=data/imagefeed.txt", true);
+httpc11.send();
 
 
 
@@ -412,6 +461,419 @@ httpc10.send();
 document.getElementById("imageclearbutton").onclick = function(){
     document.getElementById("mainimage").style.display = "none";
 }
+
+
+scrolls = [];
+var httpc9 = new XMLHttpRequest();
+httpc9.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        scrolls = JSON.parse(this.responseText);
+
+        for(var index = 0;index < scrolls.length;index++) {
+            var newscrollbutton = document.createElement("P");
+            newscrollbutton.className = "boxlink";
+            newscrollbutton.innerHTML = "scrolls/" + scrolls[index];
+            document.getElementById("scrollsbox").appendChild(newscrollbutton);
+            newscrollbutton.onclick = function(){
+                currentFile = this.innerHTML;
+                loadscroll(currentFile);
+            }
+        }
+    };
+}
+
+httpc9.open("GET", "dir.php?filename=scrolls", true);
+httpc9.send();
+
+maps = [];
+var httpc8 = new XMLHttpRequest();
+httpc8.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        maps = JSON.parse(this.responseText);
+        for(var index = 0;index < maps.length;index++) {
+            var newmapbutton = document.createElement("P");
+            newmapbutton.className = "boxlink";
+            newmapbutton.innerHTML = "maps/" + maps[index];
+            document.getElementById("mapsbox").appendChild(newmapbutton);
+            newmapbutton.onclick = function(){
+                currentFile = this.innerHTML;
+                loadmap(currentFile);
+            }
+        }
+    };
+}
+
+httpc8.open("GET", "dir.php?filename=maps", true);
+httpc8.send();
+
+media = [];
+
+var httpcUpload = new XMLHttpRequest();
+httpcUpload.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        media = JSON.parse(this.responseText);
+        loadmediafeed();
+    }
+};
+httpcUpload.open("GET", "dir.php?filename=media", true);
+httpcUpload.send();
+
+mediadir = [];
+dirname = "";
+
+function loadmediafeed(){
+    for(var index = 0;index < media.length;index++) {
+        
+        if(media[index].includes(".")){
+            var newa = document.createElement("A");
+            newa.innerHTML = media[index];
+            newa.href = "media/" + media[index];
+            document.getElementById("mediascroll").appendChild(newa);
+        }
+        else{
+            //directory
+            var newdiv = document.createElement("DIV");
+            newdiv.className = "new";
+            var newh1 = document.createElement("H1");
+            newh1.innerHTML = media[index] + "/";
+            newdiv.id = "dir" + media[index];
+            newdiv.appendChild(newh1);
+            document.getElementById("mediascroll").appendChild(newdiv);
+            newh1.onclick = function(){
+                if(this.parentNode.className == "new"){
+                    this.parentNode.className = "visible";
+                    dirname = this.innerHTML.substring(0,this.innerHTML.length-1);
+                    
+                    var httpcUpload2 = new XMLHttpRequest();
+                    httpcUpload2.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            dirmedia = JSON.parse(this.responseText);
+                            
+                            for(var dirindex = 0;dirindex < dirmedia.length;dirindex++){
+                                var newa = document.createElement("A");
+                                newa.innerHTML = dirmedia[dirindex];
+                                newa.href =  "media/" + dirname + "/"  +dirmedia[dirindex];
+                                document.getElementById("dir" + dirname).appendChild(newa);
+                            }
+                        }
+                    };
+                    httpcUpload2.open("GET", "dir.php?filename=media/" + dirname, true);
+                    httpcUpload2.send();                    
+                }
+                else{
+                    if(this.parentNode.className == "visible"){
+                        var filelist = this.parentNode.getElementsByTagName("A");
+                        for(fileindex = 0;fileindex < filelist.length;fileindex++){
+                            filelist[fileindex].style.display = "none";
+                        }
+                    }                       
+                    if(this.parentNode.className == "hidden"){
+                        var filelist = this.parentNode.getElementsByTagName("A");
+                        for(fileindex = 0;fileindex < filelist.length;fileindex++){
+                            filelist[fileindex].style.display = "block";
+                        }
+                    }         
+                    
+                    if(this.parentNode.className == "visible"){
+                        this.parentNode.className = "hidden";
+                    }
+                    else{
+                        this.parentNode.className = "visible";
+                    }   
+                }
+            }
+        }
+    }    
+
+}
+
+
+
+gvmArray = [];
+
+robotfeed = [];
+
+mainGVM.importbytecode(hypercube);    
+
+var httpcFeed = new XMLHttpRequest();
+httpcFeed.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200) {
+        robotfeed = JSON.parse(this.responseText);
+        loadcoinfeed();
+    }
+};
+httpcFeed.open("GET", "fileloader.php?filename=data/robotfeed.txt", true);
+httpcFeed.send();
+
+
+
+
+/*
+arduinocode = "";
+
+//load data/arduinocode.txt
+var httpc = new XMLHttpRequest();
+httpc.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        arduinocode = this.responseText;
+       // document.getElementById("arduinocode").value = "";
+        
+//        document.getElementById("arduinocode").value = "char coin[] = \"\";\n\n" + arduinocode;
+    };
+}
+httpc.open("GET", "fileloader.php?filename=data/arduinocodexyz.txt", true);
+httpc.send();
+    */
+    
+    
+feedlinkwidth= 0.15*feedwidth;
+
+function loadcoinfeed(){
+    gvmArray = [];
+    document.getElementById("iconsbox").innerHTML = "";
+    for(var index = 0;index < robotfeed.length;index++){
+        var newdiv = document.createElement("span");
+        var newcan = document.createElement("CANVAS");
+        newcan.className = "feedcan";
+        newdiv.style.marginTop = 0.05*feedwidth + "px";
+        newdiv.style.marginBottom = 0.05*feedwidth + "px";
+        newdiv.appendChild(newcan);
+        newdiv.className = "feedelement";
+        newdiv.style.display = "inline";
+        newcan.classList.add("button");
+        document.getElementById("iconsbox").appendChild(newdiv);
+        var newGVM = new GVM(newcan,feedlinkwidth,feedlinkwidth);
+        newGVM.hypercube = mainGVM.hypercube;
+        gvmArray.push(newGVM);
+        newGVM.drawGlyph(robotfeed[index]);    
+        
+        var datadiv = document.createElement("DIV");
+        datadiv.innerHTML = robotfeed[index];
+        datadiv.className = "data";
+        newdiv.appendChild(datadiv);
+        newdiv.onclick = function(){
+            glyph = this.getElementsByClassName("data")[0].innerHTML;
+
+            //make this the coin for coin studio
+            coin = glyph;
+            
+         //   document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(glyph) + "\";\n\n" + arduinocode;
+        }
+        
+        
+    }    
+}
+
+
+symbols = [];
+
+var httpcUpload = new XMLHttpRequest();
+httpcUpload.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        symbols = JSON.parse(this.responseText);
+        loadsymbolfeed();
+    }
+};
+httpcUpload.open("GET", "dir.php?filename=symbolfeed", true);
+httpcUpload.send();
+
+
+function loadsymbolfeed(){
+
+    for(var index = symbols.length - 1;index >= 0;index--) {
+        var newimg = document.createElement("IMG");
+        newimg.src = "symbolfeed/" + symbols[index];
+        document.getElementById("symbolsbox").appendChild(newimg);
+        newimg.classList.add("button");
+        newimg.onclick = function(){
+            document.getElementById("mainimage").src=  this.src;
+            document.getElementById("mainimage").style = "block";
+            
+            document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+            document.getElementById("mainimage").style.width = square.toString() + "px";     
+            document.getElementById("mainmap").style.display = "none";
+            document.getElementById("scrollscroll").style.display = "none";
+        
+            document.getElementById("canbox").style.display = "none";
+            document.getElementById("square3d").style.display = "none";
+        
+    
+            
+        }
+    }    
+}
+
+x = 0.0;
+y = 0.0;
+z = 0.0;
+side = 0.25;
+solidColor = "1 0 0";
+currentTrans = 0.0;
+main = document.getElementById("main");
+
+
+function redraw(){
+    main.innerHTML = "";
+    x = 0.0;
+    y = 0.0;
+    z = 0.0;
+    side = 0.25;
+    solidColor = "1 0 0";
+    currentTrans = 0.0;
+    drawGlyph(mainGVM.glyph);
+
+}
+
+function drawGlyph(localString){
+    var tempArray = localString.split(',');
+    for(var index = 0;index < tempArray.length;index++){
+        action(parseInt(tempArray[index],8));
+    }
+}
+
+function action(localCommand){
+
+    if(localCommand >= 0500 && localCommand < 0700){
+        drawGlyph(mainGVM.hypercube[localCommand]);
+    }
+    if(localCommand > 01000){
+        drawGlyph(mainGVM.hypercube[localCommand]);
+    }
+    if(localCommand >= 0220 && localCommand < 0300){
+        drawGlyph(mainGVM.hypercube[localCommand]);
+    }
+    
+
+    if(localCommand == 0700){
+        x += side;
+    }
+    if(localCommand == 0701){
+        x -= side;
+    }
+    if(localCommand == 0702){
+        y += side;
+    }
+    if(localCommand == 0703){
+        y -= side;
+    }
+    if(localCommand == 0704){
+        z += side;
+    }
+    if(localCommand == 0705){
+        z -= side;
+    }
+    if(localCommand == 0706){
+        side /= 2;
+    }
+    if(localCommand == 0707){
+        side *= 2;
+    }
+    if(localCommand == 0710){
+        drawsphere();
+    }
+    if(localCommand == 0711){
+        drawcube();
+    }
+    
+    if(localCommand == 0720){
+        //red
+        solidColor = "1 0 0";
+    }
+    if(localCommand == 0721){
+        //orange
+        solidColor = "1 0.5 0";
+    }
+    if(localCommand == 0722){
+        solidColor = "1 1 0";
+        //yellow
+    }
+    if(localCommand == 0723){
+        //green
+        solidColor = "0 1 0";
+    }
+    if(localCommand == 0724){
+        //blue
+        solidColor = "0 0 1";
+    }
+    if(localCommand == 0725){
+        //purple
+        solidColor = "1 0 1";
+    }
+    if(localCommand == 0320){
+        //black
+        solidColor = "0 0 0";
+    }
+
+    if(localCommand == 0322){
+        //red
+        solidColor = "1 0 0";
+    }
+    if(localCommand == 0323){
+        //orange
+        solidColor = "1 0.5 0";
+    }
+    if(localCommand == 0324){
+        solidColor = "1 1 0";
+        //yellow
+    }
+    if(localCommand == 0325){
+        //green
+        solidColor = "0 1 0";
+    }
+    if(localCommand == 0326){
+        //blue
+        solidColor = "0 0 1";
+    }
+    if(localCommand == 0327){
+        //purple
+        solidColor = "1 0 1";
+    }
+
+
+}
+
+
+
+function drawsphere(){
+    var news = document.createElement("shape");
+    var newt = document.createElement("transform");
+    main.appendChild(newt);
+    newt.setAttribute("translation",x.toString() + " " + y.toString() + " " + z.toString() );
+    var newt2 = document.createElement("transform");
+    newt.appendChild(newt2);
+    newt2.setAttribute("scale",(side).toString() + " " + (side).toString() + " " + (side).toString());
+    newt2.appendChild(news);
+    var newa = document.createElement("appearance");
+    news.appendChild(newa);
+    var newm = document.createElement("material");
+    newm.setAttribute("diffuseColor",solidColor);
+    newm.setAttribute("transparency",currentTrans);
+    newa.appendChild(newm);
+    var newb = document.createElement("sphere");
+    news.appendChild(newb);
+}
+
+function drawcube(){
+    var news = document.createElement("shape");
+    var newt = document.createElement("transform");
+    main.appendChild(newt);
+    newt.setAttribute("translation",x.toString() + " " + y.toString() + " " + z.toString() );
+    var newt2 = document.createElement("transform");
+    newt.appendChild(newt2);
+    newt2.setAttribute("scale",(0.5*side).toString() + " " + (0.5*side).toString() + " " + (0.5*side).toString());
+    newt2.appendChild(news);
+    var newa = document.createElement("appearance");
+    news.appendChild(newa);
+    var newm = document.createElement("material");
+    newm.setAttribute("diffuseColor",solidColor);
+    newm.setAttribute("transparency",currentTrans);
+    newa.appendChild(newm);
+    var newb = document.createElement("box");
+    news.appendChild(newb);    
+}
+
+
+
 
 </script>
 <style>
@@ -439,7 +901,7 @@ input{
 }
 
 #margin1{
-    background-color:#ff404080;
+/*    background-color:#ff404080;*/
     position:absolute;
     left:0px;
     top:0px;
@@ -504,6 +966,11 @@ input{
 #mainimage{
     position:absolute;
     z-index:-3;
+    background-color:#808080;
+}
+#square3d{
+    position:absolute;
+    z-index:3;
 }
 .data{
     display:none;
@@ -531,6 +998,77 @@ h1,h2,h3,h4{
     margin:auto;
 
 }
+#scrollsbox{
+    position:absolute;
+    background-color:#87ceeb;
+    overflow:scroll;
+    color:black;
+}
+#mapsbox{
+    position:absolute;
+    background-color:#880808;
+    overflow:scroll;
+    color:black;
+    
+}
+#iconsbox{
+    position:absolute;
+    background-color:#C0C0C0;
+    overflow:scroll;
+}
+#symbolsbox{
+    position:absolute;
+    background-color:#80ff80;
+    overflow:scroll;
+}
+#symbolsbox img{
+    max-width:50%;
+}
+#mediascroll{
+    color:#00ff00;
+    position:absolute;
+    background-color:#202020;
+    overflow:scroll;
+    color:black;
+}
+#mediascroll a,span{
+    display:block;
+    margin:auto;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    color:#ff2cb4;
+    margin-left:1em;
+    font-family:courier;
+}
+#mediascroll h1{
+    color:#ff2cb4;
+    font-family:courier;
+    border:solid;
+    border-radius:5px;
+    border-color:#ff2cb4;
+    margin-top:2px;
+    margin-bottom:2px;
+    cursor:pointer;
+}
+#mediascroll span{
+    border:solid;
+    border-color:#ff2cb4;
+    cursor:pointer;
+}
+#mediascroll div{
+    border:solid;
+    border-color:#ff2cb4;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#mainx3d{
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    background-color:grey;
+}
 
 @media only screen and (orientation: landscape) {
     #imagescroll{
@@ -539,7 +1077,41 @@ h1,h2,h3,h4{
         right:0px;
         height:25%;
     }
-
+    #scrollsbox{
+        left:0px;
+        top:25%;
+        right:0px;
+        height:25%;
+        
+    }
+    #mapsbox{
+        left:0px;
+        top:50%;
+        right:0px;
+        height:25%;
+        
+    }    
+    #mediascroll{
+        left:0px;
+        bottom:0%;
+        right:0px;
+        height:25%;
+        
+    }
+    #iconsbox{
+        left:0px;
+        top:50%;
+        right:0px;
+        height:50%;
+    
+    }
+    #symbolsbox{
+        left:0px;
+        top:0%;
+        right:0px;
+        height:50%;
+        
+    }
 }
 
 @media only screen and (orientation: portrait) {
