@@ -15,38 +15,39 @@
 
 ## Kit Photo:
 
-
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/kit.jpg)
 
 ## Control Panel Geometry
 
-
 [![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/controller.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/controller.svg)
 
- - front svg
- - back svg
- - front photo
- - back photo
- - front photo with geometron 120 iscoc triangle
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/controller-outside.jpg)
 
 ## Assembled Electronics Kit Photo
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/assembledkit.jpg)
 
- - full kit put together
- - photo of just the brain 
- - photo of just the controller
- - photo of voltmeter and screwdriver
+https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-assembly.jpg
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-assembly.jpg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/bottomcutout,jpg)
 
+![](https://i.imgur.com/hz4C54Y.jpg)
+
+![](https://i.imgur.com/hz4C54Y.jpg)
+
 ##  DVD drive cables
 
- - part number of the cable
- - photo of the cables
- - photo of 3d printer cables
- - photo of solder joints with 4 in a line
- - photo of solder joints with a square of contacts
- 
+[Cables from Digikey to connect stepper motors in DVD drive stages to circuit board(about $10 for 3 of them)](https://www.digikey.com/en/products/detail/molex/2177971043/14637940)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/stagesraw.png)
+
+![](https://i.imgur.com/zvVKp6T.jpg)
+
+![](https://i.imgur.com/7KoLTuc.jpg)
+
+
 ## Z axis Stage Assembly
 
 
