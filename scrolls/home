@@ -1,9 +1,14 @@
  - [user.php](user.php)
+ - [scrolleditor.php](scrolleditor.php)
+ - [mapeditor.php](mapeditor.php)
+ - [symbol.html](symbol.html)
  - [index.html](index.html)
 
 # The Geometron Hypercube
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d7/8-cell.gif)
+
+![]()
 
 Join the Trash Robot Network to build a world of freely replicating things from trash!  Our objective is to build an entire new civilization from things we can grow and from trash, using the tools of geometry.  Our language is Geometron, which is based on the fundamental symmetries of the Universe.  Geometron represents a revolution from a numbers-based information technology to one based entirely on geometric constructions.  Geometry is what we use to create symbols for communication with people as well as to construct and program machines which build physical products.  
 
