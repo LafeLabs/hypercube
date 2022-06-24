@@ -1,0 +1,125 @@
+
+## [HOME](index.html)
+
+# trashframe
+ 
+ - 16 vertical support bars, each 2 inches by 14 inches, slots 1 inch in from ends, 1 inch deep, 0.6 inches wide
+ - 8 base boards
+ - 4 handles
+ - 3 trash bunjis
+ - 1 trash tie
+
+
+8 of these:
+
+![](https://i.imgur.com/9t2OxzX.png)
+
+4 of these:
+
+![](https://i.imgur.com/IXPcJJL.png)
+
+16 of these:
+
+![](https://i.imgur.com/1mF5tCw.png)
+
+new more compact design:
+
+![](https://i.imgur.com/TTcsuqy.png)
+
+Laser cut .svg files:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/handles2.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/handles2.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/legs2.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/legs2.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/baseboard2.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/baseboard2.svg)
+
+
+Replicators:
+
+![](https://i.imgur.com/kx7jBt1.jpg)
+
+Fully assembled Trash Frame:
+
+![](https://i.imgur.com/Sk1gIXr.jpg)
+
+No glue or tape is needed. This can be assembled with just friction.
+
+
+## Cube planter
+
+This design still needs testing and tweaking, but it now has been proven to basically work to make a 4 inch cube(outside dimension) with stacks of cardboard using dovetail friction joints. We can make these in very large numbers, assemble them into arrays, stack them in the hanging trash frame above, and make a modular system which can have very large numbers of small plants suspended in a system which can then also be used to make robots. The same planters are used for tiny worm farms, growing plants, growing mushrooms, different kinds of compost, parts bins, art supply storage. All the cardboard will ultimately be composted or digested into fungi.
+
+![](https://i.imgur.com/7lyQPDh.png)
+
+![](https://i.imgur.com/T6OXa9A.png)
+
+Print each of these at exactly 8 inches wide on the laser cutter in thick corrugated cardboard:
+
+Print this set of 4 panels once to make the bottom(each panel is 4 layers of cardboard thick):
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-base-4x.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-base-4x.svg)
+
+Print this set of 4 panels twice to make 2 of the sides:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-side-1-4x-domain.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-side-1-4x-domain.svg)
+
+print this set of 4 panels twice to make another 2 of the sides:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-side2-ABCD.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/box-side2-ABCD.svg)
+
+![](https://i.imgur.com/cE2EOoj.png)
+
+### Trash Magic Cube Planter 2
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/uploadimages/box.jpeg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/uploadimages/boxbottom.jpeg)
+
+All of these are cut from four inch square of corrugated cardboard.  Cut out 3 of these for the bottom:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/bottom.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/bottom.svg)
+
+Cut out 6 of these, 3 each for two of the sides:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1.svg)
+
+Cut out two of these, one for each of two of the sides:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2a.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2a.svg)
+
+Cut out two of these, one for each of two of the sides:
+
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2b.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2b.svg)
+
+Cut out two of these, one for each of two of the sides:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2c.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2c.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/uploadimages/side-sketch.jpeg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/uploadimages/bottom-sketch.jpg)
+
+
+Or 6 each of these 2(along with the same bottom as above) for a square version, simpler!
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1-square.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1-square.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2-square.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2-square.svg)
+
+
+
+Print files for laser cutter for latest version, cube, print these out 12 inches wide so each square is 4 inches on a side:
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1-6x.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side1-6x.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2-6x.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/side2-6x.svg)
+
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/bottom-3x.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/bottom-3x.svg)
+
+cube Controller lid layout
+
+[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/controller.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/planterbox/symbolfeed/controller.svg)
+

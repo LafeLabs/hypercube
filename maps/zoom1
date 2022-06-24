@@ -1,0 +1,35 @@
+[
+    {
+        "x": -0.14857142857142858,
+        "y": -0.017142857142857144,
+        "w": 1.1657142857142857,
+        "h": 0.9668571428571429,
+        "angle": 0,
+        "text": "text",
+        "href": "",
+        "src": "https://i.imgur.com/trNVtTr.png",
+        "maplinkmode": false
+    },
+    {
+        "x": 0.2537142857142857,
+        "y": 0.45714285714285713,
+        "w": 0.06628571428571428,
+        "h": 0.08,
+        "angle": 0,
+        "text": "text",
+        "href": "maps/zoom2",
+        "src": "https://i.imgur.com/No1wukK.png",
+        "maplinkmode": true
+    },
+    {
+        "x": 0.010285714285714285,
+        "y": 0.005714285714285714,
+        "w": 0.06628571428571428,
+        "h": 0.06628571428571428,
+        "angle": 0,
+        "text": "text",
+        "href": "maps/home",
+        "src": "iconsymbols/home.svg",
+        "maplinkmode": true
+    }
+]

@@ -1,0 +1,57 @@
+
+## [HOME](index.html)
+
+# stages
+
+![](https://i.imgur.com/4O1Xcw7.jpg)
+
+This documents the assembly of the main mechanical elements of the xyz trash robot printer. This prints with a magic marker on bits of trash.  This assembly process assumes that cables are already attached to the DVD drives.  This is its own step. Also it is separate from the Brain and the Controller and the Trash Frame which it sits in, as well as the icon design process.
+
+Use 2 part epoxy Gorilla glue and Elmer's school glue:
+
+![](https://i.imgur.com/K2a5a7n.jpg) 
+
+All joints between metal or plastic and cardboard are with the epoxy.  The joints between layers of cardboard and each other are Elmer's glue.  Build up layers.  Be sure to create space for the parts to move freely.
+
+Z axis stage.  Notice the blue color code on the connector, which orients the connector as well to a matching paint marking on the [brain](scrolls/brain) board.
+
+![](https://i.imgur.com/op9ML4Y.jpg)
+
+
+Z axis stage with sproing and pen. Sproing is held onto the stage with a rubber band.  Pen is mounted on sproing with a rubber band as well.
+
+![](https://i.imgur.com/I3YHoZg.jpg)
+
+X axis stage:
+
+![](https://i.imgur.com/VCTXmET.jpg)
+
+Large area stage for top layer matches the size exactly of the base of the L bracket.
+
+L Bracket construction: uses tongue in groove joints as well as Elmer's glue.
+
+![](https://i.imgur.com/L0ca5d0.jpg)
+
+
+L bracket is mounted with two rubber bands to the x motion stage:
+
+![](https://i.imgur.com/6kRcNQj.jpg)
+
+The y axis stage is rubber banded into position, and the cable rubber banded into place with strain relief:
+
+![](https://i.imgur.com/3V1NV10.jpg)
+
+Note we use green color code for the y cable, red for x and blue for z.
+
+Mount the xy stage on the [Trash Frame](scrolls/trashframe) using a rubber band [trash tie](scrolls/trashtie):
+
+![](https://i.imgur.com/v9xTguL.jpg)
+
+
+Mount the z axis stage with another rubber band trash tie:
+
+![](https://i.imgur.com/4O1Xcw7.jpg)
+
+![](https://i.imgur.com/mbJhIIB.jpg)
+
+[HOME](index.html)

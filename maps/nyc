@@ -1,0 +1,35 @@
+[
+    {
+        "x": -0.152,
+        "y": -0.3417142857142857,
+        "w": 1.4091428571428573,
+        "h": 1.3577142857142857,
+        "angle": 0,
+        "text": "text",
+        "href": "",
+        "src": "https://i.imgur.com/KY0RGoI.png",
+        "maplinkmode": false
+    },
+    {
+        "x": 0.4674285714285714,
+        "y": 0.6822857142857143,
+        "w": 0.056,
+        "h": 0.06742857142857143,
+        "angle": 0,
+        "text": "text",
+        "href": "maps/prospectpark",
+        "src": "https://i.imgur.com/No1wukK.png",
+        "maplinkmode": true
+    },
+    {
+        "x": 0.021714285714285714,
+        "y": 0.904,
+        "w": 0.056,
+        "h": 0.056,
+        "angle": -149,
+        "text": "text",
+        "href": "maps/home",
+        "src": "https://i.imgur.com/CnSO74z.png",
+        "maplinkmode": true
+    }
+]

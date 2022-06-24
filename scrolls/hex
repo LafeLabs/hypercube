@@ -1,0 +1,58 @@
+## [![](iconsymbols/home.svg)](index.html)
+
+This is the symbol for the square root of three
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/root3symbol.svg)
+
+We use the square root of three to create an equilateral triangle which is symmetric around our starting point.  
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/trianglespelling.svg)
+
+We break down the symbol glyphs into these rotations based on symmetries:
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/right30.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/right120.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/filled-equilateral-spelling.svg)
+
+
+This is how we create the 120 degree isosceles triangle with Geometron:
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/cardboard-gnomon-spelling.svg)
+
+Now we build a language.  We start with a symbol which represents drawing an equilateral triangle centered at the starting point.
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/triangle-shape.svg)
+
+Then we can use a shrink action before the triangle and a grow action after to create a shrunken triangular tile centered on our starting point.  
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/shrunk-triangle-shape.svg)
+
+
+Triangles are combined to create hexagons:
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/hexagonspelling.svg)
+
+Hexagons are combined to make a unit cell:
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/hex-megacell-spelling.svg)
+
+And these can be stacked to create a full symbol with several layers of sub-shape.
+
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/cell-stack-spelling.svg)
+
+Here are the keyboard values for the Geometron keyboard, mark them on your keys.
+
+Try it out at  [symbol.html](symbol.html)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/qwerty.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/asdf.svg)
+
+
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/hex/symbolfeed/colors.svg)
+
+
+[home](index.html)

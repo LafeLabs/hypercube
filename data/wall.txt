@@ -1,0 +1,13 @@
+                                PI CRUST
+
+ART AND MUSIC! VIDEOS! PODCASTS! ARTICLES! IMAGES! WEB PAGES!
+
+SHARE AND ENJOY!
+
+THIS SCREEN IS THE WALL, ANYONE CAN TYPE ANYTHING HERE, IF IT'S ANNOYING, JUST DELETE IT. THERE ARE NO USERS, NO PASSWORDS, NO ENCRYPTION, NO PRIVATE DATA. 
+
+THIS SYSTEM EXISTS ENTIRELY TO SHARE INFORMATION FREELY. IT RUNS ON THE RASPBERRY PI, WINDOWS, MAC, ANDROID, IOS, AND ALL LINUX PLATFORMS.
+
+drop images into the "images" directory to share them.  Drop media into folders in the "media" directory or just into the main media directory and you can see it on here. click the wifi icon in the upper right corner to set the IP address of this machine so others can see it.  This is unsecure by design, use it in public only with machines that have NO PRIVATE DATA at all.  This is for free sharing, and only works on networks without any private information.  QR code replicates the link across a local network, which replicates all the media on the server.
+
+This won't work on public web pages, this is for when this system is on a raspberry pi or other free open public machines.  The only use on non local machines is this wall, which can have any posts of anything.

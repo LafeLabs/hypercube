@@ -1,0 +1,117 @@
+
+## [HOME](index.html)
+
+# DVD Upcycle
+
+Get an internal DVD drive, a multi tool and a screw driver
+
+![](https://i.imgur.com/nO7m9EY.jpg) 
+
+![](https://i.imgur.com/s0GTZLD.jpg)
+
+Unscrew all screws you can find on outside
+
+![](https://i.imgur.com/IEB8HNU.jpg)
+
+![](https://i.imgur.com/MxE6BJU.jpg)
+
+![](https://i.imgur.com/RvWuUDX.jpg)
+
+Stick very small object like a screwdriver or paperclip in the little hole to eject the drawer manually.
+
+![](https://i.imgur.com/atVRftx.jpg)
+
+![](https://i.imgur.com/BOVFdxb.jpg)
+
+Pull the drawer all the way out.
+
+![](https://i.imgur.com/VyLiqQr.jpg)
+
+Get any removable circuit boards out of the way.
+
+![](https://i.imgur.com/f2RJKHo.jpg)
+
+Remove remaining cover parts, this can take some creativity sometimes.
+
+![](https://i.imgur.com/30uX1QG.jpg)
+
+Remove all screws to extract the inner stage
+
+![](https://i.imgur.com/iS6xC9W.jpg)
+
+Remove the drawer assembly by itself, we will find other uses for these, maybe very tiny power generators or various kinds of machines to do interesting things.
+
+![](https://i.imgur.com/MPghdzh.jpg)
+
+The stage with the flat side up, this is what we will epoxy cardboard to to interface to all the other cardboard technology.
+
+![](https://i.imgur.com/ZuUQW6b.jpg)
+
+These little rubber feet will accumulate as we upcycle the drives, and these can be used for many purposes.
+
+![](https://i.imgur.com/e20SZ7h.jpg)
+
+This is the board with the control chip which can control all the various motors and motion stages, as well as optics.  We must ultimately learn how to program this directly.  This is a reverse engineering project that needs to be carried out in the Public Domain and very explicitly documented for a very large number of drive models in order for all this to scale. 
+
+![](https://i.imgur.com/uaX74YY.jpg)
+
+Closeup of the connections from the stepper motor which drives the motion stage we use for the trash robot geometron icon printers.
+
+![](https://i.imgur.com/kfiCjSE.jpg)
+
+We use a multimeter to measure between the various contacts.  There should be two pairs, which each have between 9 and 20 ohms between them and infinite resistance to the other pair.  
+
+![](https://i.imgur.com/XDP9mkz.jpg)
+
+![](https://i.imgur.com/N6yYua6.jpg)
+
+[Molex connectors we buy from Digikey](https://www.digikey.com/en/products/detail/molex/2177971043/14637940) 
+
+![](https://i.imgur.com/dJCQy7s.jpg)
+
+![](https://i.imgur.com/5HB470r.jpg)
+
+Twist the pairs, which are the first two then the second two, going along the line.  Twist all the way to the ends, making two tight twisted pairs that go the whole length of the cable.
+
+![](https://i.imgur.com/kBTUr0I.jpg)
+
+![](https://i.imgur.com/KXnV2iP.jpg)
+
+![](https://i.imgur.com/BqSxfQU.jpg)
+
+Twist the pairs into a twisted pair of pairs, making for one single cable that can be managed more easily.
+
+![](https://i.imgur.com/oi6vSN9.jpg)
+
+Get a good soldering iron, which should have a pointy tip an temperature control. Get some lead free solder.
+
+![](https://i.imgur.com/KGl9mV8.jpg)
+
+![](https://i.imgur.com/uKN5dti.jpg)
+
+![](https://i.imgur.com/f9qs0t0.jpg)
+
+Solder the wires on one by one as shown, making sure you have each twisted pair going to a pair of connected(9-20 ohms) contacts.
+
+![](https://i.imgur.com/EKK8gTP.jpg)
+
+![](https://i.imgur.com/xHPcBia.jpg)
+
+Put a loop in for strain relief so that there is not strain put on the solder joints, then hold the cable in place with twist ties.
+
+![](https://i.imgur.com/ZoM0cep.jpg)
+
+We note that for future work we want to control current through the contacts shown, which control the very fine motion of the lens, also shown here.  This can be used for optical lithography or imaging using the laser and/or detector as well as electrochemical or other mechanical probes using various other tools attached to the lens.  These coils can be controlled with PWM controllers sold from both Sparkfun and Adafruit, with a few hundred mA, using a 100 ohms bias resistor and a 12 volt supply, to move this around by a mm or so.  They are just 2-4 ohms themselves, which is why a current bias resistor is useful, to cap out the current.
+
+![](https://i.imgur.com/8FdJ5UO.jpg)
+
+Closeup of lens.  This can also be ripped out with tweezers and used as its own microscope, being mounted over the camera of a smart phone. If this is held over a scanned surface, large depth of field and field of view images are possible even with this tiny lens on a phone.
+
+![](https://i.imgur.com/Utmo6n5.jpg)
+
+The motor for the rotor.  We have not yet successfully controlled this but it is important if we are to be able to address the whole area of a disk for both read and write functions.
+
+![](https://i.imgur.com/sbSqGOb.jpg)
+
+
+## [HOME](index.html)

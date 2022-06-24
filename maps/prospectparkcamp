@@ -1,0 +1,35 @@
+[
+    {
+        "x": -0.504,
+        "y": -0.2777142857142857,
+        "w": 1.5531428571428572,
+        "h": 1.5531428571428572,
+        "angle": 0,
+        "text": "text",
+        "href": "",
+        "src": "https://i.imgur.com/Hc7SHPP.png",
+        "maplinkmode": false
+    },
+    {
+        "x": 0.24914285714285714,
+        "y": 0.6034285714285714,
+        "w": 0.07428571428571429,
+        "h": 0.07428571428571429,
+        "angle": 0,
+        "text": "text",
+        "href": "scrolls/prospectparkcamp",
+        "src": "https://i.imgur.com/No1wukK.png",
+        "maplinkmode": true
+    },
+    {
+        "x": 0.011428571428571429,
+        "y": 0.31885714285714284,
+        "w": 0.07428571428571429,
+        "h": 0.07428571428571429,
+        "angle": 0,
+        "text": "text",
+        "href": "maps/home",
+        "src": "iconsymbols/home.svg",
+        "maplinkmode": true
+    }
+]

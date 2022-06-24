@@ -1,0 +1,25 @@
+
+## [HOME](index.html)
+
+# Three D Printing and files
+ 
+## [link to 3d icon creator](icon3d.html)
+
+Click on an icon to load it into the 3d viewer:
+
+![](https://i.imgur.com/5bTHu97.png)
+
+To make a 3d printer file(.stl format) of an icon, hit the SAVE button then click on the link from there to threejs.html:
+
+![](https://i.imgur.com/oULM1Dx.png)
+
+From there, right click and download the file data/three.stl and save it as some file name that makes sense. You can send this .stl file to a 3d printer to print. Then that can be used to stamp out a mold which something can be poured/cast into.  
+
+To stamp directly from the 3d print into materials, print the inverted file by again clicking the "SAVE" button after loading the icon you want and then clicking the link to threejsinvert.html.  Now when you download the file data/three.stl it will be the mirror image, so that when it is used as a stamp, the original icon design is printed.
+
+![](https://i.imgur.com/FbEsCBo.png)
+
+
+
+
+ 
