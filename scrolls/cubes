@@ -2,19 +2,36 @@
 
 # Cubes
  
-![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)
-
-![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)
+To make one cube, cut out 12 of these from corrugated cardboard, stack them into four panels 3 layers thick and glue them using Elmer's glue:
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardside.jpg)
 
+.svg file for laser cutter:
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)
+
+Now cut out 3 of the bottom pieces, and stack them into a fifth glued panel. 
+
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardbottom.jpg)
+
+.svg file for laser cutter:
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)
+
+Assemble the sides into the base as shown:
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardcorner.jpg)
 
+Cut out 4 inch squares, print on them, glue them to the panels, and hold it all together with rubber bands:
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/touchgrass.jpg)
+
+These cubes are now ready to be used to build robots, planters, mushroom farms, nano compost cubes, worm farms, or other machinery, technology, or horticulture.  They can be stacked to make much larger fractal structures.
 
 Useful links for organic experiments:
 
  - [link to oyster mushroom cardboard farming](https://grocycle.com/grow-mushrooms-on-cardboard/)
  - [buy worms to farm in compost bins](https://unclejimswormfarm.com/order-stuff/composting-worms/)
+
+## [home scroll](scrolls/home)
