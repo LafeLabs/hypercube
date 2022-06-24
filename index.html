@@ -253,7 +253,6 @@ function loadscroll(scrollname){
     document.getElementById("square3d").style.display = "none";
     document.getElementById("mainimage").style.display = "none";
 
-
     var httpc666 = new XMLHttpRequest();
     httpc666.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -377,6 +376,7 @@ function loadimagefeed(){
             document.getElementById("scrollscroll").style.display = "none";
         
             document.getElementById("canbox").style.display = "none";
+            document.getElementById("square3d").style.backgroundColor = "";
 
     
             
@@ -409,6 +409,7 @@ var httpc10 = new XMLHttpRequest();
                 document.getElementById("mainmap").style.display = "none";
                 document.getElementById("scrollscroll").style.display = "none";
                 document.getElementById("canbox").style.display = "none";
+                document.getElementById("square3d").style.backgroundColor = "";
 
                 
             }
@@ -442,6 +443,7 @@ var httpc11 = new XMLHttpRequest();
                 document.getElementById("scrollscroll").style.display = "none";
             
                 document.getElementById("canbox").style.display = "none";
+                document.getElementById("square3d").style.backgroundColor = "";
 
                 
             }
@@ -654,7 +656,10 @@ function loadcoinfeed(){
             
             mainGVM.glyph = glyph;
             redraw();
-
+                document.getElementById("mainmap").style.display = "none";
+                document.getElementById("scrollscroll").style.display = "none";
+            
+                document.getElementById("canbox").style.display = "none";
 
         }
         
@@ -694,7 +699,8 @@ function loadsymbolfeed(){
         
             document.getElementById("canbox").style.display = "none";
             document.getElementById("square3d").style.display = "none";
-        
+            document.getElementById("square3d").style.backgroundColor = "";
+
     
             
         }
@@ -711,6 +717,12 @@ main = document.getElementById("main");
 
 
 function redraw(){
+    if(document.getElementById("mainimage").style.display == "none"){
+        document.getElementById("square3d").style.backgroundColor = "#808080";
+    }
+    else{
+        document.getElementById("square3d").style.backgroundColor = "";
+    }
     main.innerHTML = "";
     x = 0.0;
     y = 0.0;
