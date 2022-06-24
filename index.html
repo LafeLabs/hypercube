@@ -111,20 +111,35 @@ else{
     marginWidth = 0.5*(innerHeight - innerWidth);
     document.getElementById("scrollscroll").style.top = marginWidth.toString() + "px";
     document.getElementById("scrollscroll").style.bottom = marginWidth.toString() + "px";
+    document.getElementById("scrollscroll").style.left = "0px";
+    document.getElementById("scrollscroll").style.right = "0px";
+
     mainmap = new Map(innerWidth,innerWidth,document.getElementById("mainmap"));
     
 
     document.getElementById("margin1").style.height = marginWidth.toString() + "px";         
     document.getElementById("margin1").style.right = "0px";         
+    document.getElementById("margin1").style.left = "0px";         
+    document.getElementById("margin1").style.width = square.toString() + "px";         
     
     
-    document.getElementById("mapmap").style.top = marginWidth.toString() + "px";
+    document.getElementById("margin2").style.height = marginWidth.toString() + "px";         
+    document.getElementById("margin2").style.right = "0px";        
+    document.getElementById("margin2").style.left = "0px";        
+    
+    
+    
+    document.getElementById("mainmap").style.top = marginWidth.toString() + "px";
     document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
 
     document.getElementById("mainimage").style.width = square.toString() + "px";     
     
     document.getElementById("canbox").style.top = marginWidth.toString() + "px";
     document.getElementById("canbox").style.left = "0px";     
+    
+    feedwidth = 0.5*square;
+
+    
 
 }
 
@@ -727,7 +742,7 @@ function redraw(){
     x = 0.0;
     y = 0.0;
     z = 0.0;
-    side = 0.25;
+    side = 0.1;
     solidColor = "0 0 0";
     currentTrans = 0.0;
     drawGlyph(mainGVM.glyph);
@@ -1130,6 +1145,47 @@ h1,h2,h3,h4{
     table img{
         max-width:60px;
     }
+    #imagescroll{
+        left:0px;
+        top:0px;
+        width:25%;
+        bottom:0px;
+    }
+    #scrollsbox{
+        left:25%;
+        width:25%;
+        top:0px;
+        bottom:0px;
+    }
+    #mapsbox{
+        left:50%;
+        width:25%;
+        top:0px;
+        bottom:0px;
+    }    
+    #mediascroll{
+        right:0px;
+        width:25%;
+        top:0px;
+        bottom:0px;
+        
+    }
+
+    #iconsbox{
+        left:0px;
+        top:0px;
+        right:0px;
+        width:50%;
+    
+    }
+    #symbolsbox{
+        right:0px;
+        top:0px;
+        right:0px;
+        width:50%;
+    }
+  
+
 }
 </style>
 </body>
