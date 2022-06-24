@@ -373,15 +373,15 @@ function convertscrollinks(){
 
 uploadImages = [];
 
-var httpcUpload = new XMLHttpRequest();
-httpcUpload.onreadystatechange = function() {
+var httpcUploadimages = new XMLHttpRequest();
+httpcUploadimages.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         uploadImages = JSON.parse(this.responseText);
         loadimagefeed();
     }
 };
-httpcUpload.open("GET", "dir.php?filename=uploadimages", true);
-httpcUpload.send();
+httpcUploadimages.open("GET", "dir.php?filename=uploadimages", true);
+httpcUploadimages.send();
 
 
 function loadimagefeed(){
@@ -721,15 +721,15 @@ function loadcoinfeed(){
 
 symbols = [];
 
-var httpcUpload = new XMLHttpRequest();
-httpcUpload.onreadystatechange = function() {
+var httpcsymbols = new XMLHttpRequest();
+httpcsymbols.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         symbols = JSON.parse(this.responseText);
         loadsymbolfeed();
     }
 };
-httpcUpload.open("GET", "dir.php?filename=symbolfeed", true);
-httpcUpload.send();
+httpcsymbols.open("GET", "dir.php?filename=symbolfeed", true);
+httpcsymbols.send();
 
 
 function loadsymbolfeed(){
