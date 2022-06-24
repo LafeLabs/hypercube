@@ -2,6 +2,14 @@
 
 [user.php](user.php)
 
+
+ - [user.php](user.php)
+ - [scrolleditor.php](scrolleditor.php)
+ - [mapeditor.php](mapeditor.php)
+ - [symbol.html](symbol.html)
+ - [index.html](index.html)
+
+
 The [TRASH ROBOT](https://www.trashrobot.org) network exists to grow a new civilization from the trash of the old one.  When all the elements of a good life are contained in media we can replicate freely from trash and things we can grow we call that [TRASH MAGIC](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks).  
 
 The language of GEOMETRON is based on the symmetries of the Universe, and can be used to create geometric constructions to build up all our media and technology.  Geometron is described in the [First Book of Geometron](https://www.trashrobot.org/bookofgeometronfirst/) and [The Book of Geometron Magic](https://www.trashrobot.org/geometronmagic/).  
