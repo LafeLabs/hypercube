@@ -1,6 +1,12 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/",
     "symbols": [
-        "symbol1656039145.svg"
+        "bottom.svg",
+        "metricruler.svg",
+        "penrose.svg",
+        "rulers.svg",
+        "shapes.svg",
+        "side.svg",
+        "squares-3-4.svg"
     ]
 }
