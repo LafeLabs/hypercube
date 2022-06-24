@@ -131,11 +131,21 @@ else{
     
     document.getElementById("mainmap").style.top = marginWidth.toString() + "px";
     document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
-
+    document.getElementById("mainimage").style.left = "0px";
+    
     document.getElementById("mainimage").style.width = square.toString() + "px";     
     
+    document.getElementById("square3d").style.left = "0px";     
+
+    document.getElementById("square3d").style.width = square.toString() + "px";         
+    document.getElementById("square3d").style.height = square.toString() + "px";       
+    
+    document.getElementById("square3d").style.top = marginWidth.toString() + "px";
+        
     document.getElementById("canbox").style.top = marginWidth.toString() + "px";
     document.getElementById("canbox").style.left = "0px";     
+    
+    
     
     feedwidth = 0.5*square;
 
@@ -385,8 +395,18 @@ function loadimagefeed(){
             document.getElementById("mainimage").src=  this.src;
             document.getElementById("mainimage").style = "block";
             
-            document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
-            document.getElementById("mainimage").style.width = square.toString() + "px";     
+            if(innerWidth > innerHeight){
+                document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";                    
+            }
+            else{
+                document.getElementById("mainimage").style.left = "0px";                     
+                document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";
+                
+            }
+ 
+            
             document.getElementById("mainmap").style.display = "none";
             document.getElementById("scrollscroll").style.display = "none";
         
@@ -418,8 +438,16 @@ var httpc10 = new XMLHttpRequest();
                 document.getElementById("mainimage").src=  this.src;
                 document.getElementById("mainimage").style = "block";
                 
+            if(innerWidth > innerHeight){
                 document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
-                document.getElementById("mainimage").style.width = square.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";                    
+            }
+            else{
+                document.getElementById("mainimage").style.left = "0px";                     
+                document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";
+                
+            }
         
                 document.getElementById("mainmap").style.display = "none";
                 document.getElementById("scrollscroll").style.display = "none";
@@ -451,8 +479,16 @@ var httpc11 = new XMLHttpRequest();
                 document.getElementById("mainimage").src=  this.src;
                 document.getElementById("mainimage").style = "block";
                 
-                document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
-                document.getElementById("mainimage").style.width = square.toString() + "px";     
+                if(innerWidth > innerHeight){
+                    document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+                    document.getElementById("mainimage").style.width = square.toString() + "px";                    
+                }
+                else{
+                    document.getElementById("mainimage").style.left = "0px";                     
+                    document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
+                    document.getElementById("mainimage").style.width = square.toString() + "px";
+                    
+                }
         
                 document.getElementById("mainmap").style.display = "none";
                 document.getElementById("scrollscroll").style.display = "none";
@@ -706,9 +742,16 @@ function loadsymbolfeed(){
         newimg.onclick = function(){
             document.getElementById("mainimage").src=  this.src;
             document.getElementById("mainimage").style = "block";
-            
-            document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
-            document.getElementById("mainimage").style.width = square.toString() + "px";     
+            if(innerWidth > innerHeight){
+                document.getElementById("mainimage").style.left = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";                    
+            }
+            else{
+                document.getElementById("mainimage").style.left = "0px";                     
+                document.getElementById("mainimage").style.top = marginWidth.toString() + "px";     
+                document.getElementById("mainimage").style.width = square.toString() + "px";
+                
+            }
             document.getElementById("mainmap").style.display = "none";
             document.getElementById("scrollscroll").style.display = "none";
         
@@ -1176,13 +1219,15 @@ h1,h2,h3,h4{
         top:0px;
         right:0px;
         width:50%;
-    
+        bottom:0px;
     }
     #symbolsbox{
         right:0px;
         top:0px;
         right:0px;
         width:50%;
+        bottom:0px;
+
     }
   
 

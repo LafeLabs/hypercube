@@ -7,6 +7,15 @@
         "cube-factory.jpg"
     ],
     "scrolls": [
-        "home"
+        "bags",
+        "cubes",
+        "fashion",
+        "home",
+        "icons",
+        "printers",
+        "rulers",
+        "servers",
+        "shapes",
+        "spaces"
     ]
 }
