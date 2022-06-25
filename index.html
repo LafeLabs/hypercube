@@ -25,7 +25,9 @@
     <script src="jscode/mapfactory.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/x3dom@1.7.2/x3dom.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/x3dom@1.7.2/x3dom.css">
+
 
 <!--       un comment to use math
 
@@ -1058,7 +1060,7 @@ h1,h2,h3,h4{
 #imagescroll{
     position:absolute;
     overflow:scroll;
-    background-color:#808080;
+    background-color:#c0c0c0;
 }
 #imagescroll img{
     max-width:80%;
@@ -1068,26 +1070,34 @@ h1,h2,h3,h4{
 }
 #scrollsbox{
     position:absolute;
-    background-color:#87ceeb;
     overflow:scroll;
     color:black;
+        border:solid;
+    border-color:#ff2cb4;
+
 }
 #mapsbox{
     position:absolute;
-    background-color:#880808;
     overflow:scroll;
     color:black;
+    border:solid;
+    border-color:#ff2cb4;
+
     
 }
 #iconsbox{
     position:absolute;
     background-color:#C0C0C0;
     overflow:scroll;
+        border:solid;
+
 }
 #symbolsbox{
     position:absolute;
-    background-color:#80ff80;
+    background-color:#c0c0c0;
     overflow:scroll;
+        border:solid;
+
 }
 #symbolsbox img{
     max-width:50%;
@@ -1095,38 +1105,8 @@ h1,h2,h3,h4{
 #mediascroll{
     color:#00ff00;
     position:absolute;
-    background-color:#202020;
     overflow:scroll;
     color:black;
-}
-#mediascroll a,span{
-    display:block;
-    margin:auto;
-    margin-top:0.5em;
-    margin-bottom:0.5em;
-    color:#ff2cb4;
-    margin-left:1em;
-    font-family:courier;
-}
-#mediascroll h1{
-    color:#ff2cb4;
-    font-family:courier;
-    border:solid;
-    border-radius:5px;
-    border-color:#ff2cb4;
-    margin-top:2px;
-    margin-bottom:2px;
-    cursor:pointer;
-}
-#mediascroll span{
-    border:solid;
-    border-color:#ff2cb4;
-    cursor:pointer;
-}
-#mediascroll div{
-    border:solid;
-    border-color:#ff2cb4;
-    margin: 0.5em 0.5em 0.5em 0.5em;
 }
 
 #mainx3d{
@@ -1232,6 +1212,51 @@ h1,h2,h3,h4{
   
 
 }
+
+
+#mediascroll h1{
+    color:#ff2cb4;
+    font-family:courier;
+    border:solid;
+    border-radius:5px;
+    border-color:#ff2cb4;
+    margin-top:2px;
+    margin-bottom:2px;
+    cursor:pointer;
+}
+#mediascroll{
+    border:solid;
+    border-color:#ff2cb4;
+    cursor:pointer;
+}
+#mediascroll div{
+    border:solid;
+    border-color:#ff2cb4;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+
+#mediascroll span{
+    display:block;
+    margin:auto;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    color:#ff2cb4;
+    margin-left:1em;
+    font-family:courier;
+
+}
+#mediascroll a{
+    display:block;
+    margin:auto;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    color:#ff2cb4;
+    margin-left:1em;
+    font-family:courier;
+
+}
+
 </style>
 </body>
 </html>
