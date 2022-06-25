@@ -7,9 +7,12 @@
         "home",
         "icons",
         "printers",
+        "replicators",
+        "research",
         "rulers",
         "servers",
         "shapes",
-        "spaces"
+        "spaces",
+        "stencils"
     ]
 }
