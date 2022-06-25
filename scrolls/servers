@@ -9,6 +9,10 @@ Make your own Geometron keyboard with a paint pen or other means of marking up k
 
 ![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/keyboard-photo.jpg)
 
+ - [global hypercube replicator code](https://raw.githubusercontent.com/LafeLabs/hypercube/main/php/replicator.txt)
+ - [symbol.html](symbol.html)
+ - [http://localhost/](http://localhost/)
+
 ### Install on Pi
 
 Raspberry Pi is now impossible to buy.  Find them donated from someone. Most people who have them don't use them or used them once and stopped due to lack of interest/time/need. Ask around!  Someone will be able to donate a Pi, keyboard, mouse, screen, power supply and whatever other random things you need to get set up.

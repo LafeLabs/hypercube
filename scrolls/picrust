@@ -7,7 +7,7 @@
 
 The PI Crust media network distributes digital media by physical means, directly over local wireless networks using local web servers.  
 
-The propagation of the network begins with acquiring a Raspberry Pi.  They are hard to buy but often unused, get one donated from the community, ask around, someone will have one.  Find a donated screen, keyboard, mouse, and any other basic things you need including the power supply.  
+The propagation of the network begins with acquiring a Raspberry Pi.  They are hard to buy but often unused, get one donated from the community, ask around, someone will have one.  Find a donated screen, keyboard, mouse, and any other basic things you need including the power supply.   [Install the Geometron Server](scrolls/servers) on the PI. Make sure there is no personal or private information on the pi of any kind.  
 
 Find a public wifi network in a public space where we can set up a [trash magic space](scrolls/spaces), and put the pi on the network.  Images are dropped in the "uploadimages" directory.  Media are dropped into the "media" directory.  Organize the media by creating folders inside the media directory to put different collections in.  You can organize by any system: by date, by artist/creator, by format, by organization, or topic, whatever makes sense for the media you are distributing.  Local web pages can be saved as .html files in the media directory, and if you click on it from PI CRUST you'll go to the local page.  
 
