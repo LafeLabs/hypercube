@@ -2,6 +2,8 @@
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
         "bags",
+        "business",
+        "chaos",
         "cubes",
         "fashion",
         "home",
