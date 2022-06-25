@@ -1,0 +1,16 @@
+
+## [HOME](scrolls/home)
+
+# picrust media network
+ 
+![](https://i.imgur.com/LaOEeyG.jpg)
+
+The PI Crust media network distributes digital media by physical means, directly over local wireless networks using local web servers.  
+
+The propagation of the network begins with acquiring a Raspberry Pi.  They are hard to buy but often unused, get one donated from the community, ask around, someone will have one.  Find a donated screen, keyboard, mouse, and any other basic things you need including the power supply.  
+
+Find a public wifi network in a public space where we can set up a [trash magic space](scrolls/spaces), and put the pi on the network.  Images are dropped in the "uploadimages" directory.  Media are dropped into the "media" directory.  Organize the media by creating folders inside the media directory to put different collections in.  You can organize by any system: by date, by artist/creator, by format, by organization, or topic, whatever makes sense for the media you are distributing.  
+
+Point the pi to the page at [picrust.html](picrust.html), and set the IP address for the pi, so that it will display the proper QR code, and people can scan that QR code from any device that's on the local wifi and they'll go to the PI CRUST page and be able to see all the media. 
+
+Use this to distribute whatever media you want to to people who pass through the [Trash Magic Spaces](scrolls/spaces).  

@@ -6,6 +6,7 @@
         "fashion",
         "home",
         "icons",
+        "picrust",
         "printers",
         "replicators",
         "research",
