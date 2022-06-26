@@ -6,6 +6,7 @@
         "chaos",
         "cubes",
         "fashion",
+        "geometron",
         "home",
         "icons",
         "picrust",
