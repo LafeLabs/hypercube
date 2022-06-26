@@ -5,8 +5,8 @@ int unit = 100;
 int side = unit;
 
 //these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
-int xleftPin = 7;
-int xrightPin = 10;
+int xleftPin = 10;
+int xrightPin = 7;
 int yawayPin = 9;
 int ytowardsPin = 8;
 int zdownPin = 11;

@@ -10,6 +10,7 @@
         "fractal5.svg",
         "fractal6.svg",
         "metricruler.svg",
+        "octahedrontriangles.svg",
         "penrose.svg",
         "rulers.svg",
         "shapes.svg",
