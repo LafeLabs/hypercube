@@ -1,6 +1,7 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
+        "arduino",
         "bags",
         "business",
         "chaos",
@@ -9,6 +10,7 @@
         "geometron",
         "home",
         "icons",
+        "lasers",
         "picrust",
         "printers",
         "replicators",
