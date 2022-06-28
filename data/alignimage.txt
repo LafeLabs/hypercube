@@ -1,1 +1,1 @@
-{"w":0.9577142857142857,"x":0.018285714285714287,"y":-0.07085714285714285,"angle":0,"src":"http://localhost/uploadimages/squatsymbol.png"}
+{"w":0.6514285714285715,"x":0.1782857142857143,"y":0.16228571428571428,"angle":0,"src":"https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg"}
