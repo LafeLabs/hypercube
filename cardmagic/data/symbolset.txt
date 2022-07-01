@@ -1,0 +1,17 @@
+{
+    "server": "https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cardmagic/",
+    "symbols": [
+        "card.svg",
+        "symbol1656690447.svg",
+        "symbol1656697024.svg",
+        "symbol1656697094.svg",
+        "symbol1656697101.svg",
+        "symbol1656698391.svg",
+        "symbol1656698452.svg",
+        "symbol1656698478.svg",
+        "symbol1656698527.svg",
+        "symbol1656698728.svg",
+        "symbol1656698772.svg",
+        "symbol1656698781.svg"
+    ]
+}

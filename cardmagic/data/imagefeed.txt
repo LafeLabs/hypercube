@@ -1,0 +1,12 @@
+[
+  "https://i.imgur.com/niV3C7n.jpg",
+  "https://i.imgur.com/K1w4bk8.png",
+  "https://i.imgur.com/4zetaPf.png",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardside.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardbottom.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardcorner.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/touchgrass.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg",
+  "http://localhost/cardmagic/symbolfeed/symbol1656697101.svg"
+]

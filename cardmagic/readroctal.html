@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--
+
+        EVERYTHING IS PHYSICAL
+        EVERYTHING IS FRACTAL
+        EVERYTHING IS RECURSIVE
+        NO MONEY
+        MO MINING
+        NO PROPERTY
+        LOOK AT THE INSECTS
+        LOOK AT THE FUNGI
+        LANGUAGE IS HOW THE MIND PARSES REALITY
+
+    -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP///wANAP8A5Dz6ABueRwAAt/8A6BonABo86AAAAAA  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREAAAEREREREQCIgREREd3dwAAB3d3d3d3d3d3d3d3d3d3d3d3d3VVVVVVVQAFVVAAVVVQIiBRAiIBEQIAIBECAAERAgAgFgIABmYCIiBmAiIGZgIiIGYCIgZmYCIAaIAAMzMzAAiIiIiIiIiIiIiIiIiIiIiIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+    
+    <!--Stop Google:-->
+    <META NAME="robots" CONTENT="noindex,nofollow">
+<!--geometron javascript library-->
+    <script src="jscode/geometron.js"></script>
+
+</head>
+<body>
+
+<canvas  id = "maincanvas"></canvas>
+
+<img id = "mainimage" src = "symbolfeed/roctal.svg"/>        
+
+<table id = "inputtable">
+    <tr>
+        <td>image url</td><td><input id = "urlinput"/></td>
+    </tr>
+    <tr>
+        <td>sx</td><td><input id = "sxinput"/></td>
+    </tr>
+    <tr>
+        <td>sy</td><td><input id = "syinput"/></td>
+    </tr>
+    <tr>
+        <td>sw</td><td><input id = "swinput"/></td>
+    </tr>
+    <tr>
+        <td>sh</td><td><input id = "shinput"/></td>
+    </tr>
+
+</table>
+<script>
+
+
+sx = 160;
+sy = 10;
+sw = 40;
+sh = 40;
+url = document.getElementById("mainimage").src;
+
+
+document.getElementById("urlinput").value = url;
+document.getElementById("urlinput").onchange = function(){
+    url = this.value;
+    document.getElementById("mainimage").src = url;
+}
+
+
+document.getElementById("sxinput").value = sx.toString();
+document.getElementById("sxinput").onchange = function(){
+    sx = parseInt(this.value);
+    document.getElementById("mainimage").src = "";
+    document.getElementById("mainimage").src = url;
+}
+
+document.getElementById("syinput").value = sy.toString();
+document.getElementById("syinput").onchange = function(){
+    sy = parseInt(this.value);
+    document.getElementById("mainimage").src = "";
+    document.getElementById("mainimage").src = url;
+}
+
+
+document.getElementById("swinput").value = sw.toString();
+document.getElementById("swinput").onchange = function(){
+    sw = parseInt(this.value);
+    document.getElementById("mainimage").src = "";
+    document.getElementById("mainimage").src = url;
+}
+
+document.getElementById("shinput").value = sh.toString();
+document.getElementById("shinput").onchange = function(){
+    sh = parseInt(this.value);
+    document.getElementById("mainimage").src = "";
+    document.getElementById("mainimage").src = url;
+}
+
+
+document.getElementById("mainimage").onload = function() {
+    canvas = document.getElementById("maincanvas");
+    ctx = canvas.getContext("2d");
+    canvas.width = this.width;
+    canvas.height = this.height;
+    img = document.getElementById("mainimage");
+    img.crossOrigin = 'Anonymous';
+    ctx.drawImage(img,sx,sy,sw,sh,0,0,this.width,this.height);
+    //ctx.drawImage(img,0,0,this.width,this.height);
+    
+//    document.getElementById("rawinput").value = canvas.toDataURL();
+//    foo = canvas.toDataURL('image/jpeg', 0.1);
+    
+};
+
+
+</script>
+<style>
+#maincanvas{
+    position:absolute;
+    left:0px;
+    top:0px;
+    border:solid;
+    background-color:white;
+}
+#mainimage{
+    position:absolute;
+    right:0px;
+    top:0px;
+    background-color:#a0a0a0;
+    z-index:-1;
+}
+#inputtable{
+    position:absolute;
+    right:0px;
+    top:0px;
+    z-index:2;
+    background-color:#d0d0d0d0;
+}
+</style>
+</body>
+</html>

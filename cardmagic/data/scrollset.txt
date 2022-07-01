@@ -1,0 +1,18 @@
+{
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
+    "scrolls": [
+        "bags",
+        "cubes",
+        "fashion",
+        "home",
+        "icons",
+        "printers",
+        "replicators",
+        "research",
+        "rulers",
+        "servers",
+        "shapes",
+        "spaces",
+        "stencils"
+    ]
+}

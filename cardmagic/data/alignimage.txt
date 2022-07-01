@@ -1,0 +1,1 @@
+{"w":0.7062857142857143,"x":0.10285714285714286,"y":0.045714285714285714,"angle":0,"src":"http://localhost/cardmagic/symbolfeed/symbol1656697101.svg"}
