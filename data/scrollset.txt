@@ -5,6 +5,7 @@
         "bags",
         "business",
         "cards",
+        "carts",
         "chaos",
         "cubes",
         "fashion",
