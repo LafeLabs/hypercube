@@ -73,48 +73,11 @@ Cut out 4 inch squares, print on them, glue them to the panels, and hold it all 
 
 Every cube we produce in the Trash Robot Network is part of the Geometron Hypercube.  Therefore to grow the Hypercube, we produce and distribute as many cubes as we can, and always evolve the cubes to make them better over time and to solve specific problems to bring us closer to Trash Magic.
 
+## Action Geometry Tools: Rulers and Shapes
 
+To make geometric constructions out of cardboard trash, we use the tools of Action Geometry, which are created with the Geometron Language.  These include the ruler, which we cut from 0.2 or 0.25 inch thick neon green acrylic and the shape sets which we cut from 0.1 or 0.125 inch thick neon green acrylic.  
 
-
-
-
-
-
-
-The [TRASH ROBOT](https://www.trashrobot.org) network exists to grow a new civilization from the trash of the old one.  When all the elements of a good life are contained in media we can replicate freely from trash and things we can grow we call that [TRASH MAGIC](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks).  
-
-The language of GEOMETRON is based on the symmetries of the Universe, and can be used to create geometric constructions to build up all our media and technology.  Geometron is described in the [First Book of Geometron](https://www.trashrobot.org/bookofgeometronfirst/) and [The Book of Geometron Magic](https://www.trashrobot.org/geometronmagic/).  
-
-Digital media are hosted on Geometron hosts from the self-replicating code swarm (called cyber magic) at [github.com/lafelabs/geometronmagic](https://github.com/LafeLabs/geometronmagic).  These can be installed on Raspberry Pi, any Linux machine, Windows, MacOS, iOS and Android.  See instructions below to install a Geometron server.  
-
-Geometron Magic refers to self-replicating geometric media.  This is media based on geometric constructions using the language of Geometron to make things which people replicate freely.  
-
-All work presented here was created by TRASH ROBOT, AKA Lafe Spietz, and is released into [Public Domain](https://github.com/LafeLabs/geometronmagic/blob/main/LICENSE).  We replicate all this media and share it freely.  As our story gathers more attention, we will ask for sponsors to directly support the growth of the Trash Robot Network by both financial support and direct material support of creators on the Network.  This can be branded sponsorships, events, classes, sold art pieces, seminars, art installations, popups, games, educational programs, commissions, network installations, promotional campaigns, political campaigns, community organizing projects, or any other form of information sharing which has value to a potential sponsor.  Direct material support can include places to work and live, food, medicine, clean water and sanitation, transportation, employment with a sponsor or just cash donations.  
-
-There is no central organizing body. To become a creator on the Network, just start creating and sharing.  To become a sponsor, find a creator, ask them what they need, and support them.  Build things, share them, tell people about them, improve them.  
-
-We are content creators who create our own platform.  We create physical media as well as physical infrastructure to host digital media, and content to spread on that media.  We create physical media which has material value in the form of food and consumer products as well as digital media which has value in capturing attention.  Creators create, sponsors support, and consumers consume. This is the path of our media, and it removes the digital landlords who currently own all media networks.
-
-## The Geometron Hypercube
-
-The Geometron Hypercube is a set of constructions from trash which we can use to grow Trash Magic.  The hypercube part living organisms, part trash, part machine, and part code.  We use "hypercube" to refer to an extension of the idea of the cube into higher dimensions.  These are not literal dimensions in an exact mathematical sense but 
-
-The cubes which are the primary physical element of the hypercube is is a 4 inch cube with 5 sides, each side is 3 layers of corrugated cardboard.  All sides are made from 4 inch squares. Cut cardboard trash with a laser cutter or box cutter or razor blade or build and operate stamps for automated production.  These cubes form a physical social media network, where we print media onto them, build them into machines, and use them to grow living things which are of use in building our new world.
-
-The following Geometron file has the layout of all three of the panel patterns to make a cube.  To make one cube you need 6 each of the two patterns with twofold symmetry and 3 of the pattern with 4 fold symmetry.  All are 4 inches by 4 inches.  You can use this file to cut these out on a laser cutter.  Or you can download it and upload it to a Geometron server and make your own variations, including custom laser etch patterns.  To replicate one by hand using the Geometron ruler, note that all patterns are on a grid of 0.5 inches and just slide the ruler around to get the patterns which match the diagram.  
-
-[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/cubesides.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/symbolfeed/cubesides.svg)
-
-The box is self-replicating if it contains a box cutter.  Squares and all the panel cutouts can be created with direct trace and a box cutter from existing parts, or new patterns can be created with a Geometron ruler(see below).  Find a cardboard recycle dumpster, take boxes out, slice out flat panels, cut out into 4 inch squares, then either cut out and stack/glue or stack/glue then cut out.  Assemble, and glue or rubber band as needed, use for parts bins, guerilla organic growing projects(plants, fungus, worms, compost), structural elements, decorative elements, and components of the Geometron Icon printer(see below) 
-
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/cube-factory.jpg)
-
-Useful links for organic experiments:
-
- - [link to oyster mushroom cardboard farming](https://grocycle.com/grow-mushrooms-on-cardboard/)
- - [buy worms to farm in compost bins](https://unclejimswormfarm.com/order-stuff/composting-worms/)
-
-# Geometron Ruler
+### Geometron Ruler
 
 The Geometron Ruler is one inch by six inches. One side has tenths and the other halves, quarters and eights. The highest quality rulers are made from quarter inch neon green acrylic with a laser cutter.  Any ruler can be used to make more rulers.  Cereal box cardboard is a good material.  Find a maker space or individual with a laser cutter.  Dig through the waste bin to find extra acrylic.  Place the outlines and etch and make rulers.  Give them away and spread the word of Geometron, Trash Magic, Trash Robot and so on.  Also you can use [Ponoko.com](https://www.ponoko.com/) to get large numbers of rulers made and can sell those if you so choose.  
 
@@ -153,92 +116,33 @@ One ruler with etch and cut in different layers:
 
 [![](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/rulerimageset/uploadimages/ruler-cm.svg)](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/rulerimageset/uploadimages/ruler-cm.svg)
 
-
 Set of 8 cm rulers in one SVG file for Ponoko.com:
 
 [![](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/rulerimageset/uploadimages/ruler-cm-array.svg)](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/rulerimageset/uploadimages/ruler-cm-array.svg)
 
-# Shape Set
+## Shapes
+
+These shapes are used for constructions based on fundamental symmetries: fourfold, eightfold, threefold, fivefold, and sixfold.  For best results, we cut them out from eight inch neon green acrylic with a laser cutter.
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/shapes.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/shapes2.jpg)
  
-The basic set of Geometron shapes can be used in conjunction with the rulers above to construct objects using Geometron which mirror the constructions in the web browser.  
+.svg file for use in laser cutter.  Each shape has side of 3 inches, so this is a 6 inch wide file:
 
-These can be laser cut or printed and cut out or constructed through any of various geometric means. The shape set is a set of shapes based on a three inch unit and the various natural scales implied by common symmetries of the Universe.  For best results, use 1/8 inch neon green transparent acrylic.
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/shapes.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/shapes.svg)
 
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/shapes-photo.jpg)
+These can all also be constructed using the tools of classical geometry(compass and ruler) or a ruler and a protractor.  So they can be made by hand and cut out from cardboard or paper trash if no laser or acrylic is available.
 
-## Shape Set SVG file for 2 layer laser cutting or print out on printer:
-
-[![](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset.svg)](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset.svg)
-
-## Outline for the cut layer in a laser cutter:
-
-[![](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset-outline.svg)](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset-outline.svg)
-
-## PNG file for laser etch:
-
-[![](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset-etch.png)](https://raw.githubusercontent.com/LafeLabs/pibrary/main/factory/shapes/symbolfeed/shapeset-etch.png)
-
-## Geometron Icon Printer 
-
-The printer is made up of 3 cubes, each with a custom lid.  The top lid holds the z axis motion stage.  The middle lid has the control panel which controls the printer. The bottom lid is just a cover for the cube which holds the Arduino brain.  Each stage in the x and y directions is an independent construction with square base and top using a DVD drive stage.  All stages have 4 wire cables with 0.1 inch socket connectors which go to the Arduino brain.
-
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/printer-photo.jpg)
-
-### Z axis stage Cube
-
-The Z axis stage is made by gluing a 3 inch square in the center of a 4 inch square then building up levels of cardboard to the stage, and a stack of cardboard on the stage which can hold the Sproing, also shown here.
-
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/z-cube.jpg)
+##  Geometron Icon Printer
  
+ - [link to program the Arduino UNO in the Printer Robot](arduino.html)
+ - [link to global image feed](globalimagefeed.html)
+ - [link to image aligner](alignimage.html)
+ - [link to icon tracer](traceicon.html)
+ - [link to icon set](iconset.html)
 
-Don't forget the rocks! Without rocks, this will instantly tip over.  Rocks are essential. Choose nice rocks so you can carry them around and use them for other stuff.  
-
-### Sproing 
-
-This soft spring loaded tool holder is the magic that makes this printer work on uneven random surfaces.  By being soft, a long travel distance makes it possible to make marks over uneven surfaces.  This is made from stiffer thicker plastic, thin soft sheet from milk bottles, duct tape and rubber bands. It uses the standard Geometron Rulers described in the [laser shapes scroll](scrolls/lasershapes).
- 
-This component is called the Sproing.
-
-HDPE sheet from milk bottle is cut out into 2 identical rectangles, each 4.5 inches by 0.6 inches. Lines for folds are drawn an inch and a quarter in from each end.
-
-![](https://i.imgur.com/R8boqTI.png)
-
-![](https://i.imgur.com/21Ez2DZ.jpg) 
-
-Cut and fold
-
-![](https://i.imgur.com/Z5VG3zk.jpg) 
-
-Z folds. About 90 degrees for each fold.
-
-![](https://i.imgur.com/ZGw7M94.jpg) 
-
-Get some stiff and thick but not too brittle plastic like polypropylene from the lid of a plastic storage tote.  Trace out with Geometron ruler 2 different rectangles, one is 3 inches by 0.6 inches and the other 3 by three quarters of an inch.  
-
-![](https://i.imgur.com/TqpZCXX.png)
-
-![](https://i.imgur.com/ir0Uxev.png)
-
-![](https://i.imgur.com/fNsZDEQ.jpg)
-
-Cut out rectangles with box cutter. 
-
-![](https://i.imgur.com/0tdlvae.jpg)
-
-Join it all up witch duct tape as shown:
-
-![](https://i.imgur.com/aot16bk.jpg)
-
-A doubled up small rubber band is used to mount the pen.
-
-![](https://i.imgur.com/40jY0VL.jpg)
-
-And finally the Sproing is fastened to the z stage on the DVD drive using another doubled up rubber band.  Stack of cardboard is built onto the stage, first with 2 part epoxy Gorilla Glue to connect the metal to the cardboard then with Elmer's glue for the subsequent layers of cardboard to cardboard, and build that up until it's a good stage for the Sproing with the pen or other tool.
-
-![](https://i.imgur.com/89jZWJY.jpg) 
-
-
-### Printer Electronics Kit(about $75 of parts):
+## Things to buy for the electronics kit:
 
  - [3 motor controller boards from Pololu(10x3=$30)](https://www.pololu.com/product/2966)
  - [Custom printed circuit board to connect Arduino to controllers and connectors($2/ea in lots of 20 with shipping)](https://www.pcbway.com/project/shareproject/Trash_Robot_main__brain__board.html)
@@ -249,63 +153,110 @@ And finally the Sproing is fastened to the z stage on the DVD drive using anothe
  - [Arduino Uno from Sparkfun($25, some off brand UNOs have power supply problems for this application, test any new board to see if it stalls out)](https://www.sparkfun.com/products/11021)
  - [9 pin socket headers](https://www.digikey.com/en/products/detail/samtec-inc/SSQ-109-03-T-S/1111949)
 
-
-The exact electronics kit for one printer is as follows, and is in the following photograph:
-
- - 8 inches of solid core wire for square ground ring in inside of controller cube
- - 1 inch solid core wire for jumper from Vcc to Vin on shield board
- - 14 inches of rainbow ribbon cable from black to red as shown
- - 3 pololu stepper driver boards
- - 1 custom shield board
- - Arduino UNO
- - 9 pin socket connector for cable from controller
- - 2 strips of breakable headers 32-40 pins per strip
- - 3 cables to connect the motors to the brain
- - 8 buttons
+## Kit Photo:
 
 ![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/kit.jpg)
 
-When assembled, the brain will look like this:
+## Control Panel Geometry
 
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-assembly.jpg)
-
-
-To create the Controller cube lid use the following patterns for the 4 inch outside square and 3 inch inside square.  These patterns can be printed on a laser cutter to get all the labels right and the holes and cuts.  Or they can be created using the Geometron ruler and shape set and a pen by hand.  
-
-[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/symbolfeed/controller-4inch-square.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/symbolfeed/controller-4inch-square.svg)
-
-[![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/symbolfeed/controller-3inch-square.svg)](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/symbolfeed/controller-3inch-square.svg)
-
-
-Photographs of inside and outside assembly:
-
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/controller-inside.jpg)
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/controller.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/controller.svg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/controller-outside.jpg)
 
-The base cube has the Arduino brain in it and a lid with the top cut off down to 
+## Assembled Electronics Kit Photo
 
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-box-front.jpg)
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/assembledkit.jpg)
 
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-box-back.jpg)
+![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/brain-assembly.jpg)
 
-The piece on the inside of the lid is 0.5 inches by 3 inches and centered.  The cutout in the back/base is 1 inch wide and 1.125 inches high.  This can be cut by hand or laser cut from a bottom board.
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/bottomcutout,jpg)
 
-The two bases can be just made from stacks of small cardboard cutouts cut by hand and big 4 inch square on top and bottom, or similar sized rectangular cutouts.  These can be changed in orientation to control what angle of viewer can see the print as it comes out when printing in different spaces and configurations.
+![](https://i.imgur.com/hz4C54Y.jpg)
 
-![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/stages.jpg)
+![](https://i.imgur.com/hz4C54Y.jpg)
 
-When all the parts are put together, further decorate with panels of whatever color, texture and material you want to make the thing look professional or have whatever aesthetic you want.
+##  DVD drive cables
 
-## Icon Design and Printing
+[Cables from Digikey to connect stepper motors in DVD drive stages to circuit board(about $10 for 3 of them)](https://www.digikey.com/en/products/detail/molex/2177971043/14637940)
 
-Find images, put them in the global image feed.  Align the image.  Trace the icon, and save it. Program the Arduino.  Hit go.  Hit stop to pause, hold down to reset to start new print. 
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/stagesraw.png)
 
- - [globalimagefeed.html](globalimagefeed.html)
- - [alignimage.html](alignimage.html)
- - [traceicon.html](traceicon.html)
- - [iconset.html](iconset.html)
- - [program arduino](programarduinoxyz.html)
+![](https://i.imgur.com/zvVKp6T.jpg)
+
+![](https://i.imgur.com/7KoLTuc.jpg)
+
+
+## Z axis Stage Assembly
+
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zbase.jpg)
+
+## X and Y axis stage assemblies
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/xystages.jpg)
+
+## Sproing
+
+Two each of a 0.5 inch by 4 inch thin HDPE sheet and two 0.5 inches by 3 inches thick stiffer plastic.  All held on by rubber bands as shown, as well as attached to the Z stage.
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/sproing.jpg)
+ 
+
+## Full assembly
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/printertower.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/fullprinter.jpg)
+
+[link to icon design scroll](scrolls/icons)
+
+[link back to home scroll](scrolls/home)
+
+## Arduino Shields
+
+ - hole in the bottom of box image with ruler position
+ - eagle files
+ - link to buy 
+ - list of components
+ - digikey shopping cart
+ - photo of assembly for neopixel
+ - photo of assembly for sense pyramid
+ - sense pyramid photo
+ - sense pyramid triangles
+ - link to neopixel code
+ - link to github repo
+ - link to pyramids 3 sense code
+ - photo of rotor setup
+
+## Card Magic
+
+## Bags and Flags
+
+## Hypercube Cart
+
+ - 200 W solar panel
+ - lead acid battery power plant with weather protection
+ - 12x8 inch laser cutter with 40 or 50 W CO2 laser, converted to geometron operation
+ - independent suspension and weather protection for laser cutter
+ - power output: 12 volt regulated, USB chargers, inverter for AC wall power
+ - power input: solar panels, wall charge, car charge, bicycle charger, wind, water
+ - Raspberry Pi Geometron Server with the whole system from [https://github.com/LafeLabs/hypercube](https://github.com/LafeLabs/hypercube)
+ - setup for pi with small screen, projector, portable screen for projector, geometron keyboard(s), mouse, USB thumb drive to get files onto pi crust
+ - neopixel strips lighting up the whole system
+ - arduino shields for neopixel, pyramids, motors, robots, etc, arduino setups, boards
+ - cube stack: lots of cubes of all kinds: card boxes, art boxes, parts boxes, planters with plants, fungi, compost, empties, parts to make more
+ - fully set up geometron icon printer to print on cards, cubes, and trash
+ - hanging green wall of plants
+ - tarp, awning for getting out of rain 
+ - folding chair to sit under awning
+ - neon green acrylic shape sets and rulers
+ - router to connect to mesh network or cell network and make a wifi hotspot
+
+# Geometron Hypercube: The Language
+
+The meaning of the Geometron Hypercube outside of the physical world is a set of geometric actions and symbols based on the fundamental symmetries of the Universe and some convenient choices about how to construct things using the tools available to us.  
+
+A Geometron Glyph is a sequence of Geometron Actions.  Every Geometron Action has an address in one of the two cubes.  Each cube is divided up into arrays of 8x8x8 smaller cubes, each of which represent a geometric action.  For every action there is a symbol, which is itself made up of geometric actions to construct that symbol.  
 
 
 ## Server
@@ -516,13 +467,6 @@ Use the Editor built into the system to create a new file called replicator.php 
  - qr code
  - [cube voxel AR memes](voxel.html)
 
-## Tarot
-
- - [link to quantum art](https://www.quantumart.org/)
- - links to wikipedia pages
- - [link to programmer from quantum art](https://www.quantumart.org/programarduinoxyz.html)
- - screen shots of list of icons shown in this scroll
- - photo of a 22 card deck
 
 
 ## Trash Robot Bags, Flags and Rags
