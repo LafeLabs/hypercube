@@ -1,13 +1,84 @@
 # Geometron Hypercube
 
-[user.php](user.php)
+
+## Trash Magic
+
+ Trash Magic self-replicating media which propagates the means of building a civilization entirely from trash and things we can grow.  
+
+## What is the Hypercube?
+
+The Geometron Hypercube is a duality of two things: The set of all cubes we make from trash which are the basis of our physical technology and a geometric language based on the fundamental symmetries of the Universe.  We construct both of these things in order to make it easier to build Trash Magic, using the power of geometry to build things which can be easily replicated and which can build a very wide range of useful objects.  The word "hypercube" here is used to represent generalizations of the cube into higher dimensions in a broad sense.  We take this to mean a set containing many different cubes of many different kinds.
+
+## The Cardboard Hypercube
+
+ - pencil/rulers/pens/brushes/shapes box
+ - marketing display
+ - card box for Geometron Trash Magic Cards
+ - mushroom farms
+ - worm farms
+ - [link to oyster mushroom cardboard farming](https://grocycle.com/grow-mushrooms-on-cardboard/)
+ - [buy worms to farm in compost bins](https://unclejimswormfarm.com/order-stuff/composting-worms/)
+ - tiny compost piles
+ - plants, seedlings
+ - dice
+ - parts bins
+ - motion sense control pyramids
+ - motor fixture
+ - geometron icon printer tower
+ - large collaborative art structures
+ - lamps
+
+[tiktok of hand cut cube without a laser](https://www.tiktok.com/t/ZTR8AFMJp)
+
+To make one cube, cut out 12 of these from corrugated cardboard, stack them into four panels 3 layers thick and glue them using Elmer's glue:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardside.jpg)
+
+.svg file for laser cutter:
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)
+
+Now cut out 3 of the bottom pieces, and stack them into a fifth glued panel. 
 
 
- - [user.php](user.php)
- - [scrolleditor.php](scrolleditor.php)
- - [mapeditor.php](mapeditor.php)
- - [symbol.html](symbol.html)
- - [index.html](index.html)
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardbottom.jpg)
+
+.svg file for laser cutter:
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)
+
+Assemble the sides into the base as shown:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardcorner.jpg)
+
+Cut out 4 inch squares, print on them, glue them to the panels, and hold it all together with rubber bands:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/touchgrass.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/dandylion0.png)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/road3cubes.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcubebox.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcube2.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcube3.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcube4.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cube-bottom-pattern.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cube-side-pattern.jpg)
+
+Every cube we produce in the Trash Robot Network is part of the Geometron Hypercube.  Therefore to grow the Hypercube, we produce and distribute as many cubes as we can, and always evolve the cubes to make them better over time and to solve specific problems to bring us closer to Trash Magic.
+
+
+
+
+
+
+
 
 
 The [TRASH ROBOT](https://www.trashrobot.org) network exists to grow a new civilization from the trash of the old one.  When all the elements of a good life are contained in media we can replicate freely from trash and things we can grow we call that [TRASH MAGIC](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks).  
