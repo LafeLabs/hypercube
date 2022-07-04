@@ -7,9 +7,11 @@
 
 ## What is the Hypercube?
 
-The Geometron Hypercube is a duality of two things: The set of all cubes we make from trash which are the basis of our physical technology and a geometric language based on the fundamental symmetries of the Universe.  We construct both of these things in order to make it easier to build Trash Magic, using the power of geometry to build things which can be easily replicated and which can build a very wide range of useful objects.  The word "hypercube" here is used to represent generalizations of the cube into higher dimensions in a broad sense.  We take this to mean a set containing many different cubes of many different kinds.
+The Geometron Hypercube is two things: The set of all of the 4 inch cubes we make from cardboard trash which are the basis of our physical technology and a geometric language based on the fundamental symmetries of the Universe.  We construct both of these things in order to make it easier to build Trash Magic, using the power of geometry to build things which can be easily replicated and which can build a very wide range of useful objects.  The word "hypercube" here is used to represent generalizations of the cube into higher dimensions in a broad sense.  We take this to mean a set containing many different cubes of many different kinds.
 
 ## The Cardboard Hypercube
+
+The cube is 4 inches on a side and can be used for:
 
  - pencil/rulers/pens/brushes/shapes box
  - marketing display
@@ -252,18 +254,132 @@ Two each of a 0.5 inch by 4 inch thin HDPE sheet and two 0.5 inches by 3 inches 
  - neon green acrylic shape sets and rulers
  - router to connect to mesh network or cell network and make a wifi hotspot
 
-# Geometron Hypercube: The Language
 
-The meaning of the Geometron Hypercube outside of the physical world is a set of geometric actions and symbols based on the fundamental symmetries of the Universe and some convenient choices about how to construct things using the tools available to us.  
+## Geometron: A Universal Language of Geometric Construction
 
-A Geometron Glyph is a sequence of Geometron Actions.  Every Geometron Action has an address in one of the two cubes.  Each cube is divided up into arrays of 8x8x8 smaller cubes, each of which represent a geometric action.  For every action there is a symbol, which is itself made up of geometric actions to construct that symbol.  
+Geometron is a language for creating geometric constructions using these symmetries.  We aim to build the most powerful possible interface between the human mind and the physical world.  To do this we build geometric actions based on the fundamental symmetries of the Universe.  We represent those actions using symbols we construct using that same set of actions.  We describe each of the geometric actions using a human language we understand, with phrases like "draw a unit circle", while also creating symbols which are used in the language to express itself.  
 
+Geometron is constructed independent of any one physical technology to implement it, or any one set of symbols.  It is a means of creating symbolic geometric languages.  The Geometron Hypercube elements which make up the language are an arrangement of geometric actions into cubes.  One cube contains all the actions which are not explicitly symbols, and the other cube represents all the symbols for the actions in the action cube.  Each cube is broken up into a crystal of 8 by 8 by 8 cubes.  Each of those cubes contains a sequence of cube addresses, which are geometric actions.  Thus the Geometron Hypercube is a model for constructing geometric and symbolic languages which we can build up by hand using pencil and paper, and then implement in any computer language relatively quickly.  
 
-## Server
+A Geometron Glyph is a sequence of these geometric actions which are represented by addresses in the Hypercube.  These glyphs are abstractions which can be expressed as sequences of symbols in any format(a browser, a pen and paper, a printer or plotter) but which can apply to ***any kind of physical construction***.  This might include movements of motors in robotic machines which carry out automation of production, like laser cutters, electron beam writing tools, milling tools or 3d printer heads.  Or it might include lighting up pixels on a screen or deflecting the beam of a cathode ray tube.  
+
+Addresses in the Hypercube all begin with "0" to indicate that they are base 8(digits are all between 0 and 7).  All addresses in the symbol cube have a "1" added.  The Action cube is divided by types of operation into tablets, which are each arrays of 8x8 = 64 actions which can be arranged in a square on a chess board. The planar operations which are used to construct symbols on computers are all in the range from 0300 to 0377(with matching symbols at 01300 to 01377).  The actions in the range from 0200 to 0277(with matching symbols at 01200 to 01277) are all sequences of either planar actions in the 03xy range or other actions in the 02xy range.  Thus we can build up complex structures which call other sub-structures.  This is of critical value for design of technology, as we can create complex systems of systems built up from very simple components in a fractal way.  Addresses in the range from 040 to 0176 correspond to the ASCII codes for the characters which can be printed and have a symbol on standard US keyboards.  Fonts in English are stored as sequences of actions in the range from 01040 to 01176.  The contents of each of the ASCII addresses are actions which are triggered when that key is pressed.  This mapping is what is represented physically in the custom painted Geometron keyboards we build.  
+
+ 
+### Geometron Keyboards
+
+We assign keys on physical keyboards to symbols which represent actions in order to make it easier to interact with Geometron on a keyboard.  We make these with paint pens, pain brushes, nail polish, stickers, or any other means of decorating keyboards as follows:
 
 ![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/keyboard-screenshot.png)
 
 ![](https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/cube/uploadimages/keyboard-photo.jpg)
+
+These are edited on a Geometron server using the keyboard editing page linked from the main symbol editor.
+
+### Shape Sets
+
+We can use Geometron to create symbolic languages made up of shapes which can be called using their own symbols.  These can be used to create things like the Action Geometry shapes, electronic schematic diagrams, logic gates, chemical diagrams, architectural diagrams, illustrations, and really any kind of symbolic language including for technology design like circuit layout for fabrication.
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cube/uploadimages/shapetable.png)
+
+Some examples of constructions using shape sets
+
+![](https://i.imgur.com/LKa7MG0.png)
+![](https://i.imgur.com/GSKJ9dR.png)
+![](https://i.imgur.com/BP5St2L.png)
+![](https://i.imgur.com/5zawFOk.png)
+![](https://i.imgur.com/WM7oOdo.png)
+![](https://i.imgur.com/YX66htB.png)
+![](https://i.imgur.com/wVPMnfE.png)
+![](https://i.imgur.com/nhY7npD.png)
+
+## Fonts
+
+Fonts correspond to the addresses in the symbol cube which map to the key actions in the action cube. I.e. the address is the ASCII value plus 01000 base 8.
+
+Dot Matrix Font:
+
+![](https://i.imgur.com/z8FANpZ.png)
+
+Laser cut font:
+
+![](https://i.imgur.com/tbCx8KM.png)
+
+Katakana dot matrix font:
+
+![](https://i.imgur.com/nZNDjyM.png)
+
+
+## Symmetries of the Universe
+
+Symmetries are properties of things which remain the same under geometric transformation.  The Universe as we find it displays certain symmetries again and again in both the living and non living world.  Perhaps the most fundamental of these are crystal lattices, where movement in certain directions by certain distances leads to a repeating of patterns.  Perhaps the next most common symmetries we see in Nature are those of certain special rotations: bilateral symmetry, trilateral symmetry, fourfold, fivefold, sixfold, eightfold, tenfold, and twelvefold.  
+
+Each of these special rotational symmetries has certain scales which are built into them.  When we work with squares and octagons, we find the square root of two and two coming up again and again in 45 degree angle constructions.  When we work with hexagons and equilateral triangles, we get scales by the square root of three, three, and two.  And finally anything with fivefold symmetry has the Golden Ratio built into its construction.  
+
+Movement by one unit, just moving from point to point:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/unitmove.svg)
+
+Repeated movements can create crystal lattices, like the checkerboard pattern:
+
+![black and white squares crystal](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/checkerboard.svg)
+
+A circle is totally symmetric around rotations:
+
+![circle](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/circle.svg)
+
+Bilateral symmetry is particularly common in living things:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/symmetrysymbol2.svg)
+
+Threefold symmetry:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/symmetrysymbol3.svg)
+
+Fourfold symmetry
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/symmetrysymbol4.svg)
+
+Fivefold symmetry:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/symmetrysymbol5.svg)
+
+Sixfold symmetry:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/symmetrysymbol6.svg)
+
+Fractal based on triangles:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/fractal3.svg)
+
+Fractal based on squares:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/fractal4.svg)
+
+Fractal based on hexagons:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/fractal5.svg)
+
+Fractal based on hexagons:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/fractal6.svg)
+
+Symmetry in Nature:
+
+![6 fold symmetry in nature](https://upload.wikimedia.org/wikipedia/commons/9/96/A_Perfect_Pair_Daffodills_%28Narcissus%29_-_8.jpg)
+
+![5 and 6 fold symmetry in biochemistry](https://upload.wikimedia.org/wikipedia/commons/1/1f/Guanine-3D-balls.png)
+
+![pentagons on a crystal face from wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/Pyrite-184681.jpg)
+
+![buttercup image from wikipedia](https://upload.wikimedia.org/wikipedia/commons/1/1d/The-First-Oxalis-of-Winter-2015-IZE-11559.jpg)
+
+## Server
+
+The server runs the PI CRUST media network which hosts articles, books, videos, music, podcasts and web pages on local servers over local networks.  We can share books on any format, but there is a native book format for the system called the Pibrary format which is collections of "scrolls" in Markdown format. "Maps" are a sort of generalized meme, layers of images, text and symbols arranged geometrically and with hyperlinks both to other web pages and to other maps on the server.  Maps and Scrolls together can be used to create any kind of static web content we want, and are used for both private web content and for public pages to lead people to the physical media nodes. 
+
+Servers run on a zero security model where there is no private data, no users, no encryption, no property and no commerce or money of any kind.  The *only* information ever put on any server ever is that which we aim to freely share as widely as possible, primarily the means of replication of our system the Hypercube and associated Trash Magic. 
+
 
 ### Install on Pi
 
