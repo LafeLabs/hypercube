@@ -2,7 +2,12 @@
 ## [HOME](scrolls/home)
 
 # geometron
- 
+
+ - [symbol.html](symbol.html) 
+ - [symbolfeed.html](symbolfeed.html)
+ - [voxel.html](voxel.html)
+ - []
+
 ## Symmetries of the Universe
 
 Symmetries are properties of things which remain the same under geometric transformation.  The Universe as we find it displays certain symmetries again and again in both the living and non living world.  Perhaps the most fundamental of these are crystal lattices, where movement in certain directions by certain distances leads to a repeating of patterns.  Perhaps the next most common symmetries we see in Nature are those of certain special rotations: bilateral symmetry, trilateral symmetry, fourfold, fivefold, sixfold, eightfold, tenfold, and twelvefold.  
@@ -78,6 +83,7 @@ A Geometron Glyph is a sequence of these geometric actions which are represented
 
 Addresses in the Hypercube all begin with "0" to indicate that they are base 8(digits are all between 0 and 7).  All addresses in the symbol cube have a "1" added.  The Action cube is divided by types of operation into tablets, which are each arrays of 8x8 = 64 actions which can be arranged in a square on a chess board. The planar operations which are used to construct symbols on computers are all in the range from 0300 to 0377(with matching symbols at 01300 to 01377).  The actions in the range from 0200 to 0277(with matching symbols at 01200 to 01277) are all sequences of either planar actions in the 03xy range or other actions in the 02xy range.  Thus we can build up complex structures which call other sub-structures.  This is of critical value for design of technology, as we can create complex systems of systems built up from very simple components in a fractal way.  Addresses in the range from 040 to 0176 correspond to the ASCII codes for the characters which can be printed and have a symbol on standard US keyboards.  Fonts in English are stored as sequences of actions in the range from 01040 to 01176.  The contents of each of the ASCII addresses are actions which are triggered when that key is pressed.  This mapping is what is represented physically in the custom painted Geometron keyboards we build.  
 
+ - [symbol.html](symbol.html)
 
 
 [home](scrolls/home)

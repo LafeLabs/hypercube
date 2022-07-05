@@ -7,5 +7,9 @@
   "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardcorner.jpg",
   "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/touchgrass.jpg",
   "https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg",
-  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg"
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg",
+  "https://i.imgur.com/8722ISz.jpg",
+  "https://i.imgur.com/nvWedsQ.jpg",
+  "https://i.imgur.com/NzCdPkc.jpg",
+  "https://i.imgur.com/dN9OHSj.jpg"
 ]
