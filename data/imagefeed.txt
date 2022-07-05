@@ -11,5 +11,7 @@
   "https://i.imgur.com/8722ISz.jpg",
   "https://i.imgur.com/nvWedsQ.jpg",
   "https://i.imgur.com/NzCdPkc.jpg",
-  "https://i.imgur.com/dN9OHSj.jpg"
+  "https://i.imgur.com/dN9OHSj.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcubebox.jpg",
+  "https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/zoomcube3.jpg"
 ]

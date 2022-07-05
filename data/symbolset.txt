@@ -1,5 +1,5 @@
 {
-    "server": "https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/",
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "symbols": [
         "bottom.svg",
         "checkerboard.svg",
