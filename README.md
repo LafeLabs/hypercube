@@ -403,12 +403,12 @@ sudo apt install apache2 -y
 sudo apt install php libapache2-mod-php -y
 ```
 
-## Install geometron magic with this document for self-documentation and replication
+## Install hypercube with this document for self-documentation and replication
 
 ```
 cd /var/www/html
 sudo rm index.html
-sudo curl -o replicator.php https://raw.githubusercontent.com/LafeLabs/geometronmagic/main/php/replicator.txt
+sudo curl -o replicator.php https://raw.githubusercontent.com/LafeLabs/hypercube/main/php/replicator.txt
 cd ..
 sudo chmod -R 0777 *
 cd html
@@ -529,8 +529,6 @@ Click on "Explorer" to get access to where the files are.  From the main directo
 ![](https://i.imgur.com/EpHYYOd.png)
 
 Point a web browser on the same computer to [http://localhost/](http://localhost), then click on replicator.php.  This should replicate the whole system into the directory.  When this is done, click the link to go to the main page.  
-
-Now you can go [make a new coin](scrolls/newcoin) using your server.
 
 ### Install on Android
 
