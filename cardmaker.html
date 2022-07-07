@@ -32,33 +32,37 @@
 
 <table id = "maintable">
     <tr>
+        <td>Arduino String:</td>
+        <td><input id = "arduinoinput"/></td>
+    </tr>
+    <tr>
         <td>glyph code:</td>
         <td>
             <input id = "glyphinput">
         </td>
     </tr>
     <tr>
-        <td class = "button">leftUpperIcon:</td>
+        <td>leftUpperIcon:</td>
         <td><input id  = "leftUpperIconInput"/></td>
     </tr>
     <tr>
-        <td class = "button">middleUpperIcon:</td>
+        <td>middleUpperIcon:</td>
         <td><input id  = "middleUpperIconInput"/></td>
     </tr>
     <tr>
-        <td class = "button">rightUpperIcon:</td>
+        <td>rightUpperIcon:</td>
         <td><input id  = "rightUpperIconInput"/></td>
     </tr>
     <tr>
-        <td class = "button">leftLowerIcon:</td>
+        <td>leftLowerIcon:</td>
         <td><input id  = "leftLowerIconInput"/></td>
     </tr>
     <tr>
-        <td class = "button">middleLowerIcon:</td>
+        <td>middleLowerIcon:</td>
         <td><input id  = "middleLowerIconInput"/></td>
     </tr>
     <tr>
-        <td class = "button">rightLowerIcon:</td>
+        <td>rightLowerIcon:</td>
         <td><input id  = "rightLowerIconInput"/></td>
     </tr>
 </table>
@@ -83,6 +87,7 @@
 <a id = "iconfeedlink" href = "iconfeed.html">iconfeed.html</a>
 
 <textarea id = "textio"></textarea>
+<textarea id = "arduinocode"></textarea>
 
 <script>
 
@@ -93,39 +98,51 @@ iconbuttons = document.getElementById("cardbox").getElementsByClassName("button"
 
 iconbuttons[0].style.backgroundColor = "#80808080";
 
+document.getElementById("arduinoinput").value = "";
 iconbuttons[0].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
     this.style.backgroundColor = "#80808080";
     document.getElementById("glyphinput").value = card.leftUpperIcon;
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.leftUpperIcon);
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.leftUpperIcon) + "\";\n\n" + arduinocode;
+    
 }
 iconbuttons[1].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
     this.style.backgroundColor = "#80808080";
     document.getElementById("glyphinput").value = card.middleUpperIcon;
+    
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.middleUpperIcon);
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.middleUpperIcon) + "\";\n\n" + arduinocode;
 
 }
 iconbuttons[2].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
     document.getElementById("glyphinput").value = card.rightUpperIcon;
-    
     this.style.backgroundColor = "#80808080";
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.rightUpperIcon);
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.rightUpperIcon) + "\";\n\n" + arduinocode;
+    
 }
 iconbuttons[3].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
     document.getElementById("glyphinput").value = card.leftLowerIcon;
-
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.leftLowerIcon);
     this.style.backgroundColor = "#80808080";
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.leftLowerIcon) + "\";\n\n" + arduinocode;
+    
 }
 iconbuttons[4].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
     document.getElementById("glyphinput").value = card.middleLowerIcon;
-
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.middleLowerIcon);
     this.style.backgroundColor = "#80808080";
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.middleLowerIcon) + "\";\n\n" + arduinocode;
 
 }
 iconbuttons[5].onclick = function(){
@@ -133,7 +150,9 @@ iconbuttons[5].onclick = function(){
     buttonclear();
     this.style.backgroundColor = "#80808080";
     document.getElementById("glyphinput").value = card.rightLowerIcon;
-
+    document.getElementById("arduinoinput").value = bytecode2ascii(card.rightLowerIcon);
+    document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(card.rightLowerIcon) + "\";\n\n" + arduinocode;
+    
 }
 
 function buttonclear(){
@@ -200,6 +219,9 @@ function loadcoinfeed(){
         newdiv.onclick = function(){
             glyph = this.getElementsByClassName("data")[0].innerHTML;
             document.getElementById("glyphinput").value = glyph;
+                document.getElementById("arduinoinput").value = bytecode2ascii(glyph);
+                
+            document.getElementById("arduinocode").value = "char coin[] = \"" + bytecode2ascii(glyph) + "\";\n\n" + arduinocode;
             if(iconPosition == "leftUpper"){
                 card.leftUpperIcon = glyph;
             }
@@ -316,6 +338,56 @@ document.getElementById("importbutton").onclick = function(){
     savecard();
 }
 
+function bytecode2ascii(bytecode){
+    var bytesequence = bytecode.split(",");
+    var outstring = "";
+    for(var index = 0;index < bytesequence.length;index++){
+        var robotaction = parseInt(bytesequence[index],8);
+        if(robotaction == 0500){
+            outstring += "A";
+        }
+        if(robotaction == 0501){
+            outstring += "B";
+        }
+        if(robotaction == 0502){
+            outstring += "C";
+        }
+        if(robotaction == 0503){
+            outstring += "D";
+        }
+        if(robotaction == 0504){
+            outstring += "E";
+        }
+        if(robotaction == 0505){
+            outstring += "F";
+        }
+        if(robotaction == 0506){
+            outstring += "G";
+        }
+        if(robotaction == 0507){
+            outstring += "H";
+        }
+        if(robotaction > 01040 && robotaction < 01177){
+            outstring += bytecode2ascii(mainGVM.hypercube[robotaction]);
+        }
+    }
+    return outstring;
+
+}
+
+arduinocode = "";
+
+//load data/arduinocode.txt
+var httpcarduino = new XMLHttpRequest();
+httpcarduino.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        arduinocode = this.responseText;
+        document.getElementById("arduinocode").value = "char coin[] = \"\";\n\n" + arduinocode;
+    };
+}
+httpcarduino.open("GET", "fileloader.php?filename=data/arduinocodexyz.txt", true);
+httpcarduino.send();
+
 </script>
 <style>
 body{
@@ -332,6 +404,17 @@ input,textarea{
     bottom:0px;
     width:200px;
     height:200px;
+}
+#arduinocode{
+    position:absolute;
+    right:320px;
+    bottom:0px;
+    width:200px;
+    height:200px;
+    background-color:white;
+    color:black;
+    border:solid;
+    border-color:#00878F;
 }
 #maintable{
     position:absolute;
@@ -354,7 +437,7 @@ input,textarea{
 }
 #importbutton{
     position:absolute;
-    right:300px;
+    right:220px;
     bottom:10px;
     border:solid;
     border-radius:5px;
@@ -362,12 +445,12 @@ input,textarea{
 }
 #cardlink{
     position:absolute;
-    right:300px;
+    right:220px;
     bottom:40px;
 }
 #iconfeedlink{
     position:absolute;
-    right:300px;
+    right:220px;
     bottom:60px;
     
 }
