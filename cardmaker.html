@@ -38,40 +38,49 @@
         </td>
     </tr>
     <tr>
-        <td id = "leftUpperButton" class = "button">leftUpperIcon:</td>
+        <td class = "button">leftUpperIcon:</td>
         <td><input id  = "leftUpperIconInput"/></td>
     </tr>
     <tr>
-        <td id = "middleUpperButton" class = "button">middleUpperIcon:</td>
+        <td class = "button">middleUpperIcon:</td>
         <td><input id  = "middleUpperIconInput"/></td>
     </tr>
     <tr>
-        <td id = "rightUpperButton" class = "button">rightUpperIcon:</td>
+        <td class = "button">rightUpperIcon:</td>
         <td><input id  = "rightUpperIconInput"/></td>
     </tr>
     <tr>
-        <td id = "leftLowerButton" class = "button">leftLowerIcon:</td>
+        <td class = "button">leftLowerIcon:</td>
         <td><input id  = "leftLowerIconInput"/></td>
     </tr>
     <tr>
-        <td id = "middleLowerButton" class = "button">middleLowerIcon:</td>
+        <td class = "button">middleLowerIcon:</td>
         <td><input id  = "middleLowerIconInput"/></td>
     </tr>
     <tr>
-        <td id = "rightLowerButton" class = "button">rightLowerIcon:</td>
+        <td class = "button">rightLowerIcon:</td>
         <td><input id  = "rightLowerIconInput"/></td>
     </tr>
 </table>
 
 <div id = "iconsbox"></div>
 
+
+
 <div id = "cardbox">
+    <div id = "leftUpperButton" class = "button"></div>
+    <div id = "middleUpperButton" class = "button"></div>
+    <div id = "rightUpperButton" class = "button"></div>
+    <div id = "leftLowerButton" class = "button"></div>
+    <div id = "middleLowerButton" class = "button"></div>
+    <div id = "rightLowerButton" class = "button"></div>
+
     <canvas id = "card"></canvas>
 </div>
 
 <div id = "importbutton" class = "button">IMPORT</div>
 <a id = "cardlink" href = "card.html">card.html</a>
-<a id = "iconsetlink" href = "iconset.html">iconset.html</a>
+<a id = "iconfeedlink" href = "iconfeed.html">iconfeed.html</a>
 
 <textarea id = "textio"></textarea>
 
@@ -79,48 +88,57 @@
 
 iconPosition = "leftUpper";
 
-iconbuttons = document.getElementById("maintable").getElementsByClassName("button");
-iconbuttons[0].style.backgroundColor = "white";
+iconbuttons = document.getElementById("cardbox").getElementsByClassName("button");
+
+
+iconbuttons[0].style.backgroundColor = "#80808080";
 
 iconbuttons[0].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "#80808080";
+    document.getElementById("glyphinput").value = card.leftUpperIcon;
 }
 iconbuttons[1].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "#80808080";
+    document.getElementById("glyphinput").value = card.middleUpperIcon;
+
 }
 iconbuttons[2].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
+    document.getElementById("glyphinput").value = card.rightUpperIcon;
     
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "#80808080";
 }
 iconbuttons[3].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
-    
-    this.style.backgroundColor = "white";
+    document.getElementById("glyphinput").value = card.leftLowerIcon;
+
+    this.style.backgroundColor = "#80808080";
 }
 iconbuttons[4].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
+    document.getElementById("glyphinput").value = card.middleLowerIcon;
 
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "#80808080";
 
 }
 iconbuttons[5].onclick = function(){
     iconPosition = this.id.split("Button")[0];
     buttonclear();
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "#80808080";
+    document.getElementById("glyphinput").value = card.rightLowerIcon;
 
 }
 
 function buttonclear(){
     for(var index = 0;index < iconbuttons.length;index++){
-        iconbuttons[index].style.backgroundColor = "#cecdcb";
+        iconbuttons[index].style.backgroundColor = "#ffffff00";
     }
 }
 
@@ -293,7 +311,7 @@ document.getElementById("rightLowerIconInput").onchange = function(){
 }
 
 document.getElementById("importbutton").onclick = function(){
-    card = JSON.parse(this.value);
+    card = JSON.parse(document.getElementById("textio").value);
     loadcard();
     savecard();
 }
@@ -347,7 +365,7 @@ input,textarea{
     right:300px;
     bottom:40px;
 }
-#iconsetlink{
+#iconfeedlink{
     position:absolute;
     right:300px;
     bottom:60px;
@@ -364,6 +382,57 @@ input,textarea{
 }
 .button:active{
     background-color:yellow;
+}
+#leftUpperButton{
+    position:absolute;
+    left:1%;
+    top:1%;
+    width:32%;
+    height:48%;
+    border:solid;
+}
+#middleUpperButton{
+    position:absolute;
+    left:33%;
+    top:1%;
+    width:32%;
+    height:48%;
+    border:solid;
+}
+#rightUpperButton{
+    position:absolute;
+    right:1%;
+    top:1%;
+    width:32%;
+    height:48%;
+    border:solid;
+}
+
+#leftLowerButton{
+    position:absolute;
+    left:1%;
+    bottom:1%;
+    width:32%;
+    height:48%;
+    border:solid;
+}
+
+#middleLowerButton{
+    position:absolute;
+    left:33%;
+    bottom:1%;
+    width:32%;
+    height:48%;
+    border:solid;
+}
+
+#rightLowerButton{
+    position:absolute;
+    right:1%;
+    bottom:1%;
+    width:32%;
+    height:48%;
+    border:solid;
 }
 
 </style>
