@@ -3,6 +3,7 @@
         "README.md",
         "alignimage.html",
         "arduino.html",
+        "card.html",
         "cardmaker.html",
         "controls.html",
         "font.html",

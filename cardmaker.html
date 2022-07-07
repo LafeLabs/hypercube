@@ -69,7 +69,8 @@
     <canvas id = "card"></canvas>
 </div>
 
-
+<div id = "importbutton" class = "button">IMPORT</div>
+<a id = "cardlink" href = "card.html">card.html</a>
 <textarea id = "textio"></textarea>
 
 <script>
@@ -222,6 +223,12 @@ document.getElementById("rightLowerIconInput").onchange = function(){
     loadcard();
 }
 
+document.getElementById("importbutton").onclick = function(){
+    card = JSON.parse(this.value);
+    loadcard();
+    savecard();
+}
+
 </script>
 <style>
 body{
@@ -257,6 +264,20 @@ input,textarea{
     bottom:0px;
     width:200px;
     overflow:scroll;
+}
+#importbutton{
+    position:absolute;
+    right:300px;
+    bottom:10px;
+    border:solid;
+    border-radius:5px;
+    text-align:center;
+}
+#cardlink{
+    position:absolute;
+    right:300px;
+    bottom:40px;
+
 }
 .data{
     display:none;
