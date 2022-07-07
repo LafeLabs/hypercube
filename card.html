@@ -33,7 +33,21 @@
 <div id = "cardbox">
     <canvas id = "card"></canvas>
 </div>
+
+<div id = "linkbox">
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+
+</div>
+
 <script>
+links = document.getElementById("linkbox").getElementsByTagName("a");
+
 maincanvas = document.getElementById("card");
 
 if(innerWidth > innerHeight){
@@ -45,22 +59,65 @@ if(innerWidth > innerHeight){
     mainGVM = new GVM(maincanvas,3*square + 20,2*square + 20);
     mainGVM.x0 = 10;
     mainGVM.y0 = square + 10;
+    
+    document.getElementById("linkbox").style.width = (mainGVM.width - 20).toString() + "px";
+    document.getElementById("linkbox").style.height = (mainGVM.height - 20).toString() + "px";
 
+    document.getElementById("linkbox").style.left = Math.round(10 + (innerWidth - (3*square + 20))/2).toString() + "px";
+    
+    document.getElementById("linkbox").style.top = Math.round(10 + (innerHeight - (2*square + 20))/2).toString() + "px";
+    
+    for(var index = 0;index < links.length;index++){
+        links[index].style.width = square.toString() + "px";
+        links[index].style.height = square.toString() + "px";
+    }
+    links[1].style.left = square.toString() + "px";
+    links[2].style.left = (2*square).toString() + "px";
+    links[3].style.top = square.toString() + "px";
+    links[4].style.top = square.toString() + "px";
+    links[5].style.top = square.toString() + "px";
+    links[4].style.left = (2*square).toString() + "px";
+    links[5].style.left = square.toString() + "px";
+
+    
 }
 else{
     square = innerWidth/2 - 50;
 
     document.getElementById("cardbox").style.left = Math.round((innerWidth - (2*square + 20))/2).toString() + "px";
-    
     document.getElementById("cardbox").style.top = Math.round((innerHeight - (3*square + 20))/2).toString() + "px";
+    
     
     mainGVM = new GVM(maincanvas,2*square + 20,3*square + 20);
     mainGVM.x0 = square + 10;
     mainGVM.y0 = 10;
     
     mainGVM.theta0 = 0;
+
+    document.getElementById("linkbox").style.left = Math.round(10+ (innerWidth - (2*square + 20))/2).toString() + "px";
+    document.getElementById("linkbox").style.top = Math.round(10+(innerHeight - (3*square + 20))/2).toString() + "px";
+    
+    document.getElementById("linkbox").style.width = (mainGVM.width - 20).toString() + "px";
+    document.getElementById("linkbox").style.height = (mainGVM.height - 20).toString() + "px";
+    for(var index = 0;index < links.length;index++){
+        links[index].style.width = square.toString() + "px";
+        links[index].style.height = square.toString() + "px";
+    }
+    
+    links[0].style.left = square.toString() + "px";
+    links[1].style.left = square.toString() + "px";
+    links[2].style.left = square.toString() + "px";
+    links[1].style.top = square.toString() + "px";
+    links[2].style.top = (2*square).toString() + "px";
+    links[3].style.left = "0px";
+    links[4].style.left = "0px";
+    links[5].style.left = "0px";
+    links[4].style.top = square.toString() + "px";
+    links[5].style.top = (2*square).toString() + "px";
+    
     
 }
+
 
 mainGVM.importbytecode(hypercube);    
 
@@ -97,6 +154,12 @@ function loadcard(){
     mainGVM.actionSequence("0300,0331,0333,0333,0336,0330,0333,0336,0336,");
     mainGVM.actionSequence(card.rightLowerIcon);
 
+    links[0].href = card.leftUpperLink;
+    links[1].href = card.middleUpperLink;
+    links[2].href = card.rightUpperLink;
+    links[3].href = card.leftLowerLink;
+    links[4].href = card.middleLowerLink;
+    links[5].href = card.rightLowerLink;
     
 }
 
@@ -149,6 +212,18 @@ input,textarea{
     right:300px;
     bottom:40px;
 
+}
+#linkbox{
+    position:absolute;
+    left:10px;
+    top:10px;
+    width:100px;
+    height:100px;
+}
+#linkbox a{
+    position:absolute;
+    border:solid;
+    border-color:red;
 }
 .data{
     display:none;

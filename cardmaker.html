@@ -32,36 +32,52 @@
 
 <table id = "maintable">
     <tr>
+        <td></td>
+        <Td></Td>
         <td>Arduino String:</td>
         <td><input id = "arduinoinput"/></td>
     </tr>
     <tr>
+        <td></td>
+        <td></td>
         <td>glyph code:</td>
         <td>
             <input id = "glyphinput">
         </td>
     </tr>
     <tr>
+        <td>leftUpperLink</td>
+        <td><input id = "leftUpperLinkInput"/></td>
         <td>leftUpperIcon:</td>
         <td><input id  = "leftUpperIconInput"/></td>
     </tr>
     <tr>
+        <td>middleUpperLink</td>
+        <td><input id = "middleUpperLinkInput"/></td>
         <td>middleUpperIcon:</td>
         <td><input id  = "middleUpperIconInput"/></td>
     </tr>
     <tr>
+        <td>rightUpperLink:</td>
+        <td><input id  = "rightUpperLinkInput"/></td>
         <td>rightUpperIcon:</td>
         <td><input id  = "rightUpperIconInput"/></td>
     </tr>
     <tr>
+        <td>leftLowerLink:</td>
+        <td><input id  = "leftLowerLinkInput"/></td>
         <td>leftLowerIcon:</td>
         <td><input id  = "leftLowerIconInput"/></td>
     </tr>
     <tr>
+        <td>middleLowerLink:</td>
+        <td><input id  = "middleLowerLinkInput"/></td>
         <td>middleLowerIcon:</td>
         <td><input id  = "middleLowerIconInput"/></td>
     </tr>
     <tr>
+        <td>rightLowerLink:</td>
+        <td><input id  = "rightLowerLinkInput"/></td>
         <td>rightLowerIcon:</td>
         <td><input id  = "rightLowerIconInput"/></td>
     </tr>
@@ -78,7 +94,6 @@
     <div id = "leftLowerButton" class = "button"></div>
     <div id = "middleLowerButton" class = "button"></div>
     <div id = "rightLowerButton" class = "button"></div>
-
     <canvas id = "card"></canvas>
 </div>
 
@@ -270,6 +285,14 @@ function loadcard(){
     document.getElementById("middleLowerIconInput").value = card.middleLowerIcon;
     document.getElementById("rightLowerIconInput").value = card.rightLowerIcon;    
     
+    
+    document.getElementById("leftUpperLinkInput").value = card.leftUpperLink;
+    document.getElementById("middleUpperLinkInput").value = card.middleUpperLink;
+    document.getElementById("rightUpperLinkInput").value = card.rightUpperLink;
+    document.getElementById("leftLowerLinkInput").value = card.leftLowerLink;
+    document.getElementById("middleLowerLinkInput").value = card.middleLowerLink;
+    document.getElementById("rightLowerLinkInput").value = card.rightLowerLink;    
+    
     document.getElementById("textio").value = JSON.stringify(card,null,"  ");
     
     mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
@@ -303,6 +326,7 @@ document.getElementById("leftUpperIconInput").onchange = function(){
     savecard();
     loadcard();
 }
+
 document.getElementById("middleUpperIconInput").onchange = function(){
     card.middleUpperIcon = this.value;
     savecard();
@@ -337,6 +361,32 @@ document.getElementById("importbutton").onclick = function(){
     loadcard();
     savecard();
 }
+
+document.getElementById("leftUpperLinkInput").onchange = function(){
+    card.leftUpperLink = this.value;
+    savecard();
+}
+document.getElementById("middleUpperLinkInput").onchange = function(){
+    card.middleUpperLink = this.value;
+    savecard();
+}
+document.getElementById("rightUpperLinkInput").onchange = function(){
+    card.rightUpperLink = this.value;
+    savecard();
+}
+document.getElementById("leftLowerLinkInput").onchange = function(){
+    card.leftLowerLink = this.value;
+    savecard();
+}
+document.getElementById("middleLowerLinkInput").onchange = function(){
+    card.middleLowerLink = this.value;
+    savecard();
+}
+document.getElementById("leftLowerLinkInput").onchange = function(){
+    card.leftLowerLink = this.value;
+    savecard();
+}
+
 
 function bytecode2ascii(bytecode){
     var bytesequence = bytecode.split(",");
