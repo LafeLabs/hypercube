@@ -31,34 +31,34 @@
 <body>    
 
 <table id = "maintable">
-    <td>
+    <tr>
         <td>glyph code:</td>
         <td>
             <input id = "glyphinput">
         </td>
-    </td>
+    </tr>
     <tr>
-        <td>leftUpperIcon:</td>
+        <td id = "leftUpperButton" class = "button">leftUpperIcon:</td>
         <td><input id  = "leftUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>middleUpperIcon:</td>
+        <td id = "middleUpperButton" class = "button">middleUpperIcon:</td>
         <td><input id  = "middleUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>rightUpperIcon:</td>
+        <td id = "rightUpperButton" class = "button">rightUpperIcon:</td>
         <td><input id  = "rightUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>leftLowerIcon:</td>
+        <td id = "leftLowerButton" class = "button">leftLowerIcon:</td>
         <td><input id  = "leftLowerIconInput"/></td>
     </tr>
     <tr>
-        <td>middleLowerIcon:</td>
+        <td id = "middleLowerButton" class = "button">middleLowerIcon:</td>
         <td><input id  = "middleLowerIconInput"/></td>
     </tr>
     <tr>
-        <td>rightLowerIcon:</td>
+        <td id = "rightLowerButton" class = "button">rightLowerIcon:</td>
         <td><input id  = "rightLowerIconInput"/></td>
     </tr>
 </table>
@@ -71,9 +71,58 @@
 
 <div id = "importbutton" class = "button">IMPORT</div>
 <a id = "cardlink" href = "card.html">card.html</a>
+<a id = "iconsetlink" href = "iconset.html">iconset.html</a>
+
 <textarea id = "textio"></textarea>
 
 <script>
+
+iconPosition = "leftUpper";
+
+iconbuttons = document.getElementById("maintable").getElementsByClassName("button");
+iconbuttons[0].style.backgroundColor = "white";
+
+iconbuttons[0].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+    this.style.backgroundColor = "white";
+}
+iconbuttons[1].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+    this.style.backgroundColor = "white";
+}
+iconbuttons[2].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+    
+    this.style.backgroundColor = "white";
+}
+iconbuttons[3].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+    
+    this.style.backgroundColor = "white";
+}
+iconbuttons[4].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+
+    this.style.backgroundColor = "white";
+
+}
+iconbuttons[5].onclick = function(){
+    iconPosition = this.id.split("Button")[0];
+    buttonclear();
+    this.style.backgroundColor = "white";
+
+}
+
+function buttonclear(){
+    for(var index = 0;index < iconbuttons.length;index++){
+        iconbuttons[index].style.backgroundColor = "#cecdcb";
+    }
+}
 
 square = 200;
 maincanvas = document.getElementById("card");
@@ -133,7 +182,27 @@ function loadcoinfeed(){
         newdiv.onclick = function(){
             glyph = this.getElementsByClassName("data")[0].innerHTML;
             document.getElementById("glyphinput").value = glyph;
+            if(iconPosition == "leftUpper"){
+                card.leftUpperIcon = glyph;
+            }
+            if(iconPosition == "middleUpper"){
+                card.middleUpperIcon = glyph;
+            }
+            if(iconPosition == "rightUpper"){
+                card.rightUpperIcon = glyph;
+            }
+            if(iconPosition == "leftLower"){
+                card.leftLowerIcon = glyph;
+            }
+            if(iconPosition == "middleLower"){
+                card.middleLowerIcon = glyph;
+            }
+            if(iconPosition == "rightLower"){
+                card.rightLowerIcon = glyph;
+            }
 
+            loadcard();
+            savecard();
         }
         
         
@@ -248,8 +317,8 @@ input,textarea{
 }
 #maintable{
     position:absolute;
-    top:0px;
-    left:220px;
+    top:440px;
+    right:0px;
 }
 #cardbox{
     position:absolute;
@@ -262,7 +331,7 @@ input,textarea{
     left:0px;
     top:0px;
     bottom:0px;
-    width:200px;
+    right:700px;
     overflow:scroll;
 }
 #importbutton{
@@ -277,7 +346,12 @@ input,textarea{
     position:absolute;
     right:300px;
     bottom:40px;
-
+}
+#iconsetlink{
+    position:absolute;
+    right:300px;
+    bottom:60px;
+    
 }
 .data{
     display:none;
