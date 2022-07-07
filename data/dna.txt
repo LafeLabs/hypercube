@@ -83,6 +83,7 @@
         "wall.txt"
     ],
     "php": [
+        "card.txt",
         "copy.txt",
         "deletefile.txt",
         "dir.txt",
