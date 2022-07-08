@@ -36,6 +36,7 @@
 <div id = "facebox">
     <canvas id = "face"></canvas>
 </div>
+<div id = "qrcode"></div>
 <div id = "cardbox">
     <canvas id = "card"></canvas>
 </div>
@@ -123,6 +124,28 @@ else{
     
     mainGVM.theta0 = 0;
 
+
+    document.getElementById("facebox").style.left = Math.round((innerWidth - (2*square + 20))/2).toString() + "px";
+    
+    document.getElementById("facebox").style.top = Math.round((innerHeight - (3*square + 20))/2).toString() + "px";
+    
+    
+    
+    faceGVM = new GVM(facecanvas,2*square + 20,3*square + 20);
+    faceGVM.x0 = square + 10;
+    faceGVM.y0 = 10;
+    faceGVM.theta0 = 0;
+
+
+    document.getElementById("mainimage").style.height = mainGVM.height.toString() + "px";
+    document.getElementById("mainimage").style.width = mainGVM.width.toString() + "px";
+    
+    document.getElementById("mainimage").style.left = Math.round((innerWidth - (2*square + 20))/2).toString() + "px";
+    
+    document.getElementById("mainimage").style.top = Math.round((innerHeight - (3*square + 20))/2).toString() + "px";
+    
+
+  
     document.getElementById("linkbox").style.left = Math.round(10+ (innerWidth - (2*square + 20))/2).toString() + "px";
     document.getElementById("linkbox").style.top = Math.round(10+(innerHeight - (3*square + 20))/2).toString() + "px";
     
@@ -157,6 +180,15 @@ maincanvas.style.display = "block";
 faceGVM.importbytecode(hypercube);    
 
 faceGVM.unit = square;
+faceGVM.style.line0 = 5;
+faceGVM.style.line1 = 5;
+faceGVM.style.line2 = 5;
+faceGVM.style.line3 = 5;
+faceGVM.style.line4 = 5;
+faceGVM.style.line5 = 5;
+faceGVM.style.line6 = 5;
+faceGVM.style.line7 = 5;
+
 //faceGVM.style.fill1 = "#AD8762";
 facecanvas.style.display = "block";
 
@@ -206,6 +238,7 @@ function loadcard(){
         }
     }
     
+    qrcode.makeCode(globalurl + "?card="  + card.jsonurl);
 
 }
 
@@ -233,8 +266,28 @@ function redraw(){
     document.getElementById("facebox").style.opacity = (beta).toString();
     document.getElementById("mainimage").style.opacity = (beta).toString();
     
+    document.getElementById("qrcode").style.opacity = (beta).toString();
 
 }
+
+
+
+codesquaresize = 200;
+document.getElementById("qrcode").style.left = (0.5*(innerWidth - codesquaresize)).toString() + "px";
+document.getElementById("qrcode").style.top = (0.5*(innerHeight - codesquaresize)).toString() + "px";
+
+globalurl = window.location.href.split("card.html")[0] + "card.php";
+
+qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+
+qrcode.makeCode(globalurl);
 
 
 </script>
@@ -311,7 +364,7 @@ input,textarea{
 }
 #hammerbox{
     position:absolute;
-    z-index:-3;
+    z-index:-4;
     left:0px;
     right:0px;
     top:0px;
@@ -319,9 +372,13 @@ input,textarea{
 }
 #mainimage{
     position:absolute;
-    z-index:-2;
+    z-index:-3;
 }
 #facebox{
+    position:absolute;
+    z-index:-2;
+}
+#qrcode{
     position:absolute;
     z-index:-1;
 }

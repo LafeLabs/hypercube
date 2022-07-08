@@ -26,10 +26,17 @@
     <META NAME="robots" CONTENT="noindex,nofollow">
     <script src="jscode/geometron.js"></script>
 
-
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
 </head>
 <body>    
-
+<div id = "hammerbox"></div>
+<img id = "mainimage"/>
+<div id = "facebox">
+    <canvas id = "face"></canvas>
+</div>
+<div id = "qrcode"></div>
 <div id = "cardbox">
     <canvas id = "card"></canvas>
 </div>
@@ -51,10 +58,15 @@ if(isset($_GET["card"])){
 }
 
 ?></div>
+
 <script>
+
+
 links = document.getElementById("linkbox").getElementsByTagName("a");
 
 maincanvas = document.getElementById("card");
+facecanvas = document.getElementById("face");
+
 
 if(innerWidth > innerHeight){
     //landscape
@@ -62,10 +74,29 @@ if(innerWidth > innerHeight){
     document.getElementById("cardbox").style.left = Math.round((innerWidth - (3*square + 20))/2).toString() + "px";
     
     document.getElementById("cardbox").style.top = Math.round((innerHeight - (2*square + 20))/2).toString() + "px";
+    
+    
     mainGVM = new GVM(maincanvas,3*square + 20,2*square + 20);
     mainGVM.x0 = 10;
     mainGVM.y0 = square + 10;
+
+
+    document.getElementById("facebox").style.left = Math.round((innerWidth - (3*square + 20))/2).toString() + "px";
     
+    document.getElementById("facebox").style.top = Math.round((innerHeight - (2*square + 20))/2).toString() + "px";
+    
+    document.getElementById("mainimage").style.left = Math.round((innerWidth - (3*square + 20))/2).toString() + "px";
+    
+    document.getElementById("mainimage").style.top = Math.round((innerHeight - (2*square + 20))/2).toString() + "px";    
+    
+    faceGVM = new GVM(facecanvas,3*square + 20,2*square + 20);
+    faceGVM.x0 = 10;
+    faceGVM.y0 = square + 10;
+    
+    document.getElementById("mainimage").style.width = mainGVM.width.toString() + "px";
+    document.getElementById("mainimage").style.height = mainGVM.height.toString() + "px";
+
+
     document.getElementById("linkbox").style.width = (mainGVM.width - 20).toString() + "px";
     document.getElementById("linkbox").style.height = (mainGVM.height - 20).toString() + "px";
 
@@ -100,6 +131,28 @@ else{
     
     mainGVM.theta0 = 0;
 
+
+    document.getElementById("facebox").style.left = Math.round((innerWidth - (2*square + 20))/2).toString() + "px";
+    
+    document.getElementById("facebox").style.top = Math.round((innerHeight - (3*square + 20))/2).toString() + "px";
+    
+    
+    
+    faceGVM = new GVM(facecanvas,2*square + 20,3*square + 20);
+    faceGVM.x0 = square + 10;
+    faceGVM.y0 = 10;
+    faceGVM.theta0 = 0;
+
+
+    document.getElementById("mainimage").style.height = mainGVM.height.toString() + "px";
+    document.getElementById("mainimage").style.width = mainGVM.width.toString() + "px";
+    
+    document.getElementById("mainimage").style.left = Math.round((innerWidth - (2*square + 20))/2).toString() + "px";
+    
+    document.getElementById("mainimage").style.top = Math.round((innerHeight - (3*square + 20))/2).toString() + "px";
+    
+
+  
     document.getElementById("linkbox").style.left = Math.round(10+ (innerWidth - (2*square + 20))/2).toString() + "px";
     document.getElementById("linkbox").style.top = Math.round(10+(innerHeight - (3*square + 20))/2).toString() + "px";
     
@@ -131,6 +184,21 @@ mainGVM.unit = square;
 mainGVM.style.fill1 = "#AD8762";
 maincanvas.style.display = "block";
 
+faceGVM.importbytecode(hypercube);    
+
+faceGVM.unit = square;
+faceGVM.style.line0 = 5;
+faceGVM.style.line1 = 5;
+faceGVM.style.line2 = 5;
+faceGVM.style.line3 = 5;
+faceGVM.style.line4 = 5;
+faceGVM.style.line5 = 5;
+faceGVM.style.line6 = 5;
+faceGVM.style.line7 = 5;
+
+//faceGVM.style.fill1 = "#AD8762";
+facecanvas.style.display = "block";
+
 
 if(document.getElementById("carddatadiv").innerHTML.length > 0){
     card = JSON.parse(document.getElementById("carddatadiv").innerHTML);
@@ -152,7 +220,10 @@ else{
 
 function loadcard(){
 
-    
+    document.getElementById("mainimage").src = card.imageurl;
+
+    faceGVM.drawGlyph(card.faceglyph);
+
     mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
     mainGVM.actionSequence("0336,0330,0333,0336,0336,");
     mainGVM.actionSequence(card.icons[0]);
@@ -181,8 +252,57 @@ function loadcard(){
         }
     }
     
+    qrcode.makeCode(globalurl + "?card="  + card.jsonurl);
 
 }
+
+theta = 0;
+
+mc = new Hammer(document.getElementById("hammerbox"));
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+mc.on("panleft panright panup pandown tap press", function(ev) {
+
+//    theta = Math.PI/4 +(ev.deltaX/200);
+    theta = (ev.deltaX/200);
+    redraw();
+
+});
+
+redraw();
+
+function redraw(){
+    alpha = Math.cos(theta)*Math.cos(theta);
+    beta = Math.sin(theta)*Math.sin(theta);
+    
+    document.getElementById("cardbox").style.opacity = (alpha).toString();
+    document.getElementById("linkbox").style.opacity = (alpha).toString();
+
+    document.getElementById("facebox").style.opacity = (beta).toString();
+    document.getElementById("mainimage").style.opacity = (beta).toString();
+    
+    document.getElementById("qrcode").style.opacity = (beta).toString();
+
+}
+
+
+
+codesquaresize = 200;
+document.getElementById("qrcode").style.left = (0.5*(innerWidth - codesquaresize)).toString() + "px";
+document.getElementById("qrcode").style.top = (0.5*(innerHeight - codesquaresize)).toString() + "px";
+
+globalurl = window.location.href.split("card.html")[0] + "card.php";
+
+qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+
+qrcode.makeCode(globalurl);
+
 
 </script>
 <style>
@@ -256,7 +376,26 @@ input,textarea{
 .button:active{
     background-color:yellow;
 }
-
+#hammerbox{
+    position:absolute;
+    z-index:-4;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+#mainimage{
+    position:absolute;
+    z-index:-3;
+}
+#facebox{
+    position:absolute;
+    z-index:-2;
+}
+#qrcode{
+    position:absolute;
+    z-index:-1;
+}
 </style>
 </body>
 </html>
