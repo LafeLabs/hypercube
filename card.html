@@ -75,9 +75,9 @@ if(innerWidth > innerHeight){
     links[2].style.left = (2*square).toString() + "px";
     links[3].style.top = square.toString() + "px";
     links[4].style.top = square.toString() + "px";
+    links[4].style.left = square.toString() + "px";
     links[5].style.top = square.toString() + "px";
-    links[4].style.left = (2*square).toString() + "px";
-    links[5].style.left = square.toString() + "px";
+    links[5].style.left = (2*square).toString() + "px";
 
     
 }
@@ -111,8 +111,8 @@ else{
     links[2].style.top = (2*square).toString() + "px";
     links[3].style.left = "0px";
     links[4].style.left = "0px";
-    links[5].style.left = "0px";
     links[4].style.top = square.toString() + "px";
+    links[5].style.left = "0px";
     links[5].style.top = (2*square).toString() + "px";
     
     
@@ -142,58 +142,31 @@ function loadcard(){
     
     mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
     mainGVM.actionSequence("0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.leftUpperIcon);
+    mainGVM.actionSequence(card.icons[0]);
     mainGVM.actionSequence("0300,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.middleUpperIcon);
+    mainGVM.actionSequence(card.icons[1]);
     mainGVM.actionSequence("0300,0333,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.rightUpperIcon);
+    mainGVM.actionSequence(card.icons[2]);
     mainGVM.actionSequence("0300,0331,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.leftLowerIcon);
+    mainGVM.actionSequence(card.icons[3]);
     mainGVM.actionSequence("0300,0331,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.middleLowerIcon);
+    mainGVM.actionSequence(card.icons[4]);
     mainGVM.actionSequence("0300,0331,0333,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.rightLowerIcon);
+    mainGVM.actionSequence(card.icons[5]);
 
-    if(card.leftUpperLink.length >0){
-        links[0].href = card.leftUpperLink;
-    }
-    else{
-        links[0].style.display = "none";
-    }
-    if(card.middleUpperLink.length > 0){
-        links[1].href = card.middleUpperLink;
-    }
-    else{
-        links[1].style.display = "none";
-    }
 
-    if(card.rightUpperLink.length >0){
-        links[2].href = card.rightUpperLink;
+    for(var index = 0;index < card.links.length;index++){
+        if(card.links[index].length > 0){
+            links[index].href = card.links[index];
+            links[index].style.border = "solid";
+            links[index].style.borderColor = "#ff2cb4";
+            links[index].style.borderWidth = "5px";
+            links[index].style.borderRadius = "10px";
+        }   
+        else{
+            links[index].style.display = "none";
+        }
     }
-    else{
-        links[2].style.display = "none";
-    }
-
-    if(card.leftLowerLink.length >0){
-        links[3].href = card.leftLowerLink;
-    }
-    else{
-        links[3].style.display = "none";
-    }
-    if(card.middleLowerLink.length > 0){
-        links[4].href = card.middleLowerLink;
-    }
-    else{
-        links[4].style.display = "none";
-    }
-
-    if(card.rightLowerLink.length >0){
-        links[5].href = card.rightLowerLink;
-    }
-    else{
-        links[5].style.display = "none";
-    }
-
     
 
 }
