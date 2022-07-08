@@ -154,13 +154,48 @@ function loadcard(){
     mainGVM.actionSequence("0300,0331,0333,0333,0336,0330,0333,0336,0336,");
     mainGVM.actionSequence(card.rightLowerIcon);
 
-    links[0].href = card.leftUpperLink;
-    links[1].href = card.middleUpperLink;
-    links[2].href = card.rightUpperLink;
-    links[3].href = card.leftLowerLink;
-    links[4].href = card.middleLowerLink;
-    links[5].href = card.rightLowerLink;
+    if(card.leftUpperLink.length >0){
+        links[0].href = card.leftUpperLink;
+    }
+    else{
+        links[0].style.display = "none";
+    }
+    if(card.middleUpperLink.length > 0){
+        links[1].href = card.middleUpperLink;
+    }
+    else{
+        links[1].style.display = "none";
+    }
+
+    if(card.rightUpperLink.length >0){
+        links[2].href = card.rightUpperLink;
+    }
+    else{
+        links[2].style.display = "none";
+    }
+
+    if(card.leftLowerLink.length >0){
+        links[3].href = card.leftLowerLink;
+    }
+    else{
+        links[3].style.display = "none";
+    }
+    if(card.middleLowerLink.length > 0){
+        links[4].href = card.middleLowerLink;
+    }
+    else{
+        links[4].style.display = "none";
+    }
+
+    if(card.rightLowerLink.length >0){
+        links[5].href = card.rightLowerLink;
+    }
+    else{
+        links[5].style.display = "none";
+    }
+
     
+
 }
 
 </script>
@@ -222,8 +257,6 @@ input,textarea{
 }
 #linkbox a{
     position:absolute;
-    border:solid;
-    border-color:red;
 }
 .data{
     display:none;
