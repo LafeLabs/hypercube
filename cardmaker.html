@@ -32,15 +32,23 @@
 
 <table id = "maintable">
     <tr>
-        <td></td>
+        <td>Image URL:</td>
+        <td><input id = "imageurlinput"/></td>
+        <td>JSON URL:</td>
+        <Td><input id = "jsonurlinput"/></Td>
+
+    </tr>
+
+    <tr>
+        <td class = "button" id = "facemodebutton">ICONS/FACE</td>
         <Td></Td>
         <td>Arduino String:</td>
         <td><input id = "arduinoinput"/></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td>glyph code:</td>
+        <td>Face Glyph:<input id = "actioninput"/></td>
+        <td><input id = "faceglyphinput"/></td>
+        <td>icon glyph code:</td>
         <td>
             <input id = "glyphinput">
         </td>
@@ -85,7 +93,10 @@
 
 <div id = "iconsbox"></div>
 
-
+<img id= "mainimage"/>
+<div id = "facebox">
+    <canvas id = "face"></canvas>
+</div>
 
 <div id = "cardbox">
     <div id = "leftUpperButton" class = "button"></div>
@@ -105,6 +116,9 @@
 <textarea id = "arduinocode"></textarea>
 
 <script>
+
+facemode = false;
+
 
 iconPosition = "leftUpper";
 
@@ -179,15 +193,25 @@ function buttonclear(){
 square = 200;
 maincanvas = document.getElementById("card");
 var mainGVM = new GVM(maincanvas,3*square + 20,2*square + 20);
-mainGVM.importbytecode(hypercube);    
+var faceGVM = new GVM(document.getElementById("face"),3*square + 20,2*square + 20);
 
+faceGVM.importbytecode(hypercube);    
+faceGVM.x0 = 10;
+faceGVM.y0 = square + 10;
+faceGVM.unit = square;
+
+mainGVM.importbytecode(hypercube);    
 mainGVM.x0 = 10;
 mainGVM.y0 = square + 10;
 mainGVM.unit = square;
+
 mainGVM.style.fill1 = "#AD8762";
 mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
 maincanvas.style.display = "block";
+document.getElementById("face").style.display = "block";
 
+document.getElementById("mainimage").style.width = mainGVM.width.toString() + "px";
+document.getElementById("mainimage").style.height = mainGVM.height.toString() + "px";
 
 var httpcFeed = new XMLHttpRequest();
 httpcFeed.onreadystatechange = function(){
@@ -292,9 +316,17 @@ function loadcard(){
     document.getElementById("leftLowerLinkInput").value = card.links[3];
     document.getElementById("middleLowerLinkInput").value = card.links[4];
     document.getElementById("rightLowerLinkInput").value = card.links[5];    
+    document.getElementById("imageurlinput").value = card.imageurl;
+    document.getElementById("jsonurlinput").value = card.jsonurl;
+
+    document.getElementById("faceglyphinput").value = card.faceglyph;
+    
+    document.getElementById("mainimage").src = card.imageurl;
     
     document.getElementById("textio").value = JSON.stringify(card,null,"  ");
     
+    faceGVM.glyph =card.faceglyph + "0207,";
+    faceGVM.drawGlyph(faceGVM.glyph);
     mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
     mainGVM.actionSequence("0336,0330,0333,0336,0336,");
     mainGVM.actionSequence(card.icons[0]);
@@ -388,6 +420,29 @@ document.getElementById("rightLowerLinkInput").onchange = function(){
 }
 
 
+
+document.getElementById("imageurlinput").onchange  = function(){
+    card.imageurl = this.value;
+    loadcard();
+    savecard();
+}
+
+document.getElementById("jsonurlinput").onchange  = function(){
+    card.jsonurl = this.value;
+
+    loadcard();
+    savecard();
+}
+
+document.getElementById("faceglyphinput").onchange  = function(){
+    card.faceglyph = this.value;
+    loadcard();
+
+    savecard();
+}
+
+
+
 function bytecode2ascii(bytecode){
     var bytesequence = bytecode.split(",");
     var outstring = "";
@@ -438,6 +493,99 @@ httpcarduino.onreadystatechange = function() {
 httpcarduino.open("GET", "fileloader.php?filename=data/arduinocodexyz.txt", true);
 httpcarduino.send();
 
+
+document.getElementById("actioninput").value = "";
+
+document.getElementById("facemodebutton").onclick = function(){
+    facemode = !facemode;
+    if(facemode){
+        document.getElementById("cardbox").style.display = "none";
+        document.getElementById("actioninput").select();
+    }
+    else{
+        document.getElementById("cardbox").style.display = "block";
+    }
+}
+
+
+mode = 0;
+document.getElementById("actioninput").onkeypress = function(a) {
+    var charCode = a.keyCode || a.which;
+    if(charCode != 015){
+        if(mode == 0 || mode == 3){
+            localCursorAction = parseInt(faceGVM.hypercube[charCode],8);   
+        }    
+        if(mode == 1){
+            localCursorAction = charCode + 01000;     
+        }    
+        if(mode == 2){
+            localCursorAction = charCode;     
+        }    
+        
+        faceGVM.cursorAction(localCursorAction);   
+        this.value = "";
+        faceGVM.clean();
+      //  document.getElementById("spellinput").value = faceGVM.cleanGlyph;
+
+    }
+
+}
+
+
+document.getElementById("actioninput").onkeydown = function(a) {
+    var charCode = a.keyCode || a.which;
+
+    if(charCode == 015) {
+        modeswitch();
+    }
+
+    if(charCode == 010) {
+        faceGVM.cursorAction(010);
+    }
+    if(charCode == 045){
+        faceGVM.cursorAction(020);             
+    }
+    if(charCode == 047){
+        faceGVM.cursorAction(021);   
+    }
+
+    if(charCode == 046){
+        //up arrow: prev symbol
+        faceGVM.clean();
+        faceGVM.glyph = "0207," + faceGVM.cleanGlyph;
+        faceGVM.drawGlyph(faceGVM.glyph);
+    }
+    if(charCode == 050){
+        //down arrow: next symbol
+        faceGVM.clean();
+        faceGVM.glyph = faceGVM.cleanGlyph + "0207,";
+        faceGVM.drawGlyph(faceGVM.glyph);
+
+    }
+
+
+//    spellGVM.spellGlyph(mainGVM.glyph);
+   // document.getElementById("spellinput").value = mainGVM.cleanGlyph;
+    faceGVM.clean();
+    card.faceglyph = faceGVM.cleanGlyph;
+    savecard();
+    //savejson();
+}
+
+function modeswitch(){
+    mode++;
+    mode = mode%3;
+    if(mode == 0){
+      //  document.getElementById("modeindicator").src = "iconsymbols/cursor.svg";
+    }
+    if(mode == 1){
+    //    document.getElementById("modeindicator").src = "iconsymbols/abcfont.svg";
+    }
+    if(mode == 2){
+//document.getElementById("modeindicator").src = "iconsymbols/abcstack.svg";
+    }
+    document.getElementById("actioninput").select();   
+}
 </script>
 <style>
 body{
@@ -453,14 +601,14 @@ input,textarea{
     right:0px;
     bottom:0px;
     width:200px;
-    height:200px;
+    height:180px;
 }
 #arduinocode{
     position:absolute;
     right:320px;
     bottom:0px;
     width:200px;
-    height:200px;
+    height:180px;
     background-color:white;
     color:black;
     border:solid;
@@ -477,6 +625,20 @@ input,textarea{
     right:0px;
     border:solid;
 }
+#facebox{
+    position:absolute;
+    top:0px;
+    right:0px;
+    border:solid;
+    z-index:-1;
+}
+#mainimage{
+    position:absolute;
+    top:0px;
+    right:0px;
+    border:solid;
+    z-index:-2;
+}
 #iconsbox{
     position:absolute;
     left:0px;
@@ -484,6 +646,7 @@ input,textarea{
     bottom:0px;
     right:700px;
     overflow:scroll;
+    z-index:2;
 }
 #importbutton{
     position:absolute;
@@ -567,7 +730,9 @@ input,textarea{
     height:48%;
     border:solid;
 }
-
+#actioninput{
+    width:10px;
+}
 </style>
 </body>
 </html>

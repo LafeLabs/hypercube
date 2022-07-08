@@ -1,1 +1,1 @@
-{"w":0.6514285714285715,"x":0.1782857142857143,"y":0.16228571428571428,"angle":0,"src":"https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg"}
+{"w":2.176,"x":0.08914285714285715,"y":0.08914285714285715,"angle":0,"src":"https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e11149b3af2ee970bb8ead_Ko-fi_logo.png"}
