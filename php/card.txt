@@ -67,6 +67,23 @@ links = document.getElementById("linkbox").getElementsByTagName("a");
 maincanvas = document.getElementById("card");
 facecanvas = document.getElementById("face");
 
+codesquaresize = 200;
+document.getElementById("qrcode").style.left = (0.5*(innerWidth - codesquaresize)).toString() + "px";
+document.getElementById("qrcode").style.top = (0.5*(innerHeight - codesquaresize)).toString() + "px";
+
+globalurl = window.location.href;
+
+qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+
+qrcode.makeCode(globalurl);
+
 
 if(innerWidth > innerHeight){
     //landscape
@@ -252,7 +269,7 @@ function loadcard(){
         }
     }
     
-    globalurl = window.location.href.split("card.html")[0] + "card.php?card=" + card.jsonurl;
+    globalurl = window.location.href.split("card.php")[0] + "card.php?card=" + card.jsonurl;
     console.log(globalurl);
     qrcode.makeCode(globalurl);
 
@@ -288,22 +305,6 @@ function redraw(){
 
 
 
-codesquaresize = 200;
-document.getElementById("qrcode").style.left = (0.5*(innerWidth - codesquaresize)).toString() + "px";
-document.getElementById("qrcode").style.top = (0.5*(innerHeight - codesquaresize)).toString() + "px";
-
-globalurl = window.location.href;
-
-qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: globalurl,
-	width: codesquaresize,
-	height: codesquaresize,
-	colorDark : "#000000",
-	colorLight : "#ffffff",
-	correctLevel : QRCode.CorrectLevel.H
-});
-
-qrcode.makeCode(globalurl);
 
 
 </script>
