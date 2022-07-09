@@ -49,7 +49,6 @@
     <a></a>
     <a></a>
     <a></a>
-
 </div>
 
 <script>
@@ -60,6 +59,8 @@ links = document.getElementById("linkbox").getElementsByTagName("a");
 maincanvas = document.getElementById("card");
 facecanvas = document.getElementById("face");
 
+links[0].style.zIndex = "10";
+links[3].style.zIndex = "10";
 
 if(innerWidth > innerHeight){
     //landscape
@@ -101,6 +102,10 @@ if(innerWidth > innerHeight){
         links[index].style.width = square.toString() + "px";
         links[index].style.height = square.toString() + "px";
     }
+
+    links[0].style.left = "0px";
+    links[0].style.top = "0px";
+    
     links[1].style.left = square.toString() + "px";
     links[2].style.left = (2*square).toString() + "px";
     links[3].style.top = square.toString() + "px";
@@ -156,6 +161,7 @@ else{
         links[index].style.height = square.toString() + "px";
     }
     
+    links[0].style.top = "0px";
     links[0].style.left = square.toString() + "px";
     links[1].style.left = square.toString() + "px";
     links[2].style.left = square.toString() + "px";
@@ -237,8 +243,9 @@ function loadcard(){
             links[index].style.display = "none";
         }
     }
-    
-    qrcode.makeCode(globalurl + "?card="  + card.jsonurl);
+    globalurl = window.location.href.split("card.html")[0] + "card.php?card=" + card.jsonurl;
+    console.log(globalurl);
+    qrcode.makeCode(globalurl);
 
 }
 
@@ -276,7 +283,7 @@ codesquaresize = 200;
 document.getElementById("qrcode").style.left = (0.5*(innerWidth - codesquaresize)).toString() + "px";
 document.getElementById("qrcode").style.top = (0.5*(innerHeight - codesquaresize)).toString() + "px";
 
-globalurl = window.location.href.split("card.html")[0] + "card.php";
+globalurl = window.location.href;
 
 qrcode = new QRCode(document.getElementById("qrcode"), {
 	text: globalurl,
