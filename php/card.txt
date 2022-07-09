@@ -65,6 +65,9 @@ if(isset($_GET["card"])){
 
 links = document.getElementById("linkbox").getElementsByTagName("a");
 
+links[0].style.zIndex = "10";
+
+
 maincanvas = document.getElementById("card");
 facecanvas = document.getElementById("face");
 
@@ -134,6 +137,7 @@ if(innerWidth > innerHeight){
     links[5].style.top = square.toString() + "px";
     links[5].style.left = (2*square).toString() + "px";
 
+    links[0].style.zIndex = "10";
     
 }
 else{
@@ -192,6 +196,7 @@ else{
     links[5].style.left = "0px";
     links[5].style.top = (2*square).toString() + "px";
     
+    links[3].style.zIndex = "10";
     
 }
 

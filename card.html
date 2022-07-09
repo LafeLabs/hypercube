@@ -58,9 +58,12 @@ links = document.getElementById("linkbox").getElementsByTagName("a");
 
 maincanvas = document.getElementById("card");
 facecanvas = document.getElementById("face");
+    
 
-links[0].style.zIndex = "10";
-links[3].style.zIndex = "10";
+
+//for(var index = 0;index < links.length;index++){
+  //  links[0].style.zIndex = "10";
+//}
 
 if(innerWidth > innerHeight){
     //landscape
@@ -105,7 +108,8 @@ if(innerWidth > innerHeight){
 
     links[0].style.left = "0px";
     links[0].style.top = "0px";
-    
+    links[0].style.zIndex = "10";
+
     links[1].style.left = square.toString() + "px";
     links[2].style.left = (2*square).toString() + "px";
     links[3].style.top = square.toString() + "px";
@@ -173,7 +177,8 @@ else{
     links[5].style.left = "0px";
     links[5].style.top = (2*square).toString() + "px";
     
-    
+    links[3].style.zIndex = "10";
+
 }
 
 
