@@ -42,6 +42,7 @@
 </div>
 
 <div id = "linkbox">
+    
     <a></a>
     <a></a>
     <a></a>
@@ -269,9 +270,7 @@ function loadcard(){
         }
     }
     
-    globalurl = window.location.href.split("card.php")[0] + "card.php?card=" + card.jsonurl;
-    console.log(globalurl);
-    qrcode.makeCode(globalurl);
+
 
 }
 
