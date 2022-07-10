@@ -31,6 +31,13 @@
 <body>    
 <a href = "card.html" id = "cardlink2">card.html</a>
 
+<input class = "linkinputs" id = "leftUpperLinkInput"/>
+<input class = "linkinputs" id = "middleUpperLinkInput"/>
+<input class = "linkinputs" id  = "rightUpperLinkInput"/>
+<input class = "linkinputs" id  = "leftLowerLinkInput"/>
+<input class = "linkinputs" id  = "middleLowerLinkInput"/>
+<input class = "linkinputs" id  = "rightLowerLinkInput"/>
+
 <table id = "maintable">
     <tr>
         <td id = "publishbutton" class = "button">PUBLISH</td>
@@ -61,38 +68,38 @@
         </td>
     </tr>
     <tr>
-        <td>leftUpperLink</td>
-        <td><input id = "leftUpperLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>leftUpperIcon:</td>
         <td><input id  = "leftUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>middleUpperLink</td>
-        <td><input id = "middleUpperLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>middleUpperIcon:</td>
         <td><input id  = "middleUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>rightUpperLink:</td>
-        <td><input id  = "rightUpperLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>rightUpperIcon:</td>
         <td><input id  = "rightUpperIconInput"/></td>
     </tr>
     <tr>
-        <td>leftLowerLink:</td>
-        <td><input id  = "leftLowerLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>leftLowerIcon:</td>
         <td><input id  = "leftLowerIconInput"/></td>
     </tr>
     <tr>
-        <td>middleLowerLink:</td>
-        <td><input id  = "middleLowerLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>middleLowerIcon:</td>
         <td><input id  = "middleLowerIconInput"/></td>
     </tr>
     <tr>
-        <td>rightLowerLink:</td>
-        <td><input id  = "rightLowerLinkInput"/></td>
+        <td></td>
+        <td></td>
         <td>rightLowerIcon:</td>
         <td><input id  = "rightLowerIconInput"/></td>
     </tr>
@@ -219,6 +226,31 @@ function buttonclear(){
 }
 
 square = 200;
+
+document.getElementById("leftUpperLinkInput").style.width =  (square - 20).toString() + "px";
+document.getElementById("middleUpperLinkInput").style.width =  (square - 20).toString() + "px";
+document.getElementById("rightUpperLinkInput").style.width =  (square - 20).toString() + "px";
+document.getElementById("leftLowerLinkInput").style.width =  (square - 20).toString() + "px";
+document.getElementById("middleLowerLinkInput").style.width =  (square - 20).toString() + "px";
+document.getElementById("rightLowerLinkInput").style.width =  (square - 20).toString() + "px";
+
+document.getElementById("leftUpperLinkInput").style.right = (square*2 + 20).toString() + "px";
+document.getElementById("middleUpperLinkInput").style.right = (square + 10).toString() + "px";
+document.getElementById("rightUpperLinkInput").style.right = (0).toString() + "px";
+
+document.getElementById("leftUpperLinkInput").style.top =  (0).toString() + "px";
+document.getElementById("middleUpperLinkInput").style.top =  (0).toString() + "px";
+document.getElementById("rightUpperLinkInput").style.top =  (0).toString() + "px";
+
+document.getElementById("leftLowerLinkInput").style.top =  (square).toString() + "px";
+document.getElementById("middleLowerLinkInput").style.top =  (square).toString() + "px";
+document.getElementById("rightLowerLinkInput").style.top =  (square).toString() + "px";
+
+document.getElementById("leftLowerLinkInput").style.right =  (2*square+20).toString() + "px";
+document.getElementById("middleLowerLinkInput").style.right =  (square + 10).toString() + "px";
+document.getElementById("rightLowerLinkInput").style.right =  (0).toString() + "px";
+
+
 maincanvas = document.getElementById("card");
 var mainGVM = new GVM(maincanvas,3*square + 20,2*square + 20);
 var faceGVM = new GVM(document.getElementById("face"),3*square + 20,2*square + 20);
@@ -661,6 +693,12 @@ input,textarea{
     font-family:courier;
     background-color:black;
 }
+.linkinputs{
+    position:absolute;
+    z-index:2;
+    top:0px;
+}
+
 #textio{
     position:absolute;
     right:0px;
