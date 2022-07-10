@@ -20,6 +20,7 @@ mkdir("symbolfeed");
 mkdir("uploadimages");
 mkdir("maps");
 mkdir("media");
+mkdir("cards");
 
 
 copy("https://raw.githubusercontent.com/LafeLabs/hypercube/main/php/replicator.txt","replicator.php");

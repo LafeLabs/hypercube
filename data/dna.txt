@@ -5,6 +5,7 @@
         "arduino.html",
         "card.html",
         "cardmaker.html",
+        "cardset.html",
         "controls.html",
         "font.html",
         "fork.html",
@@ -63,6 +64,7 @@
         "arduinocodexyzold.txt",
         "arduinocodexyzpause.txt",
         "card.txt",
+        "cardset.txt",
         "coin.txt",
         "controls.txt",
         "currentjson.txt",
@@ -84,6 +86,7 @@
     ],
     "php": [
         "card.txt",
+        "cardsetreplicator.txt",
         "copy.txt",
         "deletefile.txt",
         "dir.txt",

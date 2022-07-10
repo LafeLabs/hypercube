@@ -33,6 +33,12 @@
 
 <table id = "maintable">
     <tr>
+        <td id = "publishbutton" class = "button">PUBLISH</td>
+        <td></td>
+        <td>card name:</td>
+        <td><input id = "cardnameinput"/></td>
+    </tr>
+    <tr>
         <td>Image URL:</td>
         <td><input id = "imageurlinput"/></td>
         <td>JSON URL:</td>
@@ -110,8 +116,29 @@
 </div>
 
 <div id = "importbutton" class = "button">IMPORT</div>
-<a id = "cardlink" href = "card.html">card.html</a>
-<a id = "iconfeedlink" href = "index.html">index.html</a>
+
+<table id = "linktable">
+    <tr>
+        <td>
+            <a href = "card.html">card.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href = "index.html">index.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href = "iconfeed.html">iconfeed.html</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href = "cardset.html">cardset.html</a>
+        </td>
+    </tr>
+</table>
 
 <textarea id = "textio"></textarea>
 <textarea id = "arduinocode"></textarea>
@@ -329,6 +356,13 @@ function loadcard(){
     document.getElementById("imageurlinput").value = card.imageurl;
     document.getElementById("jsonurlinput").value = card.jsonurl;
 
+    if(card.name != undefined){
+        document.getElementById("cardnameinput").value = card.name;
+    }
+    else{
+        card.name = "cardname";
+        document.getElementById("cardnameinput").value = "";
+    }
     document.getElementById("faceglyphinput").value = card.faceglyph;
     
     document.getElementById("mainimage").src = card.imageurl;
@@ -451,6 +485,10 @@ document.getElementById("faceglyphinput").onchange  = function(){
     savecard();
 }
 
+document.getElementById("cardnameinput").onchange = function(){
+    card.name = this.value;
+    savecard();
+}
 
 
 function bytecode2ascii(bytecode){
@@ -596,6 +634,23 @@ function modeswitch(){
     }
     document.getElementById("actioninput").select();   
 }
+
+document.getElementById("publishbutton").onclick  = function(){
+    
+    var httpc2 = new XMLHttpRequest();
+    httpc2.open("POST","filesaver.php", true);
+    httpc2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    httpc2.send("data="+encodeURIComponent(JSON.stringify(card,null,"    ")) +"&filename=cards/" + card.name);//send text to filesaver.php
+            
+}
+
+
+
+
+    
+
+    
+
 </script>
 <style>
 body{
@@ -628,6 +683,7 @@ input,textarea{
     position:absolute;
     top:440px;
     right:0px;
+    z-index:1;
 }
 #cardbox{
     position:absolute;
@@ -666,16 +722,10 @@ input,textarea{
     border-radius:5px;
     text-align:center;
 }
-#cardlink{
+#linktable{
     position:absolute;
     right:220px;
     bottom:40px;
-}
-#iconfeedlink{
-    position:absolute;
-    right:220px;
-    bottom:60px;
-    
 }
 .data{
     display:none;
