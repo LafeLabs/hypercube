@@ -3,8 +3,10 @@
 
 # replicators
  
- - [copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/index.html&to=index.html](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/index.html&to=index.html)
- - [copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/data/robotfeed.txt&to=data/robotfeed.txt](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/data/robotfeed.txt&to=data/robotfeed.txt)
+ - [copy index.html from github](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/index.html&to=index.html)
+ - [copy icon feed from github](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/data/robotfeed.txt&to=data/robotfeed.txt)
+ - [copy data/card.txt from github](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/data/card.txt&to=data/card.txt)
  - [scrollsetreplicator.php](scrollsetreplicator.php)
  - [mapsetreplicator.php](mapsetreplicator.php)
+
   
