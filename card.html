@@ -238,11 +238,36 @@ function loadcard(){
 
     for(var index = 0;index < card.links.length;index++){
         if(card.links[index].length > 0){
-            links[index].href = card.links[index];
+            if(card.links[index].includes(".") || card.links[index].includes("/") || card.links[index].includes(":")){
+                links[index].href = card.links[index];
+            }
+            else{
+                links[index].style.cursor = "pointer";
+                links[index].id = card.links[index];
+                links[index].onclick = function(){
+                    cardname = "cards/" + this.id;
+//                  alert("cards/" + this.id);
+                    var httpccard = new XMLHttpRequest();
+                    httpccard.onreadystatechange = function(){
+                        if (this.readyState == 4 && this.status == 200) {
+                            card = JSON.parse(this.responseText);
+                            loadcard();
+                        }
+                    };
+                    httpccard.open("GET", "fileloader.php?filename=" + cardname, true);
+                    httpccard.send();
+
+                    
+                    
+                }
+            }
             links[index].style.border = "solid";
             links[index].style.borderColor = "#ff2cb4";
             links[index].style.borderWidth = "5px";
-            links[index].style.borderRadius = "10px";
+            links[index].style.borderRadius = "10px";                
+            links[index].style.display = "block";
+            
+
         }   
         else{
             links[index].style.display = "none";
@@ -296,6 +321,7 @@ qrcode = new QRCode(document.getElementById("qrcode"), {
 });
 
 qrcode.makeCode(globalurl);
+
 
 
 </script>

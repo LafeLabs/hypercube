@@ -112,7 +112,6 @@ function savejson(){
 
 
 
-
 cards = [];
 var httpc2 = new XMLHttpRequest();
     httpc2.onreadystatechange = function() {
@@ -124,7 +123,24 @@ var httpc2 = new XMLHttpRequest();
                 newspan.innerHTML = "cards/" + cards[index];
                 newspan.classList.add("button");
                 newspan.onclick = function(){
-                    alert(this.innerHTML);
+//                    alert(this.innerHTML);
+                    cardname = this.innerHTML;
+                    var httpc = new XMLHttpRequest();
+                    httpc.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            card = JSON.parse(this.responseText);
+                            var url = "filesaver.php";        
+                            var httpc2 = new XMLHttpRequest();
+                            httpc2.open("POST", url, true);
+                            httpc2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                            httpc2.send("data="+encodeURIComponent(JSON.stringify(card,null,"    "))+"&filename=data/card.txt");//send text to filesaver.php
+                            
+                        }
+                    };
+                    httpc.open("GET", "fileloader.php?filename=" + cardname, true);
+                    httpc.send();
+
+
                 }
                 var newli = document.createElement("LI");
                 newli.appendChild(newspan);
@@ -150,7 +166,7 @@ function addDeleteButtons(){
         dirlist[index].appendChild(newdeletebutton);
     }
     
-    deletebuttons = document.getElementById("mainlist").getElementsByClassName("button");
+    deletebuttons = document.getElementById("mainlist").getElementsByClassName("delete");
 
     for(var index = 0;index < deletebuttons.length;index++){
         deletebuttons[index].onclick = function() {
