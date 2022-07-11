@@ -54,8 +54,11 @@
 <a href = "cardsetreplicator.php" id = "fetchlink">
 (!)CLICK TO FETCH SET FROM SOURCE TO HERE(!)
 </a>
-
 <textarea id  = "textio"></textarea>
+<div id= "feed">
+        <ul id = "mainlist"></ul>
+
+</div>
 <script>
 
 var localurl = window.location.href.split("cardset.html")[0];
@@ -109,6 +112,66 @@ function savejson(){
 
 
 
+
+cards = [];
+var httpc2 = new XMLHttpRequest();
+    httpc2.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        cards = JSON.parse(this.responseText);
+        for(var index = 0;index < cards.length;index++) {
+            if(cards[index] != "home"){
+                var newspan = document.createElement("SPAN");
+                newspan.innerHTML = "cards/" + cards[index];
+                newspan.classList.add("button");
+                newspan.onclick = function(){
+                    alert(this.innerHTML);
+                }
+                var newli = document.createElement("LI");
+                newli.appendChild(newspan);
+                document.getElementById("mainlist").appendChild(newli);
+            
+            }
+        }
+        addDeleteButtons();
+    }
+};
+
+httpc2.open("GET", "dir.php?filename=cards", true);
+httpc2.send();
+
+
+function addDeleteButtons(){
+    dirlist = document.getElementById("mainlist").getElementsByTagName("LI");
+    for(var index = 0;index < dirlist.length;index++){
+        var newdeletebutton = document.createElement("span");
+        newdeletebutton.innerHTML = "DELETE";
+        newdeletebutton.className = "button";
+        newdeletebutton.classList.add("delete");
+        dirlist[index].appendChild(newdeletebutton);
+    }
+    
+    deletebuttons = document.getElementById("mainlist").getElementsByClassName("button");
+
+    for(var index = 0;index < deletebuttons.length;index++){
+        deletebuttons[index].onclick = function() {
+            thisdir = this.parentNode.getElementsByTagName("SPAN")[0].innerHTML;
+            
+//            console.log(thisdir);
+
+            var httpc = new XMLHttpRequest();
+            var url = "deletefile.php";         
+            httpc.open("POST", url, true);
+            httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+            httpc.send("filename=" + thisdir);//send text to deletefile.php
+            this.parentNode.parentNode.removeChild(this.parentNode);
+
+
+        }
+    }
+
+}
+
+
 </script>
 <style>
 #buttontable{
@@ -131,7 +194,9 @@ function savejson(){
 #inputtable tr{
     width:100%;
 }
-
+.delete{
+    color:red;
+}
 #textio{
     position:absolute;
     right:1px;
@@ -142,10 +207,11 @@ function savejson(){
 #feed{
     position:absolute;
     top:50%;
-    bottom:0px;
-    left:0px;
-    right:0px;
+    bottom:10px;
+    left:10px;
+    right:50%;
     overflow:scroll;
+    border:solid;
 }
 #serverinput{
     width:100%;
