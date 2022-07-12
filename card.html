@@ -28,11 +28,13 @@
 
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.js"></script>
+        
 </head>
 <body>    
 <div id = "hammerbox"></div>
 <img id = "mainimage"/>
+<div id = "scrollscroll"></div>
 <div id = "facebox">
     <canvas id = "face"></canvas>
 </div>
@@ -93,6 +95,7 @@ if(innerWidth > innerHeight){
     document.getElementById("mainimage").style.width = mainGVM.width.toString() + "px";
     document.getElementById("mainimage").style.height = mainGVM.height.toString() + "px";
 
+    
 
     document.getElementById("linkbox").style.width = (mainGVM.width - 20).toString() + "px";
     document.getElementById("linkbox").style.height = (mainGVM.height - 20).toString() + "px";
@@ -118,7 +121,12 @@ if(innerWidth > innerHeight){
     links[5].style.top = square.toString() + "px";
     links[5].style.left = (2*square).toString() + "px";
 
-    
+    document.getElementById("scrollscroll").style.width = document.getElementById("mainimage").style.width;
+    document.getElementById("scrollscroll").style.height = document.getElementById("mainimage").style.height;    
+    document.getElementById("scrollscroll").style.left = document.getElementById("mainimage").style.left;
+    document.getElementById("scrollscroll").style.top = document.getElementById("mainimage").style.top;    
+
+
 }
 else{
     square = innerWidth/2 - 50;
@@ -182,6 +190,8 @@ else{
 }
 
 
+
+
 mainGVM.importbytecode(hypercube);    
 
 mainGVM.unit = square;
@@ -204,75 +214,78 @@ faceGVM.style.line7 = 5;
 facecanvas.style.display = "block";
 
 
-var httpccard = new XMLHttpRequest();
-httpccard.onreadystatechange = function(){
-    if (this.readyState == 4 && this.status == 200) {
-        card = JSON.parse(this.responseText);
-        loadcard();
-    }
-};
-httpccard.open("GET", "fileloader.php?filename=data/card.txt", true);
-httpccard.send();
 
+loadcard("data/card.txt");
 
-function loadcard(){
-
-    document.getElementById("mainimage").src = card.imageurl;
-
-    faceGVM.drawGlyph(card.faceglyph);
-
-    mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
-    mainGVM.actionSequence("0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[0]);
-    mainGVM.actionSequence("0300,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[1]);
-    mainGVM.actionSequence("0300,0333,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[2]);
-    mainGVM.actionSequence("0300,0331,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[3]);
-    mainGVM.actionSequence("0300,0331,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[4]);
-    mainGVM.actionSequence("0300,0331,0333,0333,0336,0330,0333,0336,0336,");
-    mainGVM.actionSequence(card.icons[5]);
-
-
-    for(var index = 0;index < card.links.length;index++){
-        if(card.links[index].length > 0){
-            if(card.links[index].includes(".") || card.links[index].includes("/") || card.links[index].includes(":")){
-                links[index].href = card.links[index];
-            }
-            else{
-                links[index].style.cursor = "pointer";
-                links[index].id = card.links[index];
-                links[index].onclick = function(){
-                    cardname = "cards/" + this.id;
-//                  alert("cards/" + this.id);
-                    var httpccard = new XMLHttpRequest();
-                    httpccard.onreadystatechange = function(){
-                        if (this.readyState == 4 && this.status == 200) {
-                            card = JSON.parse(this.responseText);
-                            loadcard();
+function loadcard(cardname){
+    document.getElementById("linkbox").style.display = "block";
+    var httpccard = new XMLHttpRequest();
+    httpccard.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            card = JSON.parse(this.responseText);
+                    
+                    
+            document.getElementById("scrollscroll").style.display = "none";
+            document.getElementById("mainimage").src = card.imageurl;
+            faceGVM.drawGlyph(card.faceglyph);
+            mainGVM.drawGlyph("0321,0362,0203,0335,0203,0203,0203,0335,0203,0203,0335,0203,0203,0203,0335,0203,0363,0320,0335,0201,0334,0342,0335,0335,0342,0334,0201,0334,0342,0335,0342,0335,0342,0335,0330,0330,0335,");
+            mainGVM.actionSequence("0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[0]);
+            mainGVM.actionSequence("0300,0333,0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[1]);
+            mainGVM.actionSequence("0300,0333,0333,0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[2]);
+            mainGVM.actionSequence("0300,0331,0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[3]);
+            mainGVM.actionSequence("0300,0331,0333,0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[4]);
+            mainGVM.actionSequence("0300,0331,0333,0333,0336,0330,0333,0336,0336,");
+            mainGVM.actionSequence(card.icons[5]);
+        
+            for(var index = 0;index < card.links.length;index++){
+                if(card.links[index].length > 0){
+                    if(card.links[index].includes(":") || card.links[index].includes(".html") || card.links[index].includes(".php")){
+                        links[index].href = card.links[index];
+                    }
+                    else{
+                        var newspan = document.createElement("SPAN");
+                        newspan.classList.add("data");
+                        newspan.innerHTML = card.links[index];
+                        links[index].appendChild(newspan);
+                        links[index].style.cursor = "pointer";
+        
+                        links[index].onclick = function(){
+                            name = this.getElementsByClassName("data")[0].innerHTML;
+                            if(name.substring(0,6) == "cards/"){
+                                loadcard(name);
+                            }
+                            if(name.substring(0,8) == "scrolls/"){
+                                loadscroll(name);
+                            }
+                            
                         }
-                    };
-                    httpccard.open("GET", "fileloader.php?filename=" + cardname, true);
-                    httpccard.send();
-
+                    }
                     
+                    links[index].style.border = "solid";
+                    links[index].style.borderColor = "#ff2cb4";
+                    links[index].style.borderWidth = "5px";
+                    links[index].style.borderRadius = "10px";                
+                    links[index].style.display = "block";
                     
+        
+                }   
+                else{
+                    links[index].style.display = "none";
                 }
             }
-            links[index].style.border = "solid";
-            links[index].style.borderColor = "#ff2cb4";
-            links[index].style.borderWidth = "5px";
-            links[index].style.borderRadius = "10px";                
-            links[index].style.display = "block";
             
-
-        }   
-        else{
-            links[index].style.display = "none";
+            
         }
-    }
+    };
+    httpccard.open("GET", "fileloader.php?filename=" + cardname, true);
+    httpccard.send();
+
+    
 }
 
 theta = 0;
@@ -323,6 +336,113 @@ qrcode = new QRCode(document.getElementById("qrcode"), {
 qrcode.makeCode(globalurl);
 
 
+mode = "dark";
+//mode = "light";
+
+scroll = "";
+rawhtml = "";
+var converter = new showdown.Converter();
+// for more on options see here:
+// https://github.com/showdownjs/showdown/wiki/Showdown-Options
+converter.setOption('literalMidWordUnderscores', 'true');
+converter.setOption('tables', 'true')
+    
+filename = "scrolls/home";
+
+
+function loadscroll(scrollname){
+    document.getElementById("linkbox").style.display = "none";
+
+    document.getElementById("scrollscroll").style.display = "block";
+    filename = scrollname;
+    if(filename.substring(0,8) == "scrolls/" || filename == "README.md"){
+        localfile = true;
+    }
+    else{
+        localfile = false;
+    }
+
+
+
+
+    document.getElementById("scrollscroll").innerHTML = "";
+    document.getElementById("scrollscroll").style.display = "block";
+
+
+    var httpc666 = new XMLHttpRequest();
+    httpc666.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            scroll = this.responseText;
+            rawhtml = converter.makeHtml(scroll);
+            document.getElementById("scrollscroll").innerHTML = rawhtml;
+            convertscrollinks();
+            //			MathJax.Hub.Typeset();//tell Mathjax to update the math
+    //			MathJax.Hub.Typeset();//tell Mathjax to update the math
+        }
+    };
+    httpc666.open("GET", "fileloader.php?filename=" + scrollname, true);
+    httpc666.send();
+    //MathJax.Hub.Typeset();//tell Mathjax to update the math
+}
+
+
+function convertscrollinks(){
+    scrolllinks = document.getElementById("scrollscroll").getElementsByTagName("A");
+    for(var index = 0;index < scrolllinks.length;index++){
+        if(scrolllinks[index].href.includes("scrolls/") && !scrolllinks[index].href.includes(".php")){
+            //console.log(links[index].href);
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = scrolllinks[index].innerHTML;
+            var dataspan = document.createElement("SPAN");
+            dataspan.className = "data";
+            dataspan.innerHTML  = "scrolls/" + scrolllinks[index].href.split("scrolls/")[1];
+            newspan.appendChild(dataspan);
+            newspan.className = "scrolllink";
+            scrolllinks[index].parentNode.insertBefore(newspan,scrolllinks[index]);
+            scrolllinks[index].style.display = "none";
+            
+            newspan.onclick = function(){
+                var localscroll = this.getElementsByClassName("data")[0].innerHTML;
+                loadscroll(localscroll);
+            }
+        }
+        if(scrolllinks[index].href.includes("scroll(") && !scrolllinks[index].href.includes(".php")){
+            //link format scroll(any url)
+            //console.log(scrolllinks[index].href);
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = scrolllinks[index].innerHTML;
+            var dataspan = document.createElement("SPAN");
+            dataspan.className = "data";
+            dataspan.innerHTML  = scrolllinks[index].href.split("scroll(")[1].split(")")[0];
+            newspan.appendChild(dataspan);
+            newspan.className = "scrolllink";
+            scrolllinks[index].parentNode.insertBefore(newspan,scrolllinks[index]);
+            scrolllinks[index].style.display = "none";
+            
+            newspan.onclick = function(){
+                var localscroll = this.getElementsByClassName("data")[0].innerHTML;
+                loadscroll(localscroll);
+            }
+        }
+        if(scrolllinks[index].href.includes("cards/") && !scrolllinks[index].href.includes(".php")){
+            console.log(scrolllinks[index].href);
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = scrolllinks[index].innerHTML;
+            var dataspan = document.createElement("SPAN");
+            dataspan.className = "data";
+            dataspan.innerHTML  = "cards/" + scrolllinks[index].href.split("cards/")[1];
+            newspan.appendChild(dataspan);
+            newspan.className = "scrolllink";
+            scrolllinks[index].parentNode.insertBefore(newspan,scrolllinks[index]);
+            scrolllinks[index].style.display = "none";
+            
+            newspan.onclick = function(){
+                var localscroll = this.getElementsByClassName("data")[0].innerHTML;
+                loadcard(localscroll);
+            }
+        }        
+    }
+}
 
 </script>
 <style>
@@ -416,6 +536,36 @@ input,textarea{
     position:absolute;
     z-index:-1;
 }
+#scrollscroll{
+    display:block;
+    position:absolute;
+    z-index:4;
+    overflow:scroll;
+    text-align:justify;
+    padding-left:1em;
+    padding-right:1em;
+    background-color:black; 
+    color:#00ff00;
+    font-size:2em;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+}
+#scrollscroll a{
+    color:#ff2cb4;
+}
+#scrollscroll img{
+    max-width:80%;
+    display:block;
+    margin:auto;
+    background-color:#808080;
+}
+.scrolllink{
+    color:#ff2cb4;
+    cursor:pointer;
+}
+
 </style>
 </body>
 </html>
