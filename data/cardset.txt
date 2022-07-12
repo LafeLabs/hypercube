@@ -2,6 +2,7 @@
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "cards": [
         "elements",
-        "hypercube"
+        "hypercube",
+        "purple"
     ]
 }
