@@ -3,6 +3,7 @@
     "cards": [
         "elements",
         "hypercube",
+        "maplelawn",
         "purple",
         "song"
     ]
