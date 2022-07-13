@@ -13,6 +13,7 @@
         "geometroncoinfeededitor.html",
         "globalimagefeed.html",
         "hypercube.html",
+        "hypercubepage.html",
         "icon3d.html",
         "icon64.html",
         "iconfeed.html",

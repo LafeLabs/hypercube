@@ -3,6 +3,7 @@
     "cards": [
         "elements",
         "hypercube",
-        "purple"
+        "purple",
+        "song"
     ]
 }
