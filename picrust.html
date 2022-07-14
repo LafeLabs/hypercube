@@ -22,7 +22,7 @@ foo
 
     -->
     
-<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAuN74AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREQAAAAARERERAAAAABEREREAAAAAEREREQAAAAARERERAAAAABEREREAAAAAEREREQAAAAARERERAAAAAAAAAAARERERAAAAABEREREAAAAAEREREQAAAAARERERAAAAABEREREAAAAAEREREQAAAAARERERAAAAABEREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAYoetAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREREREREREREREREAEREREREREQAREREREQAREREAEREREAEREAEREQERAAAAERARABERERERABEQABEREQABEBEQABEAAREAAREQAAEREAEAEREREREAERABEREREAEREQABERAAEREREQAAABEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
 
 
    <title>PI CRUST</title>    
@@ -38,8 +38,8 @@ foo
 <div id = "brandbox"><a style = "color:#ff2cb4;background-color:black" href = "index.html">HOME</a></div>
 <div id = "imagescroll">
             
-            <a style = "position:absolute;right:0px;top:0px" href= "imagefeed.html">DESTROYER</a>
-        <form id = "uploadform" style = "margin-top:10px;" action="upload.php" method="post" enctype="multipart/form-data">
+            <a style = "position:absolute;right:0px;top:0px;display:none;" href= "imagefeed.html">DESTROYER</a>
+        <form id = "uploadform" style = "margin-top:10px;display:none;" action="upload.php" method="post" enctype="multipart/form-data">
                 Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
@@ -47,13 +47,15 @@ foo
 
 </div>
 <div id = "mediascroll">
-        <a style = "position:absolute;right:0px;top:0px" href= "mediadestroyer.html">DESTROYER</a>
+
+        <a style = "position:absolute;right:0px;top:0px;display:none;" href= "mediadestroyer.html">DESTROYER</a>
             <a style = "position:absolute;right:0px;top:1em" href = "webpages.html">WEB PAGE EDITOR</a>
-    <form id = "uploadform" style = "margin-top:10px;color:#00ff00" action="uploadmedia.php" method="post" enctype="multipart/form-data">
+    <form id = "uploadform" style = "margin-top:10px;color:#00ff00;display:none;" action="uploadmedia.php" method="post" enctype="multipart/form-data">
                 Select media file to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Media File" name="submit">
     </form>    
+    
 </div>
 <script>
 
@@ -188,7 +190,11 @@ function loadmediafeed(){
 
 
 
-globalurl = window.location.href;
+//globalurl = window.location.href;
+
+globalurl = "http://10.0.0.138/picrust.html";
+
+
 if(innerWidth> innerHeight){
     codesquaresize = 0.5*innerHeight - 100;   
 }
@@ -196,8 +202,24 @@ else{
     codesquaresize = 0.5*innerWidth - 100;   
 }
 
-ipaddress = "";
 
+drawqrcode();
+
+function drawqrcode(){
+    qrcode = new QRCode(document.getElementById("qrcode"), {
+    	text: globalurl,
+    	width: codesquaresize,
+    	height: codesquaresize,
+    	colorDark : "#000000",
+    	colorLight : "#ffffff",
+    	correctLevel : QRCode.CorrectLevel.H
+    });    
+    qrcode.makeCode(globalurl);
+
+}
+
+/*
+ipaddress = "";
 
 var httpc = new XMLHttpRequest();
 httpc.onreadystatechange = function() {
@@ -218,20 +240,6 @@ httpc.onreadystatechange = function() {
 httpc.open("GET", "fileloader.php?filename=data/ipaddress.txt", true);
 httpc.send();
     
-    
-function drawqrcode(){
-    qrcode = new QRCode(document.getElementById("qrcode"), {
-    	text: globalurl,
-    	width: codesquaresize,
-    	height: codesquaresize,
-    	colorDark : "#000000",
-    	colorLight : "#ffffff",
-    	correctLevel : QRCode.CorrectLevel.H
-    });    
-    qrcode.makeCode(globalurl);
-
-}
-
 
 document.getElementById("ipaddressinput").onchange = function(){
     ipaddress = this.value;
@@ -256,22 +264,26 @@ document.getElementById("ipbutton").onclick = function(){
         document.getElementById("ipaddressinput").style.display = "none";
     }
 }
+*/
 
 </script>
 <style>
 body{
     overflow:hidden;
-    background-color:#F8DEB8;
-/*    background-color:#ad8762;*/
+/*    background-color:#F8DEB8;*/
+    background-color:#ad8762;
 }
 #ipbutton{
+    
     position:absolute;
     right:0px;
     top:0px;
     font-size:20px;
     cursor:pointer;
+    display:none;
 }
 #ipaddressinput{
+    display:none;
     position:absolute;
     top:0px;
     right:50px;
@@ -313,8 +325,8 @@ body{
     width:50%;
     overflow-y:scroll;
     height:50%;
-    background-color:#F8DEB8;
-/*    background-color:#ad8762;*/
+/*    background-color:#F8DEB8;*/
+    background-color:#ad8762;
     
 }
 #imagescroll img{
