@@ -2,13 +2,33 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d7/8-cell.gif)
 
+
+The Cube is self-replicating geometry from cardboard trash.  
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cubereplicator.jpg)
+
+The cube contains tools to replicate itself: box cutters, sharpies, [rulers](scrolls/rulers), and [shapes for geometric constructions](scrolls/shapes).
+
+We use triangles of various special shapes to create patterns showing the fundamental symmetries of the Universe.  [These can be made from laser cut acrylic using patterns from this web page](scrolls/shapes).  Also we use [laser cut acrylic rulers](scrolls/rulers) if we can. But without special tools, we can use a protractor, printing, tracing, or classical geometry to construct shapes with angles of 45 degrees, 30 degrees, 60 degrees, 90 degrees, 36 and 72 degrees.   These angles give us insight into the most common symmetries we find in both Nature and Technology.  
+
+We begin with raw corrugated cardboard.
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/rawcardboard.jpg)
 
+This is cut into 4 inch squares:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/squarestack.jpg)
+
+Squares without any paint/coating/finish/color are cut to the side shapes and bottom shape, and we need 5 faces for the outside, which are unmodified 4 inch squares.  
+
+Use a 36 degree triangle to color one finished side in with a fractal pentagram structure, which shows how fivefold symmetry relates to the Golden Ratio:
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/fivepanel.svg)
 
+Use triangles with 30, 60, and 120 degrees to color another side in with a fractal six pointed star showing how sixfold symmetry and scaling by the square root of 3 are structured. 
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/sixpanel.svg)
+
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/quadpanel.svg)
 
@@ -23,7 +43,9 @@
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardbottom.jpg)
 
 
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/pieces.jpg)
 
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/piece-assembly.jpg)
 
 
  - [Create cubes](scrolls/cubes)
