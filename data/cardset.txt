@@ -4,6 +4,7 @@
         "elements",
         "hypercube",
         "maplelawn",
+        "picrust",
         "purple",
         "song"
     ]
