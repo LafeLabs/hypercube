@@ -29,42 +29,101 @@ Use triangles with 30, 60, and 120 degrees to color another side in with a fract
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/sixpanel.svg)
 
+A third side is based on a study of the square root of two and fourfold symmetry:
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/quadpanel.svg)
 
+We put all this together along with the side and base layouts to get the five finished faces:
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/faces.jpg)
+
+side layout, on a 0.5 inch grid(we need 12 of these per cube):
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/sidepanel.svg)
 
+An assembled side piece with 6x1 inch rulers for scale:
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardside.jpg)
+
+We cut 3 of these out per cube to make the base:
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottompanel.svg)
 
+Those are stacked and glued:
+
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardboardbottom.jpg)
 
+Squares can be transformed into sides one by one by hand:
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/pieces.jpg)
 
-![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/piece-assembly.jpg)
+Assembly with glue fits it all together:
 
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/piece-assembly.jpg)
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/glue.jpg)
 
+If you have access to a laser cutter, there are patterns you can use to cut here:
 
- - [Create cubes](scrolls/cubes)
- - [Create Trash Magic Cards](scrolls/cards)
- - [Create rulers](scrolls/rulers)
- - [Create shape sets](scrolls/shapes)
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/side.svg)
+
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)
+
+
+# Trash Magic 
+
+The objective of Trash Magic is to build a world of freely replicating media which is used to create and replicate all elements of a comfortable life for all people using only trash and things we can grow.  To that end, we build media from trash and replicate it.  This self-replicating trash-based media can be used to replicate anything: ideas, things, groups, systems, technologies, organizations, projects, research, media, food, medicine, culture, stories, and living things.  
+
+# Trash Magic Geometron Hypercube Cards
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardmagictiktok.jpg)](card.html)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/symbolfeed/card.svg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/uploadimages/cardmagic.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/uploadimages/sixcards.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/uploadimages/cubestack.jpg)
+
+Cards are 3x4.5 inches, divided up into 1.5 inch squares.  Icons are printed in squares with the [Geometron Icon Trash Robot Printer](scrolls/printers).  Cards are carried from one cube to another in the Geometron Hypercube, the set of all [Geometron Cubes](scrolls/cubes) built worldwide.  Using physical cards in conjunction with media we put on both local and global web servers we can point to any information of any kind.  A domain name can point to a web page which can point to a place which can have more physical media pointing to a server which can hold any media in any format of any size.  This represents an extension of the World Wide Web into the physical world, printed on trash.  Passerby bring us cardboard trash and we cut it up into cards, divide the cards, print on them, put them in cubes, and share them with the whole Hypercube. 
+
+Cards can be used to:
+
+ - find people to connect with
+ - spread messages, memes, philosophies
+ - spread media 
+ - replicate things in Trash Magic
+ - promote a brand
+ - advertise a product or service
+ - build game boards in the physical world
+ - represent business transactions
+ - represent mutual aid 
+ - represent philosophical concepts
+ - direct to a place(park, corner, bridge, tunnel, shelter, house, business, rest stop, library, community center, makerspace, art gallery, coffee shop, garden, grove, warehouse, ford, dock, swamp, beach, etc.)
+ - build a collaborative game board on flat surfaces. This is a form of physical social media entirely built on trash and geometry.
+
+## PI CRUST Media
+
+ - [picrust.html](picrust.html)
+
+## Books
+
+ - [Read The First Book of Geometron](https://www.trashrobot.org/bookofgeometronfirst/)
+ - [Read the Book of Geometron Magic](https://www.trashrobot.org/geometronmagic/)
+ - [Read the Trash Magic Manifesto and Action Coloring Book](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks)
+ - [Public Domain Github Repository for Geometron Hypercube](https://github.com/LafeLabs/hypercube)
+
+## Icon Printers
+
+
  - [Create icon printer robots](scrolls/printers)
  - [Create and share Trash Robot Fashion](scrolls/fashion)
  - [Create Geometron media servers](scrolls/servers) 
  - [Create a new Geometron icon](scrolls/icons)
  - [Share media on the PI CRUST Media Network](scrolls/picrust)
  - [Contemplate Symmetry](scrolls/geometron)
- - [Read The First Book of Geometron](https://www.trashrobot.org/bookofgeometronfirst/)
- - [Read the Book of Geometron Magic](https://www.trashrobot.org/geometronmagic/)
- - [Read the Trash Magic Manifesto and Action Coloring Book](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks)
- - [Public Domain Github Repository for Geometron Hypercube](https://github.com/LafeLabs/hypercube)
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cubeplant.jpg)
 
