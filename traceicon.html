@@ -234,6 +234,31 @@ spellGVM.x0 = 5;
 spellGVM.y0 = 35;
 spellGVM.unit = 20;
 
+
+//WASD key setup, w is fwd, s is back, a is left, d is right, shift adds pixel to movement
+robotkeys = [
+    "0141:0506,",
+    "0163:0505,",
+    "0144:0507,",
+    "0167:0504,",
+    "0101:0502,",
+    "0123:0501,",
+    "0104:0503,",
+    "0127:0500,",
+    "0140:0320,",
+    "061:0321,",
+    "062:0322,",
+    "063:0323,",
+    "064:0324,",
+    "065:0325,",
+    "066:0326,",
+    "067:0327,"
+];
+
+
+//asdf/zxcv key setup, asdf are fwd, back, left, right and zxcv are same but with pixels drawn
+
+/*
 robotkeys = [
     "0141:0500,",
     "0163:0501,",
@@ -252,6 +277,7 @@ robotkeys = [
     "066:0326,",
     "067:0327,"
 ];
+*/
 
 var httpcHypercube = new XMLHttpRequest();
 httpcHypercube.onreadystatechange = function(){
