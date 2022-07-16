@@ -133,8 +133,11 @@ Using physical cards in conjunction with media we put on both local and global w
 The PI CRUST is a media server we build on local machines outside of the public Inernet.  This can be on a Windows laptop, Mac Laptop, Linux laptop, or Raspberry Pi.  We share media over these servers by carrying it around in the physical network on USB thumb drives.
 
  - [picrust.html](picrust.html)
- - [install PI CRUST on Windows or Mac]
- - [install PI CRUST on Raspberry PI]
+ - [install PI CRUST on Windows or Mac](scrolls/xampp)
+ - [install PI CRUST on Raspberry PI](scrolls/pi)
+
+Make folders inside the "media" directory.  Drop media in there.  Operators can make home pages for media content creators.   Content creators can promote content with physical Trash Magic cards which are available on the PI CRUST server.  For example a card might be an album which is on a server which the card points to via the Trash Magic mixed reality network. The album consists of a set of songs and possibly video, text, images, and other graphic arts which are in the home page.  That home page can be visited by people on the wifi which hosts the PI CRUST server.
+
 
 
 ## Books

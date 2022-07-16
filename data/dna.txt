@@ -249,6 +249,7 @@
         "icons",
         "lasers",
         "links",
+        "pi",
         "picrust",
         "printers",
         "replicators",
@@ -257,7 +258,8 @@
         "servers",
         "shapes",
         "spaces",
-        "stencils"
+        "stencils",
+        "xampp"
     ],
     "maps": [
         "home"
