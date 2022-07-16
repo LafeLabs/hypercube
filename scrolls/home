@@ -77,6 +77,43 @@ The objective of Trash Magic is to build a world of freely replicating media whi
 
 # Trash Magic Geometron Hypercube Cards
 
+Trash Magic Cards are cardboard cards 3 by 4.5 inches in size.  One side has a fractal pentagram drawn with a 36 degree isosceles triangle.  The other side is divided into 6 squares, each 1.5 inches across.  Squares can have any icon, drawn either by hand or with the [trash robot icon printer](scrolls/printers).
+
+
+A Cube can contain the means of replication of both the the cards: a 3 inch square, a 36 degree triangle, a box cutter and a marker.  That tool set can cut raw cardboard we find outside into cards and pattern the cards with the fractal and the grid.  Cards can then be made by hand using the sharpie and placed back in the cube.  This is how the Geometron Hypercube works as social media.  People make cards, edit cards, put cards in the cube, take them out, use them to make boards near the cube, or carry them away to other cubes in the network. 
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardfactory.jpg)
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardfactory2.jpg)
+
+Cards can be used for any networked communication.  Use cards to 
+
+ - find resources
+ - distribute resources
+ - sell things
+ - buy things
+ - share links to social media
+ - share links to web resources
+ - spread memes
+ - find friends
+ - find collaborators on projects
+ - locate places with resources and link them to one another
+ - stimulate the flow of local waste streams into Trash Magic, to upcycle into usable things
+ - annotate spaces, physical hyperlink, mixed reality media
+ - send messages
+ - divination
+ - game creation
+ - commerce
+ - direct to a place(park, corner, bridge, tunnel, shelter, house, business, rest stop, library, community center, makerspace, art gallery, coffee shop, garden, grove, warehouse, ford, dock, swamp, beach, etc.)
+ - build a collaborative game board on flat surfaces. This is a form of physical social media entirely built on trash and geometry.
+
+When cards become unusable, we sterilize them and [grow mushrooms](https://grocycle.com/grow-mushrooms-on-cardboard/) out of them.
+
+
+Cards are a form of mixed reality media.  We can move them around in public spaces and place them on things to give layers of meanings to those things.  While this involves not digital technology, the existence of the ubiquitous mobile Internet means we can connect the physical media to any digital media.  This can be done with simple hand written links. For example, simply writing a tiktok handle and hashtag can link to a tiktok which can be anything, all linked in words using only a pen and cardboard.  
+
+This layer of information we put on the world around us can point not just to cloud information like commercial social media accounts but to local wifi networks which have PI CRUST servers on them where we have our own media network off the Internet.  This physical mixed reality media network built entirely on cardboard is what draws people to our digital network that exists outside of the Internet.
+
 [![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cardmagictiktok.jpg)](card.html)
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/symbolfeed/card.svg)
@@ -87,26 +124,18 @@ The objective of Trash Magic is to build a world of freely replicating media whi
 
 ![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/cardmagic/uploadimages/cubestack.jpg)
 
-Cards are 3x4.5 inches, divided up into 1.5 inch squares.  Icons are printed in squares with the [Geometron Icon Trash Robot Printer](scrolls/printers).  Cards are carried from one cube to another in the Geometron Hypercube, the set of all [Geometron Cubes](scrolls/cubes) built worldwide.  Using physical cards in conjunction with media we put on both local and global web servers we can point to any information of any kind.  A domain name can point to a web page which can point to a place which can have more physical media pointing to a server which can hold any media in any format of any size.  This represents an extension of the World Wide Web into the physical world, printed on trash.  Passerby bring us cardboard trash and we cut it up into cards, divide the cards, print on them, put them in cubes, and share them with the whole Hypercube. 
 
-Cards can be used to:
+Using physical cards in conjunction with media we put on both local and global web servers we can point to any information of any kind.  A domain name can point to a web page which can point to a place which can have more physical media pointing to a server which can hold any media in any format of any size.  This represents an extension of the World Wide Web into the physical world, printed on trash.  Passerby bring us cardboard trash and we cut it up into cards, divide the cards, print on them, put them in cubes, and share them with the whole Hypercube. 
 
- - find people to connect with
- - spread messages, memes, philosophies
- - spread media 
- - replicate things in Trash Magic
- - promote a brand
- - advertise a product or service
- - build game boards in the physical world
- - represent business transactions
- - represent mutual aid 
- - represent philosophical concepts
- - direct to a place(park, corner, bridge, tunnel, shelter, house, business, rest stop, library, community center, makerspace, art gallery, coffee shop, garden, grove, warehouse, ford, dock, swamp, beach, etc.)
- - build a collaborative game board on flat surfaces. This is a form of physical social media entirely built on trash and geometry.
 
 ## PI CRUST Media
 
+The PI CRUST is a media server we build on local machines outside of the public Inernet.  This can be on a Windows laptop, Mac Laptop, Linux laptop, or Raspberry Pi.  We share media over these servers by carrying it around in the physical network on USB thumb drives.
+
  - [picrust.html](picrust.html)
+ - [install PI CRUST on Windows or Mac]
+ - [install PI CRUST on Raspberry PI]
+
 
 ## Books
 
@@ -115,8 +144,10 @@ Cards can be used to:
  - [Read the Trash Magic Manifesto and Action Coloring Book](https://www.trashrobot.org/user.php?scroll=scrolls/trashmagicbooks)
  - [Public Domain Github Repository for Geometron Hypercube](https://github.com/LafeLabs/hypercube)
 
-## Icon Printers
 
+
+
+## Icon Printers
 
  - [Create icon printer robots](scrolls/printers)
  - [Create and share Trash Robot Fashion](scrolls/fashion)
