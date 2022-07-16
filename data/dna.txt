@@ -35,6 +35,7 @@
         "roctal.html",
         "roctalcoin.html",
         "roctalscroll.html",
+        "scroll.html",
         "scrolldelete.html",
         "scrolleditor.html",
         "scrollset.html",
@@ -236,6 +237,7 @@
         "xyzcube.svg"
     ],
     "scrolls": [
+        "android",
         "arduino",
         "bags",
         "business",

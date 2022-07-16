@@ -1,3 +1,7 @@
+## [PI CRUST Server](picrust.html)
+
+## [CARD](card.html)
+
 # The Geometron Hypercube
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d7/8-cell.gif)
@@ -71,6 +75,27 @@ If you have access to a laser cutter, there are patterns you can use to cut here
 [![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/bottom.svg)
 
 
+## Toaster: Square Factory
+
+It is useful to have a box which can hold 4 inch squares in the various stages of processing.  This can contain squares both before and after cutting to various shapes, before and after patterning and before and after gluing into completed panels(side or bottom).
+
+
+Completed Toaster Box:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/toaster4.jpg)
+
+Assembly layout:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/toaster3.jpg)
+
+
+Side:
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/toaster1.jpg)
+
+Bottom:
+
+![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/toaster2.jpg)
+
 # Trash Magic 
 
 The objective of Trash Magic is to build a world of freely replicating media which is used to create and replicate all elements of a comfortable life for all people using only trash and things we can grow.  To that end, we build media from trash and replicate it.  This self-replicating trash-based media can be used to replicate anything: ideas, things, groups, systems, technologies, organizations, projects, research, media, food, medicine, culture, stories, and living things.  
@@ -135,12 +160,13 @@ The PI CRUST is a media server we build on local machines outside of the public 
  - [picrust.html](picrust.html)
  - [install PI CRUST on Windows or Mac](scrolls/xampp)
  - [install PI CRUST on Raspberry PI](scrolls/pi)
+ - [install PI CRUST on Android](scrolls/android)
 
 Make folders inside the "media" directory.  Drop media in there.  Operators can make home pages for media content creators.   Content creators can promote content with physical Trash Magic cards which are available on the PI CRUST server.  For example a card might be an album which is on a server which the card points to via the Trash Magic mixed reality network. The album consists of a set of songs and possibly video, text, images, and other graphic arts which are in the home page.  That home page can be visited by people on the wifi which hosts the PI CRUST server.
 
+Make personal home pages from PI CRUST using the page editor linked in the media scroll in [PI CRUST](picrust.html).
 
-
-## Books
+## Trash Robot Books
 
  - [Read The First Book of Geometron](https://www.trashrobot.org/bookofgeometronfirst/)
  - [Read the Book of Geometron Magic](https://www.trashrobot.org/geometronmagic/)
@@ -148,25 +174,30 @@ Make folders inside the "media" directory.  Drop media in there.  Operators can 
  - [Public Domain Github Repository for Geometron Hypercube](https://github.com/LafeLabs/hypercube)
 
 
+## Geometron Icons
 
+Icons are sequences of geometric actions which make simple pixelated shapes.  They are a way to show how Geometron can be a universal geometric language letting us move between many physical and digital media.  Trace icons using a keyboard, where the keys to move are w, a, s, d and to move with pixels are W, A, S, D. 
 
-## Icon Printers
-
- - [Create icon printer robots](scrolls/printers)
- - [Create and share Trash Robot Fashion](scrolls/fashion)
+ - [Build icon printer robots](scrolls/printers)
+ - [harvest trace image urls](globalimagefeed.html)
+ - [align trace image](alignimage.html)
+ - [trace icon](traceicon.html)
+ - [program Arduino](arduino.html)
+ - [edit icon feed](iconfeed.html)
  - [Create Geometron media servers](scrolls/servers) 
- - [Create a new Geometron icon](scrolls/icons)
- - [Share media on the PI CRUST Media Network](scrolls/picrust)
- - [Contemplate Symmetry](scrolls/geometron)
 
-![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/cubeplant.jpg)
+ 
+The steps to create your own Geometron icon are:
 
-![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/uploadimages/touchgrass.jpg)
+ 1.  Find an image and drop the url to it into [globalimagefeed.html](globalimagefeed.html)
+ 2.  Align the image for tracing using [alignimage.html](alignimage.html)
+ 3.  Trace the image with [traceicon.html](traceicon.html) and save it
+ 4.  Copy the Geometron glyph of the icon and share it with others, spread it, replicate it, share whole sets/feeds of icons with [iconfeed.html](iconfeed.html)
+ 5. Produce physical prints using the [printer robot](scrolls/printers) or other Geometron machines like laser cutters and 3d printers
 
+What to do with icons?
 
-Join the Trash Robot Network to build a world of freely replicating things from trash!  Our objective is to build an entire new civilization from things we can grow and from trash, using the tools of geometry.  Our language is [Geometron, which is based on the fundamental symmetries of the Universe](scrolls/geometron).  Geometron represents a revolution from a numbers-based information technology to one based entirely on geometric constructions.  Geometron is what we use to create symbols for communication with people as well as to construct and program machines which build physical products.  
-
-The Geometron Hypercube is our primary "product" on which all our other technology is based.  We create 4 inch cubes from cardboard trash we find in our environment.  We use these cubes as literal building blocks both for our mechanical technology like the printers and other robots we use for fabrication. We also use them to grow living things which we can eat as well as use for other technological purposes like mycelium-based circuits.  Cubes are stacked, moved, organized, edited, composted, and traded, and form the basis of the economy of our new world.  
-
-Taken together, the sum total of the cubes, and their infrastructure for replication are called the Geometron Hypercube.  This is a combination of physical information in the form of the cubes and more abstract informational constructions which make up the Geometron language.  
-
+ - [program arduino(arduino.html)](arduino.html)
+ - [save base 64 and use(icon64.html)](icon64.html)
+ - [save svg and print in laser cutter for stencil(svgfeed.html)](svgfeed.html)
+ - [3d print icons(icon3d.html)](icon3d.html)

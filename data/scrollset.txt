@@ -1,6 +1,7 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
+        "android",
         "arduino",
         "bags",
         "business",
