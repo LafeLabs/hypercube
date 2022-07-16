@@ -223,7 +223,6 @@ document.getElementById("newscrollinput").onchange = function(){
 }
 
 
-
 function addcodelink(codename){
     var newscrollbutton = document.createElement("div");
     newscrollbutton.classList.add("file");
@@ -289,6 +288,31 @@ function setmode(){
 
 codesquaresize = 120;
 
+
+var newscrollbutton = document.createElement("div");
+newscrollbutton.classList.add("file");
+newscrollbutton.classList.add("html");
+newscrollbutton.innerHTML = "picrust.html";
+document.getElementById("filescroll").appendChild(newscrollbutton);
+newscrollbutton.onclick = function(){
+    currentFile = this.innerHTML;
+    //use php script to load current file;
+    var httpc = new XMLHttpRequest();
+    httpc.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            filedata = this.responseText;
+            setmode();
+            editor.setValue(filedata);
+            fileName = "picrust.html";
+            document.getElementById("newscrollinput").value = fileName;
+        }
+    };
+    httpc.open("GET", "fileloader.php?filename=" + currentFile, true);
+    httpc.send();
+                
+    document.getElementById("currentfilename").innerHTML = currentFile;
+                
+}
 
 </script>
 <style>
