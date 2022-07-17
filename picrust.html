@@ -104,6 +104,31 @@ function loadimagefeed(){
 }
 
 
+
+symbols = [];
+
+var httpcsymbols = new XMLHttpRequest();
+httpcsymbols.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        symbols = JSON.parse(this.responseText);
+        loadsymbolfeed();
+    }
+};
+httpcsymbols.open("GET", "dir.php?filename=symbolfeed", true);
+httpcsymbols.send();
+
+
+function loadsymbolfeed(){
+
+    for(var index = symbols.length - 1;index >= 0;index--) {
+        var newimg = document.createElement("IMG");
+        newimg.src = "symbolfeed/" + symbols[index];
+        document.getElementById("imagescroll").appendChild(newimg);
+    }    
+}
+
+
+
 media = [];
 
 var httpcUpload = new XMLHttpRequest();
