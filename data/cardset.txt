@@ -7,6 +7,7 @@
         "maplelawn",
         "picrust",
         "purple",
+        "shapes",
         "song"
     ]
 }
