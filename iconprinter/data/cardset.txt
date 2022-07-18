@@ -1,0 +1,11 @@
+{
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
+    "cards": [
+        "elements",
+        "hypercube",
+        "maplelawn",
+        "picrust",
+        "purple",
+        "song"
+    ]
+}

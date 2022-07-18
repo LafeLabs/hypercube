@@ -3,6 +3,7 @@
     "cards": [
         "elements",
         "hypercube",
+        "iconprinter",
         "maplelawn",
         "picrust",
         "purple",
