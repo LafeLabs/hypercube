@@ -26,6 +26,8 @@
         "replicator.txt",
         "text2php.txt",
         "upload.txt",
-        "uploadmedia.txt"
+        "uploadmedia.txt",
+        "webdnagenerator.txt",
+        "webreplicator.txt"
     ]
 }

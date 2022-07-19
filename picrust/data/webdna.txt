@@ -1,0 +1,4 @@
+[
+    "controlpanel.html",
+    "internette.html"
+]
