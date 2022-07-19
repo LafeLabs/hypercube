@@ -30,20 +30,7 @@
             HOME
             </a>
         </td>
-        <td>
-            <a href = "picrust.html">PI CRUST</a>
-        </td>
-        </tr>
-        <tr>
-        <td>
-            <a href = "alignimage.html">ALIGN ICON</a>
-        </td>
-        <tr>
-            <td>
-            <a href = "globalimagefeed.html">GLOBAL IMAGES</a>
-            </td>
-        </tr>
-    </tr>    
+    </tr>
 </table>    
 <div id = "imagefeedheader">
     <form id = "uploadform" action="upload.php" method="post" enctype="multipart/form-data">
@@ -87,12 +74,12 @@ function loadimagefeed(){
         newdiv.className = "filelabel";
         newuploadbox.appendChild(newdiv);
     
-        var newimg = document.createElement("IMG");
-        newimg.src = "iconsymbols/delete.svg";
-        newuploadbox.appendChild(newimg);
-        newimg.classList.add("button");
-        newimg.classList.add("deletebutton");
-        newimg.onclick = function(){
+        var newspan = document.createElement("SPAN");
+        newspan.innerHTML = "<a style = \"color:red\">X</a>";
+        newuploadbox.appendChild(newspan);
+        newspan.classList.add("button");
+        newspan.classList.add("deletebutton");
+        newspan.onclick = function(){
             var imageurl =this.parentElement.getElementsByClassName("uploadimage")[0].src; 
             var imagename = "uploadimages/" + imageurl.split("uploadimages/")[1];
             var httpc = new XMLHttpRequest();
@@ -163,8 +150,14 @@ h1{
     
 }
 .deletebutton{
-    width:4em;
+    width:2em;
     background-color:#808080;
+    border:solid;
+    border-radius:5px;
+    border-width:5px;
+    border-color:red;
+    font-family:helvetica;
+    font-size:2em;
 }
 .button{
     cursor:pointer;

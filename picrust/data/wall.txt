@@ -14,5 +14,12 @@ elements of pi crust:
  - images 
  - ads
 
+plan:
+
+ - add readme.html and editor to work flow
+ - add a mode file in data/mode.txt which determines mode, and control panel for it
+ - media destroyer in work flow
+ - image destroyer in work flow
+ - basic standard pages for types of media:
 
  
