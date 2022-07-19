@@ -1,0 +1,30 @@
+{
+    "html": [
+        "README.md",
+        "imagefeed.html",
+        "index.html",
+        "mediadestroyer.html",
+        "picrust.html",
+        "qrcode.html",
+        "readme.html",
+        "webpages.html"
+    ],
+    "data": [
+        "dna.txt",
+        "wall.txt"
+    ],
+    "php": [
+        "copy.txt",
+        "deletefile.txt",
+        "dir.txt",
+        "dnagenerator.txt",
+        "editor.txt",
+        "fileloader.txt",
+        "filesaver.txt",
+        "mkdir.txt",
+        "replicator.txt",
+        "text2php.txt",
+        "upload.txt",
+        "uploadmedia.txt"
+    ]
+}
