@@ -56,8 +56,8 @@
         "trashrobot.html",
         "user.html",
         "voxel.html",
-        "webeditor.html",
-        "webpages.html"
+        "webdestroyer.html",
+        "webeditor.html"
     ],
     "data": [
         "alignimage.txt",

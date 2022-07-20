@@ -79,6 +79,16 @@ httpc.send();
 
 
 
+var httpcprototype = new XMLHttpRequest();
+httpcprototype.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        htmlprototype = this.responseText;
+    }
+};
+httpcprototype.open("GET", "fileloader.php?filename=web/index.html", true);
+httpcprototype.send();
+
+
 scrolls = [];
 var httpc8 = new XMLHttpRequest();
 httpc8.onreadystatechange = function() {
@@ -162,7 +172,6 @@ document.getElementById("newscrollinput").onchange = function(){
                     scroll = htmlprototype;
                 }   
                 
-                scroll = scroll.replace(/name/g,name);
                 setmode();
                 editor.setValue(scroll);  
                 

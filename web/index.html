@@ -9,8 +9,10 @@
 
 <a href= "../index.html" style = "position:Absolute;right:0px;top:1em;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:2">HOME</a>
 <a href= "../webeditor.html" style = "position:Absolute;right:0px;top:0px;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:2">WEB EDITOR</a>
+<div id = "qrcode"></div>
     <div id = "linkbox">
         <h1>PI CRUST WEB</h1>
+        <a href = "../webdestroyer.html">../webdestroyer.html</a>
     </div>
 <script>
 
@@ -46,13 +48,11 @@ function loadmediafeed(){
 
 globalurl = window.location.href;
 
-//globalurl = "http://10.0.0.138/picrust.html";
+//globalurl = "http://10.0.0.138/web/index.html";
 
 
-codesquaresize = 100;   
+codesquaresize = 200;   
 
-
-/*
 drawqrcode();
 
 function drawqrcode(){
@@ -68,7 +68,7 @@ function drawqrcode(){
 
 }
 
-*/
+
 
 </script>
 </body>
@@ -97,6 +97,7 @@ function drawqrcode(){
         left:10px;
         top:10px;
         background-color:#4040ff80;
+        overflow:scroll;
     }
     #linkbox a{
         font-family:Comic Sans MS;
@@ -107,10 +108,14 @@ function drawqrcode(){
         font-size:2em;
     }
     #qrcode{
+        position:absolute;
         border:solid;
         border-color:#808080;
         background-color:#808080;
         border-width:10px;
+        z-index:1;
+        bottom:10px;
+        right:10px;
     }
     
 </style>
