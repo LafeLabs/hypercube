@@ -56,6 +56,7 @@
         "trashrobot.html",
         "user.html",
         "voxel.html",
+        "webeditor.html",
         "webpages.html"
     ],
     "data": [

@@ -40,7 +40,7 @@ httpc2.onreadystatechange = function() {
     }
 };
 
-httpc2.open("GET", "../fileloader.php?filename=data/wall.txt", true);
+httpc2.open("GET", "../fileloader.php?filename=web/trashrobot-wall.txt", true);
 httpc2.send();
 
 
@@ -50,7 +50,7 @@ document.getElementById("wall").onkeyup = function() {
         var url = "../filesaver.php";        
         httpc.open("POST", url, true);
         httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
-        httpc.send("data="+encodeURIComponent(wall)+"&filename=data/wall.txt");//send text to filesaver.php        
+        httpc.send("data="+encodeURIComponent(wall)+"&filename=web/trashrobot-wall.txt");//send text to filesaver.php        
     
 }
 

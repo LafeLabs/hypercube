@@ -21,7 +21,7 @@ mkdir("uploadimages");
 mkdir("maps");
 mkdir("media");
 mkdir("cards");
-
+mkdir("web");
 
 copy("https://raw.githubusercontent.com/LafeLabs/hypercube/main/php/replicator.txt","replicator.php");
 
