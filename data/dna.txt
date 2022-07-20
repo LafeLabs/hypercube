@@ -271,7 +271,6 @@
         "index.html",
         "internette.html",
         "trashrobot-wall.html",
-        "trashrobot-wall.txt",
-        "trashrobot.html"
+        "trashrobot-wall.txt"
     ]
 }

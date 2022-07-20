@@ -46,6 +46,32 @@ function loadmediafeed(){
 
 }
 
+mediaup = [];
+
+var httpcUploadup = new XMLHttpRequest();
+httpcUploadup.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        mediaup = JSON.parse(this.responseText);
+        loadmediafeedup();
+    }
+};
+httpcUploadup.open("GET", "../dir.php", true);
+httpcUploadup.send();
+
+function loadmediafeedup(){
+    for(var index = 0;index < mediaup.length;index++) {
+        
+        if(mediaup[index].substr(-5) == ".html"){
+            var newa = document.createElement("A");
+            newa.innerHTML = mediaup[index];
+            newa.href = "../" + mediaup[index];
+            document.getElementById("linkbox").appendChild(newa);
+            
+        }
+    }    
+
+}
+
 globalurl = window.location.href;
 
 //globalurl = "http://10.0.0.138/web/index.html";
