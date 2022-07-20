@@ -17,6 +17,8 @@ dna.txt is a json formatted file which points to all the files in this system, w
     $jsfiles = scandir(getcwd()."/jscode");
     $scrollfiles = scandir(getcwd()."/scrolls");
     $mapfiles = scandir(getcwd()."/maps");
+    $webfiles = scandir(getcwd()."/web");
+
 
 
     $htmlfiles = [];
@@ -74,6 +76,13 @@ dna.txt is a json formatted file which points to all the files in this system, w
     foreach($mapfiles as $value){
         if($value[0] != "."){
             array_push($dna->maps,$value);
+        }
+    }
+
+    $dna->web = [];
+    foreach($webfiles as $value){
+        if(substr($value,-5) == ".html" || substr($value,-4) == ".css" || substr($value,-3) == ".js" || substr($value,-4) == ".php" || substr($value,-4) == ".txt"){
+            array_push($dna->web,$value);
         }
     }
 

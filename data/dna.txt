@@ -266,5 +266,12 @@
     ],
     "maps": [
         "home"
+    ],
+    "web": [
+        "index.html",
+        "internette.html",
+        "trashrobot-wall.html",
+        "trashrobot-wall.txt",
+        "trashrobot.html"
     ]
 }

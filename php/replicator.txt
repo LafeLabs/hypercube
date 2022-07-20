@@ -72,6 +72,12 @@ foreach($dna->maps as $value){
 
 }
 
+foreach($dna->web as $value){
+        
+    copy($baseurl."web/".$value,"web/".$value);
+
+}
+
 
 ?>
 <a href = "index.html">CLICK TO GO TO PAGE</a>
