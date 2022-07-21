@@ -19,6 +19,7 @@
         "iconfeed.html",
         "iconset.html",
         "imagefeed.html",
+        "images.html",
         "index.html",
         "keyboard.html",
         "magic.html",
