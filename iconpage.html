@@ -63,14 +63,15 @@ feedlinkwidth  = feedwidth;
 mainsize = 0.5*innerWidth - 10;
 
 maincanvas = document.getElementById("maincanvas");
-var mainGVM = new GVM(maincanvas,400,500);
 
-mainGVM.unit = 20;
+//8.5 x 11 letter size paper, make it 50 px per inch so 425x550
+var mainGVM = new GVM(maincanvas,425,550);
+mainGVM.unit = 75;//1.5 inches is 1 unit
 mainGVM.style.fill1 = "white";
 mainGVM.style.color1 = "black";
 mainGVM.style.line1 = 0.5;
-mainGVM.x0 = 100;
-mainGVM.y0 = 100;
+mainGVM.x0 = 25;//half inch
+mainGVM.y0 = 12;//quarter inch, rounded down
 
 mainGVM.drawGlyph("0300,");
 
@@ -82,7 +83,10 @@ httpcHypercube.onreadystatechange = function(){
     if (this.readyState == 4 && this.status == 200) {
         hypercube = JSON.parse(this.responseText);
         mainGVM.importbytecode(hypercube);    
-        
+        mainGVM.hypercube[0221] = "0320,0370,0331,0333,0200,0336,0330,0332,0336,0336,0210,0210,0220,0371,";
+        mainGVM.hypercube[0222] = "0221,0333,0221,0333,0221,0333,0221,0333,0221,0331,0332,0332,0332,0332,";
+        mainGVM.hypercube[0223] = "0222,0222,0222,0222,0222,0222,0222,";
+            
         var httpcFeed = new XMLHttpRequest();
         httpcFeed.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200) {
@@ -129,7 +133,8 @@ function loadfeed(){
         newdiv.onclick = function(){
             glyph = this.getElementsByClassName("data")[0].innerHTML;
             document.getElementById("glyphinput").value = glyph;
-            mainGVM.drawGlyph(glyph + "0337,0337,0337,0333,0336,0336,0336," + glyph+ "0337,0337,0337,0333,0336,0336,0336," + glyph);
+            mainGVM.hypercube[0220] = glyph;
+            mainGVM.drawGlyph("0300,0223,");
             //make this the coin for coin studio
             coin = glyph;
             
