@@ -33,6 +33,9 @@ else{
     <a href = "imagefeed.html">imagefeed.html</a>
 </p>
 <p style = "font-size:5em">
+    <a href = "images.html">images.html</a>
+</p>
+<p style = "font-size:5em">
     <a href = "picrust.html">picrust.html</a>
 </p>
 <p style = "font-size:5em">
