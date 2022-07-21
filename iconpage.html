@@ -152,7 +152,10 @@ document.getElementById("savebutton").onclick = function(){
 
 
 function savesvg(){
-
+    var httpc2 = new XMLHttpRequest();
+    httpc2.open("POST","filesaver.php", true);
+    httpc2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    httpc2.send("data="+encodeURIComponent(mainGVM.svgString) +"&filename=symbolfeed/iconpage.svg");//send text to filesaver.php
 
 }
 
