@@ -17,6 +17,7 @@
         "icon3d.html",
         "icon64.html",
         "iconfeed.html",
+        "iconpage.html",
         "iconset.html",
         "imagefeed.html",
         "images.html",
