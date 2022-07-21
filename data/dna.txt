@@ -25,6 +25,7 @@
         "mapbook.html",
         "mapdelete.html",
         "mapset.html",
+        "media.html",
         "mediadestroyer.html",
         "picrust.html",
         "programarduino.html",

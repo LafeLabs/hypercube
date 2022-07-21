@@ -8,6 +8,7 @@
         "picrust",
         "purple",
         "shapes",
-        "song"
+        "song",
+        "trash"
     ]
 }
