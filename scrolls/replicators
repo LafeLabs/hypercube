@@ -10,6 +10,7 @@
  - [copy card.html onto index.html](copy.php?from=card.html&to=index.html)
  - [copy picrust.html onto index.html](copy.php?from=picrust.html&to=index.html)
  - [copy image feed github replicator to this replicator](copy.php?from=https://raw.githubusercontent.com/LafeLabs/imagefeed/main/php/replicator.txt&to=replicator.php)
+ - [copy current hypercube github replicator to this replicator](copy.php?from=https://raw.githubusercontent.com/LafeLabs/hypercube/main/php/replicator.txt&to=replicator.php)
  - [replicator.php](replicator.php)
  - [scrollsetreplicator.php](scrollsetreplicator.php)
  - [mapsetreplicator.php](mapsetreplicator.php)
