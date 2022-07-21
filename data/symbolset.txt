@@ -28,6 +28,8 @@
         "squares-3-4.svg",
         "star6card.svg",
         "symbol1658163027.svg",
+        "symbol1658443537.svg",
+        "symbol1658443566.svg",
         "symmetrysymbol2.svg",
         "symmetrysymbol3.svg",
         "symmetrysymbol4.svg",
