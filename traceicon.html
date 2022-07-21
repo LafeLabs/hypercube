@@ -40,7 +40,7 @@
             <a href = "alignimage.html">ALIGN</a>
         </td>
         <td>
-            <a href = "iconset.html">ICONS</a>
+            <a href = "iconfeed.html">ICON FEED</a>
         </td>
         <td>
             <a href = "arduino.html">PRINTER</a>
@@ -51,7 +51,7 @@
     </tr>
 </table>
 <p id = "paragraph">
-    to use keyboard, move with zxcv and move with pixel using asdf keys.  select color with `,1,2,3,4,5,6,7.  Clear program with "|". Robot icon Code is the sequence  of numbers. Copy and save them, share them, post them to icon feeds.  To share on the local Icon Feed click the "share" link.  To program the Arduino click the "program" link.  
+    to use keyboard, move with wasd and move with pixel using ijkl keys.  select color with `,1,2,3,4,5,6,7.  Clear program with "|". Robot icon Code is the sequence  of numbers. Copy and save them, share them, post them to icon feeds.  To share on the local Icon Feed click the "share" link.  To program the Arduino click the "program" link.  
 </p>
 <div id = "mainbox">
     <canvas id = "gridcanvas"></canvas>
@@ -70,6 +70,9 @@
             </td>
             <td>
                 <input id = "spellinput"/>
+            </td>
+            <td>
+                move keys:wasd,<br>move pixel:ijkl,<br>colors:`,1,2,3,4,5,6,7
             </td>
         </tr>
     </table>
@@ -252,9 +255,13 @@ robotkeys = [
     "064:0324,",
     "065:0325,",
     "066:0326,",
-    "067:0327,"
+    "067:0327,",
+    "0152:0502,",
+    "0153:0501,",
+    "0154:0503,",
+    "0151:0500",
 ];
-
+//0152,0153,0154,0151,
 
 //asdf/zxcv key setup, asdf are fwd, back, left, right and zxcv are same but with pixels drawn
 
