@@ -34,10 +34,6 @@
         "programarduinoxyz.html",
         "qrcode.html",
         "readme.html",
-        "readroctal.html",
-        "roctal.html",
-        "roctalcoin.html",
-        "roctalscroll.html",
         "scroll.html",
         "scrolldelete.html",
         "scrolleditor.html",
@@ -120,6 +116,7 @@
         "symbolsetreplicator.txt",
         "text2php.txt",
         "upload.txt",
+        "uploadimagefeed.txt",
         "uploadmedia.txt",
         "uploadsymbol.txt",
         "user.txt"

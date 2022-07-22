@@ -13,7 +13,17 @@ images
     <META NAME="robots" CONTENT="noindex,nofollow">
 </head>
 <body>
-<div id = "imagefeed"></div>
+<div id = "header">
+    <a style = "position:absolute;right:0px;top:px;color:#ff2cb4;font-size:1.5em;font-family:courier" href = "web/">WEB</a>
+    <form id = "uploadform" action="uploadimagefeed.php" method="post" enctype="multipart/form-data">
+                <span id ="uploadspan">UPLOAD:</span>
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit" id ="submitinput">
+    </form>       
+</div>    
+<div id = "imagefeed">
+
+</div>
 
 
 <script>
@@ -31,6 +41,9 @@ httpcUpload.open("GET", "dir.php?filename=uploadimages", true);
 httpcUpload.send();
 
 
+deletemode = false;
+//deletemode = true;
+
 function loadimagefeed(){
 
     for(var index = uploadImages.length - 1;index >= 0;index--) {
@@ -42,6 +55,23 @@ function loadimagefeed(){
         
         newuploadbox.appendChild(newimg);
         document.getElementById("imagefeed").appendChild(newuploadbox);
+        if(deletemode){
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = "DELETE";
+            newuploadbox.appendChild(newspan);
+            newspan.classList.add("button");
+            newspan.classList.add("deletebutton");
+            newspan.onclick = function(){
+                var imageurl =this.parentElement.getElementsByClassName("uploadimage")[0].src; 
+                var imagename = "images/" + imageurl.split("images/")[1];
+                var httpc = new XMLHttpRequest();
+                var url = "deletefile.php";         
+                httpc.open("POST", url, true);
+                httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+                httpc.send("filename=" + imagename);//send text to deletefile.php
+                this.parentElement.parentElement.removeChild(this.parentElement);
+            }   
+        }
         
 
     }    
@@ -58,9 +88,16 @@ body{
 h1{
     text-align:center;
 }
+#header{
+    position:absolute;
+    right:0px;
+    left:0px;
+    top:0px;
+    height:2em;
+}
 #imagefeed{
     position:absolute;
-    top:0px;
+    top:2em;
     left:0px;
     right:0px;
     bottom:0px;
@@ -73,6 +110,36 @@ h1{
     background-color:#808080;
     margin-top:2em;
     margin-bottom:2em;
+}
+.imagebox{
+    border-top:solid;
+    padding-bottom:1em;
+    padding-top:1em;
+    padding-left:1em;
+    
+}
+.deletebutton{
+    width:2em;
+    background-color:#808080;
+    border:solid;
+    border-radius:5px;
+    border-width:5px;
+    border-color:red;
+    font-family:helvetica;
+    font-size:2em;
+    color:red;
+}
+.button{
+    cursor:pointer;
+}
+.button:hover{
+    background-color:green;
+}
+.button:active{ 
+    background-color:yellow;
+}
+.data{
+    display:none;
 }
 </style>
 </body>
