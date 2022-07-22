@@ -15,4 +15,12 @@
  - [scrollsetreplicator.php](scrollsetreplicator.php)
  - [mapsetreplicator.php](mapsetreplicator.php)
 
+# Five Replication objects:
+
+ - shapes
+ - cards
+ - cubes
+ - servers
+ - icon printer robots
+
   
