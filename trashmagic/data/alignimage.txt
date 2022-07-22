@@ -1,0 +1,1 @@
+{"w":0.8022857142857143,"x":0.09828571428571428,"y":0.11885714285714286,"angle":0,"src":"http://localhost/trashmagic/symbolfeed/symbol1658522076.svg"}
