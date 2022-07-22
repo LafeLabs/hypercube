@@ -5,7 +5,9 @@
  
  - [user.php](user.php)
  - [index.html](index.html)
+ - [iconpage.html](iconpage.html)
  - [scroll.html](scroll.html)
+ - [scrolleditor.php](scrolleditor.php)
  - [picrust.html](picrust.html)
  - [card.html](card.html)
  - [card.php](card.php)

@@ -1,7 +1,9 @@
 
 ## [HOME](scrolls/home)
 
-# icons
+# icon magic
+
+We create sets of icons and replicate them
 
  - [card.html](card.html)
  - [iconfeed.html](iconfeed.html)  
@@ -10,3 +12,20 @@
  - [alignimage.html](alignimage.html)
  - [traceicon.html](traceicon.html)
  - [iconpage.html](iconpage.html)
+ - [data/robotfeed.txt](data/robotfeed.txt)
+
+Print these out at about 170% size:
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-trashmagic.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-trashmagic.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-cardmagic.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-cardmagic.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-shapemagic.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-shapemagic.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-hypercube.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-hypercube.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-iconmagic.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-iconmagic.svg)
+
+[![](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-picrust.svg)](https://raw.githubusercontent.com/LafeLabs/hypercube/main/symbolfeed/iconpage-picrust.svg)
+
+
