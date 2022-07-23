@@ -14,9 +14,9 @@ if (file_exists($target_file)) {
     $imageIndex +=  1;
    // $target_file = $target_dir . "image" . $imageIndex . $extension;
 }
-if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploadimages/".$target_file)) {
+if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploadimages/img".time().$extension)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        
+       
 }
 else{
     echo "upload failed for some reason, possibly image size. Try screen shotting and uploading that(smaller) image.";    

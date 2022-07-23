@@ -14,7 +14,7 @@ images
 </head>
 <body>
 <div id = "header">
-    <a style = "position:absolute;right:0px;top:px;color:#ff2cb4;font-size:1.5em;font-family:courier" href = "web/">WEB</a>
+    <a style = "position:absolute;right:0px;top:px;color:#ff2cb4;font-size:1.5em;font-family:courier" href = "index.html">HOME</a>
     <form id = "uploadform" action="uploadimagefeed.php" method="post" enctype="multipart/form-data">
                 <span id ="uploadspan">UPLOAD:</span>
         <input type="file" name="fileToUpload" id="fileToUpload">
@@ -41,8 +41,8 @@ httpcUpload.open("GET", "dir.php?filename=uploadimages", true);
 httpcUpload.send();
 
 
-deletemode = false;
-//deletemode = true;
+//deletemode = false;
+deletemode = true;
 
 function loadimagefeed(){
 
