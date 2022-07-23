@@ -1,8 +1,20 @@
-
 ## [HOME](scrolls/home)
 
-# Create a Picrust Server 
+# Replicate PI CRUST  Server 
+
+Install the system on your computer, put media on the media feed, load images in the image feed, write on the wall.  Put the replicator videos and other documents of trash magic replication into the media folders on the server to share over a local wifi network using the QR code or messaged links.
  
+ - [http://localhost/](http://localhost/)
+ - [php/replicator.txt](php/replicator.txt)
+ - [picrust.html](picrust.html)
+ - [web/](web/)
+ - [media.html](media.html)
+ - [mediadestroy.html](mediadestroyer.html)
+ - [qrcode.html](qrcode.html)
+ - [imagefeed.html](imagefeed.html)
+ - [globalimagfeed.html](globalimagefeed.html)
+ - [wall.html](wall.html)
+
 ### Install on Windows or Mac
 
 First, install XAMPP, a free open source web server for all platforms.  [Download from www.apachefriends.org](https://www.apachefriends.org/index.html).  Click on windows to download, and click through to install everything.

@@ -55,6 +55,7 @@
         "trashrobot.html",
         "user.html",
         "voxel.html",
+        "wall.html",
         "webdestroyer.html",
         "webeditor.html"
     ],
