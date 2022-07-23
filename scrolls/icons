@@ -11,11 +11,4 @@ The steps to create your own Geometron icon are:
  2.  Align the image for tracing using [alignimage.html](alignimage.html)
  3.  Trace the image with [traceicon.html](traceicon.html) and save it
  4.  Copy the Geometron glyph of the icon and share it with others, spread it, replicate it, share whole sets/feeds of icons with [iconfeed.html](iconfeed.html)
- 5. Produce physical prints using the [printer robot](scrolls/printers) or other Geometron machines like laser cutters and 3d printers
-
-What to do with icons?
-
- - [program arduino(arduino.html)](arduino.html)
- - [save base 64 and use(icon64.html)](icon64.html)
- - [save svg and print in laser cutter for stencil(svgfeed.html)](svgfeed.html)
- - [3d print icons(icon3d.html)](icon3d.html)
+ 5. Print a page using [iconpage.html](iconpage.html)
