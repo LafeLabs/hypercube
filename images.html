@@ -14,7 +14,8 @@ images
 </head>
 <body>
 <div id = "header">
-    <a style = "position:absolute;right:0px;top:px;color:#ff2cb4;font-size:1.5em;font-family:courier" href = "index.html">HOME</a>
+    <div id = "deletemodebutton" class= "button">DELETE MODE OFF</div>
+    <a style = "position:absolute;right:0px;top:px;color:#ff2cb4;font-size:2em;font-family:courier;background-color:black" href = "index.html">HOME</a>
     <form id = "uploadform" action="uploadimagefeed.php" method="post" enctype="multipart/form-data">
                 <span id ="uploadspan">UPLOAD:</span>
         <input type="file" name="fileToUpload" id="fileToUpload">
@@ -41,11 +42,11 @@ httpcUpload.open("GET", "dir.php?filename=uploadimages", true);
 httpcUpload.send();
 
 
-//deletemode = false;
-deletemode = true;
+deletemode = false;
+//deletemode = true;
 
 function loadimagefeed(){
-
+    document.getElementById("imagefeed").innerHTML = "";
     for(var index = uploadImages.length - 1;index >= 0;index--) {
         var newuploadbox = document.createElement("DIV");
         newuploadbox.classList.add("imagebox");
@@ -78,30 +79,60 @@ function loadimagefeed(){
 }
 
 
+document.getElementById("deletemodebutton").style.backgroundColor = "#80808000";
+
+document.getElementById("deletemodebutton").onclick  = function(){
+    deletemode  = !deletemode;
+    if(deletemode){
+        document.getElementById("deletemodebutton").innerHTML = "DELETE MODE ON";
+        document.getElementById("deletemodebutton").style.backgroundColor = "red";
+    }
+    else{
+        document.getElementById("deletemodebutton").innerHTML = "DELETE MODE OFF";
+        document.getElementById("deletemodebutton").style.backgroundColor = "#80808000";    
+    }
+    loadimagefeed();
+}
+
 </script>
 <style>
 body{
     overflow:hidden;
-    font-size:1em;
     background-color:#808080;
 }
 h1{
     text-align:center;
+}
+input{
+    font-size:2em;
 }
 #header{
     position:absolute;
     right:0px;
     left:0px;
     top:0px;
-    height:2em;
+    height:4em;
+}
+#uploadspan{
+    font-size:2em;
 }
 #imagefeed{
     position:absolute;
-    top:2em;
+    top:4em;
     left:0px;
     right:0px;
     bottom:0px;
     overflow:scroll;
+}
+#deletemodebutton{
+    position:absolute;
+    right:4em;
+    top:0px;
+    font-family:courier;
+    border:solid;
+    border-radius:5px;
+    text-align:center;
+    font-size:2em;
 }
 .uploadimage{
     max-width:50%;
