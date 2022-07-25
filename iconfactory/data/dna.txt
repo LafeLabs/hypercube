@@ -1,0 +1,75 @@
+{
+    "html": [
+        "README.md",
+        "alignimage.html",
+        "arduino.html",
+        "globalimagefeed.html",
+        "iconfeed.html",
+        "iconpage.html",
+        "images.html",
+        "index.html",
+        "media.html",
+        "mediadestroyer.html",
+        "picrust.html",
+        "qrcode.html",
+        "readme.html",
+        "scrolleditor.html",
+        "traceicon.html",
+        "webdestroyer.html",
+        "webeditor.html"
+    ],
+    "data": [
+        "alignimage.txt",
+        "arduinocodexyz.txt",
+        "coin.txt",
+        "dna.txt",
+        "hypercube.txt",
+        "imagefeed.txt",
+        "robotfeed.txt",
+        "wall.txt",
+        "webdna.txt"
+    ],
+    "php": [
+        "copy.txt",
+        "deletefile.txt",
+        "dir.txt",
+        "dnagenerator.txt",
+        "editor.txt",
+        "fileloader.txt",
+        "filesaver.txt",
+        "mkdir.txt",
+        "replicator.txt",
+        "text2php.txt",
+        "uploadimage.txt",
+        "uploadmedia.txt",
+        "webdnagenerator.txt",
+        "webreplicator.txt"
+    ],
+    "web": [
+        "books.html",
+        "images.html",
+        "index.html",
+        "internette.html",
+        "music.html",
+        "qrcode.html",
+        "utilities.html"
+    ],
+    "javascript": [
+        "geometron.js"
+    ],
+    "iconsymbols": [
+        "abcfont.svg",
+        "cursor.svg",
+        "delete.svg",
+        "expand.svg",
+        "expandsmall.svg",
+        "left.svg",
+        "leftsmall.svg",
+        "right.svg",
+        "rightsmall.svg",
+        "rotate.svg",
+        "scale.svg",
+        "shrink.svg",
+        "shrinksmall.svg"
+    ]
+}
