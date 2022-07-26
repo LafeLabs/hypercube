@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>qrcode.html</title>
+<meta charset="utf-8">
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <h1><a href = "index.html">HOME</a></h1>
+    <div id= "qrcode"></div>
+    <script>
+
+    codesquaresize = 400;    
+    globalurl = window.location.href.split("qrcode.html")[0];
+        
+qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+
+    </script>
+</body>
+</html>

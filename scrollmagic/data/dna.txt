@@ -1,0 +1,56 @@
+{
+    "html": [
+        "README.md",
+        "images.html",
+        "index.html",
+        "media.html",
+        "mediadestroyer.html",
+        "picrust.html",
+        "qrcode.html",
+        "readme.html",
+        "scroll.html",
+        "scrolldelete.html",
+        "scrolleditor.html",
+        "scrollset.html",
+        "webdestroyer.html",
+        "webeditor.html"
+    ],
+    "data": [
+        "dna.txt",
+        "scrollset.txt",
+        "wall.txt",
+        "webdna.txt"
+    ],
+    "php": [
+        "copy.txt",
+        "deletefile.txt",
+        "dir.txt",
+        "dnagenerator.txt",
+        "editor.txt",
+        "fileloader.txt",
+        "filesaver.txt",
+        "mkdir.txt",
+        "replicator.txt",
+        "scroll.txt",
+        "scrolleditor.txt",
+        "scrollsetreplicator.txt",
+        "text2php.txt",
+        "uploadimage.txt",
+        "uploadmedia.txt",
+        "webdnagenerator.txt",
+        "webreplicator.txt"
+    ],
+    "scrolls": [
+        "foo",
+        "home"
+    ],
+    "web": [
+        "books.html",
+        "images.html",
+        "index.html",
+        "internette.html",
+        "music.html",
+        "qrcode.html",
+        "utilities.html"
+    ]
+}

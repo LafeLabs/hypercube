@@ -1,0 +1,7 @@
+{
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
+    "scrolls": [
+        "foo",
+        "home"
+    ]
+}
