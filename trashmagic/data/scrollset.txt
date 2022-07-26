@@ -2,9 +2,12 @@
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
         "cards",
+        "cubes",
         "home",
         "icons",
         "links",
+        "picrust",
+        "printers",
         "replicators",
         "shapes"
     ]
