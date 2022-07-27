@@ -8,6 +8,7 @@
  - [scrolleditor.php](scrolleditor.php)
  - [scrollset.html](scrollset.html)
  - [scrolldelete.html](scrolldelete.html)
+ - [data/scrollset.txt](data/scrollset.txt)
  - [php/replicator.txt](php/replicator.txt)
  - [global replicator link](https://raw.githubusercontent.com/LafeLabs/hypercube/main/scrollmagic/php/replicator.txt)
  - [fork.html](fork.html)
