@@ -1,8 +1,10 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
+        "cards",
         "cubes",
-        "foo",
-        "home"
+        "home",
+        "picrust",
+        "shapes"
     ]
 }
