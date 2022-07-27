@@ -1,5 +1,5 @@
 {
-    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/trashmagic/",
     "scrolls": [
         "books",
         "cards",
