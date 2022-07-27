@@ -4,16 +4,7 @@
     <meta charset="utf-8">
     <!--
 
-        EVERYTHING IS PHYSICAL
-        EVERYTHING IS FRACTAL
-        EVERYTHING IS RECURSIVE
-        NO MONEY
-        MO MINING
-        NO PROPERTY
-        LOOK AT THE INSECTS
-        LOOK AT THE FUNGI
-        LANGUAGE IS HOW THE MIND PARSES REALITY
-
+destroy media files via the browser
     
     -->
     
@@ -26,23 +17,14 @@
 <table id = "linktable">
     <tr>
         <td>
-            <a href = "index.html">
-            HOME
+            <a href = "../index.html">
+            PI CRUST HOME
             </a>
         </td>
         </tr>
-        <tr>
-        <td>
-            <a href = "picrust.html">PI CRUST</a>
-        </td>
-    </tr>    
 </table>    
 <div id = "imagefeedheader">
-    <form id = "uploadform" action="uploadmedia.php" method="post" enctype="multipart/form-data">
-                <span id ="uploadspan">UPLOAD:</span>
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Media File" name="submit" id ="submitinput">
-    </form>        
+
 </div>
     
 <div id = "imagefeed"></div>
@@ -76,12 +58,12 @@ function loadimagefeed(){
             newdiv.className = "filelabel";
             newuploadbox.appendChild(newdiv);
         
-            var newimg = document.createElement("IMG");
-            newimg.src = "iconsymbols/delete.svg";
-            newuploadbox.appendChild(newimg);
-            newimg.classList.add("button");
-            newimg.classList.add("deletebutton");
-            newimg.onclick = function(){
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = "X";
+            newuploadbox.appendChild(newspan);
+            newspan.classList.add("button");
+            newspan.classList.add("deletebutton");
+            newspan.onclick = function(){
                 var filename = "media/" + this.parentElement.getElementsByClassName("filelabel")[0].innerHTML; 
                 var httpc = new XMLHttpRequest();
                 var url = "deletefile.php";         
@@ -89,7 +71,8 @@ function loadimagefeed(){
                 httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
                 httpc.send("filename=" + filename);//send text to deletefile.php
                 this.parentElement.parentElement.removeChild(this.parentElement);
-            }   
+            }           
+        
         }
     }    
 }
@@ -152,8 +135,17 @@ h1{
     
 }
 .deletebutton{
-    width:4em;
+    width:1em;
     background-color:#808080;
+    font-family:helvetica;
+    font-size:2em;
+    border:solid;
+    color:red;
+    border-radius:5px;
+    border-width:5px;
+    display:block;
+    height:1em;
+    text-align:center;
 }
 .button{
     cursor:pointer;

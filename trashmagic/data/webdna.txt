@@ -1,0 +1,8 @@
+[
+    "books.html",
+    "images.html",
+    "index.html",
+    "internette.html",
+    "music.html",
+    "qrcode.html"
+]

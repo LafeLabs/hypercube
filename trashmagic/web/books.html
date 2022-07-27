@@ -6,24 +6,10 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> 
 </head>
 <body>
-    <div id = "page">
-        <h1>Internette</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y5BZkaWZAAA" title="YouTube video player" frameborder="0" ></iframe>
-
-        <p>
-            Say goodbye to e-worms!
-        </p>
-        <ul>
-            <li>
-                <a href = "../picrust.html">Return to PI CRUST</a>
-            </li>               
-            <li>
-                <a href = "../webeditor.html">Web Page Editor</a>
-            </li>               
-    
-        </ul>
+    <a href= "../webeditor.html" style = "position:Absolute;right:0px;top:0px;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:3">WEB EDITOR</a>
+    <div id = "linkbox">
+        <h1>BOOKS</h1>
     </div>
-    <div id = "linkbox"></div>
 <script>
 
 
@@ -36,7 +22,7 @@ httpcUpload.onreadystatechange = function() {
         loadmediafeed();
     }
 };
-httpcUpload.open("GET", "../dir.php?filename=media", true);
+httpcUpload.open("GET", "../dir.php?filename=media/books", true);
 httpcUpload.send();
 
 mediadir = [];
@@ -45,13 +31,11 @@ dirname = "";
 function loadmediafeed(){
     for(var index = 0;index < media.length;index++) {
         
-        if(media[index].substr(-5) == ".html"){
             var newa = document.createElement("A");
             newa.innerHTML = media[index];
-            newa.href = media[index];
+            newa.href = "../media/books/" + media[index];
             document.getElementById("linkbox").appendChild(newa);
             
-        }
     }    
 
 }
@@ -62,8 +46,8 @@ function loadmediafeed(){
 <style>
     body{
         background-color:black;
-        color:#00ff00;
-        font-family:courier;
+        color:#ffffff;
+        font-family:Comic Sans MS;
     }
     h1,h2,h3,h4{
         text-align:center;
@@ -76,17 +60,16 @@ function loadmediafeed(){
         display:block;
         margin:auto;
     }
-    #page{
-        position:absolute;
-        left:10px;
-        top:10px;
-        overflow:scroll;
-    }
+    
     #linkbox{
         position:absolute;
         right:10px;
         bottom:10px;
+        left:10px;
+        top:10px;
         background-color:#4040ff80;
+                overflow:scroll;
+
     }
     #linkbox a{
         font-family:Comic Sans MS;
@@ -102,28 +85,6 @@ function loadmediafeed(){
         background-color:#808080;
         border-width:10px;
     }
-    @media only screen and (orientation: portrait) {
-        #linkbox{
-            width:90%;
-            bottom:10px;
-            height:40%;
-        }   
-        #page{
-            height:48%;
-            width:100%;
-        }
-    }
-    @media only screen and (orientation: landscape) {
-        #linkbox{
-            top:10px;
-            width:40%;
-            bottom:10px;
-            height:90%;
-        }   
-        #page{
-            bottom:10px;
-            right:50%;
-        }
-    }
+    
 </style>
 </html>

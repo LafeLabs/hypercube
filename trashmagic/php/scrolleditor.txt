@@ -26,15 +26,14 @@ double line break for paragraph break, *italic*, **bold**, [link](index.html). D
 </div>
     
 <textarea id = "maintextarea"></textarea>
-    <a id = "userlink" href = "user.php?scroll=scrolls/home">
-        <img src = "iconsymbols/scroll.svg"/>
-    </a>
-    <a href = "scrolldelete.html">
-        <img src = "iconsymbols/delete.svg"/>
-    </a>
-    <img id = "modebutton" class = "button" src= "iconsymbols/lightdark.svg"/>
-
-    <img id = "menubutton" class = "button" src= "iconsymbols/hidemenu.svg"/>
+<div id = "linksbox">
+    <a id = "userlink" href = "scroll.php?scroll=scrolls/home">READ SCROLL</a>
+    <a href = "scrolldelete.html">DELETE SCROLLS</a>
+    <a href "scrollset.html">SCROLL SET REPLICATOR</a>
+    <span id = "menubutton" class = "button">SHOW SCROLL LIST</span>
+    <span id = "modebutton" class = "button">MODE</span>
+    
+</div>
     
 <div id = "feedscroll">
     <table>
@@ -114,7 +113,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
                 scroll = this.responseText;
                 document.getElementById("maintextarea").value = scroll;  
                 document.getElementById("currentfilename").innerHTML = currentfile;        
-                document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+                document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
             }
         };
         httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -129,7 +128,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
                 document.getElementById("maintextarea").value = scroll;  
                 currentfile = "scrolls/remote";
                 document.getElementById("currentfilename").innerHTML = currentfile;
-                document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+                document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
             }
         };
         httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -148,7 +147,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
             scroll = this.responseText;
             document.getElementById("maintextarea").value = scroll;  
             document.getElementById("currentfilename").innerHTML = currentfile;
-            document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+            document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
             
             data = encodeURIComponent(scroll);
             var httpc = new XMLHttpRequest();
@@ -166,7 +165,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
 }
 
 if(document.getElementById("scrolldiv").innerHTML.length == 0 && document.getElementById("fromdiv").innerHTML.length == 0){
-    currentfile = "README.md";
+    currentfile = "scrolls/home";
     var httpc = new XMLHttpRequest();
     httpc.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -212,7 +211,7 @@ var httpc7 = new XMLHttpRequest();
                     currentfile = this.innerHTML;
                     //console.log(scrollname);
                     document.getElementById("currentfilename").innerHTML = currentfile;       
-                    document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+                    document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
                     var httpc = new XMLHttpRequest();
                     httpc.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
@@ -251,7 +250,7 @@ if (this.readyState == 4 && this.status == 200) {
             document.getElementById("newscrollinput").value = "";
             currentfile = this.innerHTML;
             document.getElementById("currentfilename").innerHTML = currentfile;
-            document.getElementById("userlink").href = "user.php?scroll=" + currentfile;            
+            document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;            
             var httpc = new XMLHttpRequest();
             httpc.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -276,7 +275,7 @@ document.getElementById("newscrollinput").onchange = function(){
     name = this.value;
     currentfile = "scrolls/" + this.value;
     document.getElementById("currentfilename").innerHTML = currentfile; 
-    document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+    document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
     var httpc = new XMLHttpRequest();
     httpc.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -308,7 +307,7 @@ document.getElementById("newscrollinput").onchange = function(){
         currentfile = this.innerHTML;
         //console.log(scrollname);
         document.getElementById("currentfilename").innerHTML = currentfile;       
-        document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+        document.getElementById("userlink").href = "scroll.php?scroll=" + currentfile;
         var httpc = new XMLHttpRequest();
         httpc.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -406,6 +405,11 @@ function savejson(){
 }
 body{
     overflow:hidden;
+}
+#linksbox a,span{
+    color:#ff2cb4;
+    border:solid;
+    border-color:#ff2cb4;
 }
 .scrollbutton{
     cursor:pointer;

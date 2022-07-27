@@ -1,22 +1,16 @@
 <!doctype html>
 <html>
 <head>
-<title>The Web</title>
+<title>images</title>
     <meta charset="utf-8">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> 
 </head>
 <body>
-
-<a href= "../index.html" style = "position:Absolute;right:0px;top:1em;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:2">HOME</a>
-<a href= "../webeditor.html" style = "position:Absolute;right:0px;top:0px;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:2">WEB EDITOR</a>
-<div id = "qrcode"></div>
+    <a href= "../webeditor.html" style = "position:Absolute;right:0px;top:0px;color:#ff2cb4;background-color:#404040;font-size:2em;z-index:3">WEB EDITOR</a>
     <div id = "linkbox">
-        <h1>PI CRUST WEB</h1>
-        <h3><a href = "https://www.w3schools.com/">Learn HTML, CSS and JavaScript at W3Schools.com</a></h3>
-        <h3><a href = "https://codepen.io/">Learn Web Development by Example and share code at codepen.io</a></h3>
-        <a href = "../webdestroyer.html">../webdestroyer.html</a>
     </div>
 <script>
+
 
 media = [];
 
@@ -27,26 +21,22 @@ httpcUpload.onreadystatechange = function() {
         loadmediafeed();
     }
 };
-httpcUpload.open("GET", "../dir.php?filename=web", true);
+httpcUpload.open("GET", "../dir.php?filename=uploadimages", true);
 httpcUpload.send();
 
+mediadir = [];
+dirname = "";
 
 function loadmediafeed(){
     for(var index = 0;index < media.length;index++) {
         
-        if(media[index].substr(-5) == ".html"){
-            var newa = document.createElement("A");
-            newa.innerHTML = media[index];
-            newa.href = media[index];
-            document.getElementById("linkbox").appendChild(newa);
+            var newimg = document.createElement("IMG");
+            newimg.src =  "../uploadimages/" + media[index];
+            document.getElementById("linkbox").appendChild(newimg);
             
-        }
     }    
 
 }
-
-
-
 
 
 </script>
@@ -86,8 +76,18 @@ function loadmediafeed(){
         padding-left:1em;
         font-size:2em;
     }
-    
-    
+    img{
+        max-width:50%;
+        display:block;
+        margin:auto;
+        padding-top:1em;
+    }
+    #qrcode{
+        border:solid;
+        border-color:#808080;
+        background-color:#808080;
+        border-width:10px;
+    }
     
 </style>
 </html>
