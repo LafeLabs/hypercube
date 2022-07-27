@@ -26,11 +26,14 @@ double line break for paragraph break, *italic*, **bold**, [link](index.html). D
 </div>
     
 <textarea id = "maintextarea"></textarea>
+<div id = "linksbox">
     <a id = "userlink" href = "scroll.php?scroll=scrolls/home">READ SCROLL</a>
     <a href = "scrolldelete.html">DELETE SCROLLS</a>
     <a href "scrollset.html">SCROLL SET REPLICATOR</a>
     <span id = "menubutton" class = "button">SHOW SCROLL LIST</span>
     <span id = "modebutton" class = "button">MODE</span>
+    
+</div>
     
 <div id = "feedscroll">
     <table>
@@ -402,6 +405,11 @@ function savejson(){
 }
 body{
     overflow:hidden;
+}
+#linksbox a,span{
+    color:#ff2cb4;
+    border:solid;
+    border-color:#ff2cb4;
 }
 .scrollbutton{
     cursor:pointer;

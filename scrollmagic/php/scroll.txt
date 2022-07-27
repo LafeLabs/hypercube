@@ -42,8 +42,8 @@ Scroll Reader with links to editor
 
 
 <a id ="scrolleditorlink" href = "scrolleditor.php">EDIT</a>
-<div id = "modebutton">mode</div>
-<div id = "hidebutton">hide</div>
+<span class = "button" id = "modebutton">MODE</span>
+<div class = "button" id = "hidebutton">SHOW SCROLL MENU</div>
     
 <div class = "data" id = "scrolldiv"><?php
 
@@ -65,6 +65,7 @@ if(innerWidth > innerHeight){
     document.getElementById("scrollsbox").style.width = (0.5*(innerHeight - innerWidth)).toString() + "px";
     
     document.getElementById("scrollsbox").style.left = (innerHeight + 0.5*(innerWidth - innerHeight)).toString() + "px";    
+    document.getElementById("hidebutton").style.display = "none";
     
     
 }
@@ -180,6 +181,8 @@ document.getElementById("modebutton").onclick = function(){
 
 
 modeswitch();
+modeswitch();
+
 function modeswitch(){
     if(mode == "dark"){
         mode = "light";
@@ -202,6 +205,8 @@ function modeswitch(){
   
         document.getElementById("scrollsbox").style.backgroundColor = "#303030";
         document.getElementById("scrollsbox").style.color = "#00ff00";  
+        
+        document.getElementById("hidebutton").style.color = "#ff2cb4";
 
     }
 }
@@ -258,17 +263,19 @@ document.getElementById("hidebutton").onclick = function(){
     hideportraitlist = !hideportraitlist;
     if(hideportraitlist){
         document.getElementById("scrollsbox").style.display = "none";
-        document.getElementById("hideicon").src = "iconsymbols/showmenu.svg";
+        document.getElementById("hidebutton").innerHTML = "SHOW SCROLL MENU";
     }
     else{
         document.getElementById("scrollsbox").style.display = "block";
-        document.getElementById("hideicon").src = "iconsymbols/hidemenu.svg";
-
+            document.getElementById("hidebutton").innerHTML = "HIDE SCROLL MENU";    
     }
 
 }
 </script>
 <style>
+a{
+    color:#ff2cb4;
+}
 .editlinks{
 /*    display:none;*/
 }
@@ -319,6 +326,12 @@ input{
 }
 #scrollscroll a{
     color:#ff2cb4;
+}
+#modebutton{
+    color:#ff2cb4;
+    border:solid;
+    border-color:#ff2cb4;
+
 }
 #scrollscroll img{
     max-width:80%;
@@ -379,6 +392,9 @@ h1,h2,h3,h4{
     #portraitlinks{
         display:none;
     }
+    #hidebutton{
+        display:none;
+    }
 
 }
 
@@ -409,6 +425,14 @@ h1,h2,h3,h4{
     }
     table img{
         max-width:60px;
+    }
+    #hidebutton{
+        position:absolute;
+        bottom:0px;
+        right:0px;
+    }
+    #scrolleditorlink{
+        font-size:2em;
     }
 }
 </style>
