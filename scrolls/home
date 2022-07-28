@@ -2,7 +2,7 @@
 
  - [symbol factory](symbol.html)
  - [symbol feed](symbolfeed.html)
- - [scroll editor](scrolleditor.php)
+ - [scroll editor](scrolleditor.php?scroll=scrolls/home)
  - [icon feed](iconfeed.html)
  - [page of icons](iconpage.html)
  - [program Arduino robot](arduino.html)
@@ -10,6 +10,8 @@
  - [icon card editor](cardmaker.html)
  - [qrcode](qrcode.html)
  - [global image feed](globalimagefeed.html)
+ - [align image](alignimage.html)
+ - [trace icon](http://localhost/traceicon.html)
  - [voxel.html](voxel.html)
  - [Geometron Hypercube Github Repository](https://github.com/LafeLabs/hypercube)
 
