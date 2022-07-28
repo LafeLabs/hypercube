@@ -1,12 +1,17 @@
-## [PI CRUST Server](picrust.html)
-
-## [CARD](card.html)
-
-## [generate page of icons](iconpage.html)
-
-## [Program Arduino Printer](arduino.html)
-
 # The Geometron Hypercube
+
+ - [symbol factory](symbol.html)
+ - [symbol feed](symbolfeed.html)
+ - [scroll editor](scrolleditor.php)
+ - [icon feed](iconfeed.html)
+ - [page of icons](iconpage.html)
+ - [program Arduino robot](arduino.html)
+ - [icon card](card.html)
+ - [icon card editor](cardmaker.html)
+ - [qrcode](qrcode.html)
+ - [global image feed](globalimagefeed.html)
+ - [voxel.html](voxel.html)
+ - [Geometron Hypercube Github Repository](https://github.com/LafeLabs/hypercube)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d7/8-cell.gif)
 

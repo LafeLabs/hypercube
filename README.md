@@ -1,6 +1,5 @@
 # Geometron Hypercube
 
-
 ## Trash Magic
 
  Trash Magic self-replicating media which propagates the means of building a civilization entirely from trash and things we can grow.  
