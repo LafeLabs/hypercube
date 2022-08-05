@@ -1,32 +1,6 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/",
     "scrolls": [
-        "android",
-        "arduino",
-        "bags",
-        "business",
-        "cards",
-        "carts",
-        "chaos",
-        "cubes",
-        "fashion",
-        "geometron",
-        "home",
-        "icons",
-        "lasers",
-        "links",
-        "pi",
-        "picrust",
-        "printers",
-        "replicators",
-        "research",
-        "rulers",
-        "servers",
-        "shapes",
-        "spaces",
-        "stencils",
-        "tarot.txt",
-        "trashmagic",
-        "xampp"
+        "home"
     ]
 }

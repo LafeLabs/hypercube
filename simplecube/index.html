@@ -2,310 +2,426 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+
+    <!--
+
+        EVERYTHING IS PHYSICAL 
+        EVERYTHING IS FRACTAL
+        EVERYTHING IS RECURSIVE
+        NO MONEY 
+        MO MINING 
+        NO PROPERTY
+        LOOK AT THE INSECTS
+        LOOK AT THE FUNGI
+        LANGUAGE IS HOW THE MIND PARSES REALITY 
+
+    -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP///wANAP8A5Dz6ABueRwAAt/8A6BonABo86AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREAAAEREREREQCIgREREd3dwAAB3d3d3d3d3d3d3d3d3d3d3d3d3VVVVVVVQAFVVAAVVVQIiBRAiIBEQIAIBECAAERAgAgFgIABmYCIiBmAiIGZgIiIGYCIgZmYCIAaIAAMzMzAAiIiIiIiIiIiIiIiIiIiIiIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+
     <!--Stop Google:-->
     <META NAME="robots" CONTENT="noindex,nofollow">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
+<!--       un comment to use math
 
-<script>    
-</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+            MathJax.Hub.Config({
+                tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true,
+                processClass: "mathjax",
+                ignoreClass: "no-mathjax"
+                }
+            });//			MathJax.Hub.Typeset();//tell Mathjax to update the math
+        </script>
+    -->
+
+    
 </head>
 <body>    
 
-<div id = "margin">
-    <a href = "symbol.html" style = "font-size:3em">
-        <img src = "iconsymbols/home.svg"/>
-    </a>            
-    <a href = "symbolset.html" style = "font-size:3em">
-        <img src = "iconsymbols/chaos.svg"/>
-    </a>
+<div id = "scrollscroll"></div>
 
-<table id = "toptable">
+<div id  = "scrollsbox">
+    <input id = "scrollinput"/>
+</div>
+<table id = "landscapelinks">
     <tr>
-        <td>
+        <td class = "editlinks">
+            <a  id ="scrolleditorlink2" href = "scrolleditor.php">
+                <img src = "iconsymbols/edit.svg"/>
+            </a>
         </td>
     </tr>
     <tr>
-        <td>COPY LINK:</td>
-        <td><a id = "copylink"></a></td>
-    </tr>
-    
-    <tr>
-        <td>FROM:</td>
-        <td><input id = "fromfile"/></td>
+        <td class = "editlinks">
+            <a href = "scrollset.html">
+                <img src = "iconsymbols/chaos.svg"/>
+            </a>
+        </td>
     </tr>
     <tr>
-        <td>TO:</td>
-        <td><input id = "tofile"/></td>
+        <td class = "editlinks">
+            <a href = "scrolldelete.html">
+                <img src = "iconsymbols/delete.svg"/>
+            </a>
+        </td>
     </tr>
-
+    <tr>
+        <td class = "editlinks">
+            <a href = "fork.html">
+                <img src = "iconsymbols/fork.svg"/>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td id = "modebutton" class= "button">
+            <img src = "iconsymbols/lightdark.svg"/>
+        </td>
+    </tr>
+    <tr>
+        <td id = "qrcode"></td>
+    </tr>
 </table>
 
-    <canvas id= "maincanvas"></canvas>
-    <input id = "rawinput"/>
-    <img id = "mainimage"/>
-</div>
-<div id = "symbolscroll">
-<form id = "uploadform"  action="uploadsymbol.php" method="post" enctype="multipart/form-data">
-                Select symbol file to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
+<table id = "portraitlinks">
+    <tr>
+        <td class = "editlinks">
+            <a id ="scrolleditorlink" href = "scrolleditor.php">
+                <img src = "iconsymbols/edit.svg"/>
+            </a>
+        </td>
+        <td class = "editlinks">
+            <a href = "scrollset.html">
+                <img src = "iconsymbols/chaos.svg"/>
+            </a>
+        </td>
+        <td class = "editlinks">
+            <a href = "scrolldelete.html">
+                <img src = "iconsymbols/delete.svg"/>
+            </a>
+        </td>
+        <td class = "editlinks">
+            <a href = "fork.html">
+                <img src = "iconsymbols/fork.svg"/>
+            </a>
+        </td>
+        <td id = "modebutton2" class= "button">
+            <img src = "iconsymbols/lightdark.svg"/>
+        </td>
+        <td id = "hidebutton" class= "button">
+            <img id = "hideicon" src = "iconsymbols/showmenu.svg"/>
+        </td>
 
-</div>
+        <td id = "qrcode2"></td>
+    </tr>
+</table>
+
+<div class = "data" id = "scrolldiv"></div>
 
 <script>
-document.getElementById("tofile").value = "";
-document.getElementById("fromfile").value = "";
 
-hypercubearray = [];
-for(var index = 0;index  < 1024;index++){
-    hypercubearray.push("");
+if(innerWidth > innerHeight){
+    
+    document.getElementById("scrollscroll").style.width = (innerHeight - 35).toString() + "px";
+    document.getElementById("scrollscroll").style.left = (0.5*(innerWidth - innerHeight) - 25).toString() + "px";    
+    document.getElementById("scrollsbox").style.width = (0.5*(innerHeight - innerWidth)).toString() + "px";
+    document.getElementById("scrollsbox").style.left = (innerHeight + 0.5*(innerWidth - innerHeight)).toString() + "px";    
+
+}
+else{
+
+
 }
 
+mode = "dark";
+//mode = "light";
 
-symbols = [];
-var httpc4 = new XMLHttpRequest();
-httpc4.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        symbols = JSON.parse(this.responseText);
-        for(var index = symbols.length - 1;index >= 0;index--) {
-            var newp = document.createElement("P");
-            var newimg = document.createElement("IMG");
-            newimg.src = "symbolfeed/" + symbols[index];
-            newimg.classList.add("button");
-            newimg.classList.add("feedimage");
-            document.getElementById("symbolscroll").appendChild(newp);
-            newp.appendChild(newimg);
-            
-            newimg.onclick = function() {
-                var localurl = "symbolfeed" + this.src.split("symbolfeed")[1];
-                loadsymbol(localurl);
-                filename = this.src.split("symbolfeed/")[1];
-                document.getElementById("fromfile").value = filename;
-            }                
 
-        
-            var newlabel = document.createElement("P");
-            newlabel.className = "typelabel";
-            if(symbols[index].substr(-4) == ".png"){
-                newlabel.innerHTML = "PNG";
-                newlabel.style.color = "red";
-                newimg.style.borderColor = "red";
-            }
-            if(symbols[index].substr(-4) == ".svg"){
-                newlabel.innerHTML = "SVG";
-                newlabel.style.color = "blue";
-                newimg.style.borderColor = "blue";
-            }
-            newp.appendChild(newlabel);
+scroll = "";
+rawhtml = "";
+var converter = new showdown.Converter();
+// for more on options see here:
+// https://github.com/showdownjs/showdown/wiki/Showdown-Options
+converter.setOption('literalMidWordUnderscores', 'true');
+converter.setOption('tables', 'true')
+    
+filename = "scrolls/home";
 
-            var newdiv = document.createElement("DIV");
-            newdiv.innerHTML = symbols[index];
-            newdiv.className = "filename";
-            newp.appendChild(newdiv);
-            
-            var delimg = document.createElement("IMG");
-            delimg.src = "iconsymbols/delete.svg";
-            delimg.className = "button";
-            newp.appendChild(delimg);
-            newp.style.border = "solid";
-            delimg.onclick = function(){
-                var thisimageurl = this.parentNode.getElementsByTagName("IMG")[0].src;
-                var thisimagename = thisimageurl.split("symbolfeed/")[1];
-                var httpc = new XMLHttpRequest();
-                var url = "deletefile.php";         
-                httpc.open("POST", url, true);
-                httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
-                httpc.send("filename=symbolfeed/" + thisimagename);//send text to deletefile.php
-                document.getElementById("symbolscroll").removeChild(this.parentNode);
-                
-            }
+//loadscroll("scrolls/home");
 
+loadscroll("scrolls/home");
+
+
+localfile = true;
+
+
+
+function loadscroll(scrollname){
+    filename = scrollname;
+    if(filename.substring(0,8) == "scrolls/" || filename == "README.md"){
+        localfile = true;
+    }
+    else{
+        localfile = false;
+    }
+    document.getElementById("scrolleditorlink").href = "scrolleditor.php?scroll=" + filename;
+    document.getElementById("scrolleditorlink2").href = "scrolleditor.php?scroll=" + filename;
+
+
+    document.getElementById("scrollscroll").innerHTML = "";
+    document.getElementById("scrollscroll").style.display = "block";
+    var httpc666 = new XMLHttpRequest();
+    httpc666.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            scroll = this.responseText;
+            rawhtml = converter.makeHtml(scroll);
+            document.getElementById("scrollscroll").innerHTML = rawhtml;
+            convertscrollinks();
+            //			MathJax.Hub.Typeset();//tell Mathjax to update the math
+    //			MathJax.Hub.Typeset();//tell Mathjax to update the math
         }
-    }
-};
-
-httpc4.open("GET", "dir.php?filename=symbolfeed", true);
-httpc4.send();
-
-
-
-
-function loadsymbol(thisurl){
-    if(thisurl.substr(-4) == ".svg"){
-        imagename = thisurl.split("symbolfeed/")[1];
-        imageurl = "symbolfeed/" + imagename;
-        var httpc2 = new XMLHttpRequest();
-        httpc2.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                svgraw = this.responseText;
-                jsondata = svgraw.split("<json>")[1].split("</json>")[0];
-                currentjson = JSON.parse(jsondata);
-                if(currentjson.shapes != undefined){
-//                    console.log("there are shapes.");
-                    for(var index = 0;index < currentjson.shapes.length;index++){
-                        var localaddress = parseInt(currentjson.shapes[index].split(":")[0],8);
-                        var localglyph = currentjson.shapes[index].split(":")[1];
-                        if(localglyph.length > 0){
-                            hypercubearray[localaddress] = localglyph;
-                        }
-                    }
-                    savecube();
-                }
-                else{
-                    //console.log("no shapes here.")
-                }
-                data = encodeURIComponent(jsondata);
-                var httpc = new XMLHttpRequest();
-                var url = "filesaver.php";        
-                httpc.open("POST", url, true);
-                httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
-                httpc.send("data="+data+"&filename=data/currentjson.txt");//send text to filesaver.php
-               // window.location.href = "symbol.html";
-            }
-        };
-        httpc2.open("GET", "fileloader.php?filename=" + imageurl, true);
-        httpc2.send();
-    }
-    if(thisurl.substr(-4) == ".png"){
-        imagename = thisurl.split("symbolfeed/")[1];
-        imageurl = "symbolfeed/" + imagename;
-        document.getElementById("mainimage").src = imageurl;
-    }    
+    };
+    httpc666.open("GET", "fileloader.php?filename=" + scrollname, true);
+    httpc666.send();
+    //MathJax.Hub.Typeset();//tell Mathjax to update the math
 }
 
 
-
-
-
-var httpccube = new XMLHttpRequest();
-httpccube.onreadystatechange = function(){
-    if (this.readyState == 4 && this.status == 200) {
-        hypercuberaw = JSON.parse(this.responseText);
-        for(var index = 0;index < hypercuberaw.length;index++){
-            var localaddress = [parseInt(hypercuberaw[index].split(":")[0],8)]
-            var localglyph = hypercuberaw[index].split(":")[1];
-            if(localglyph.length > 0){
-                hypercubearray[localaddress] = localglyph;
+function convertscrollinks(){
+    links = document.getElementById("scrollscroll").getElementsByTagName("A");
+    for(var index = 0;index < links.length;index++){
+        if(links[index].href.includes("scrolls/") && !links[index].href.includes(".php")){
+            //console.log(links[index].href);
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = links[index].innerHTML;
+            var dataspan = document.createElement("SPAN");
+            dataspan.className = "data";
+            dataspan.innerHTML  = "scrolls/" + links[index].href.split("scrolls/")[1];
+            newspan.appendChild(dataspan);
+            newspan.className = "scrolllink";
+            links[index].parentNode.insertBefore(newspan,links[index]);
+            links[index].style.display = "none";
+            
+            newspan.onclick = function(){
+                var localscroll = this.getElementsByClassName("data")[0].innerHTML;
+                loadscroll(localscroll);
             }
         }
-    }
-};
-httpccube.open("GET", "fileloader.php?filename=data/hypercube.txt", true);
-httpccube.send();
+        if(links[index].href.includes("scroll(") && !links[index].href.includes(".php")){
+            //link format scroll(any url)
+            //console.log(links[index].href);
+            var newspan = document.createElement("SPAN");
+            newspan.innerHTML = links[index].innerHTML;
+            var dataspan = document.createElement("SPAN");
+            dataspan.className = "data";
+            dataspan.innerHTML  = links[index].href.split("scroll(")[1].split(")")[0];
+            newspan.appendChild(dataspan);
+            newspan.className = "scrolllink";
+            links[index].parentNode.insertBefore(newspan,links[index]);
+            links[index].style.display = "none";
+            
+            newspan.onclick = function(){
+                var localscroll = this.getElementsByClassName("data")[0].innerHTML;
+                loadscroll(localscroll);
+            }
+        }
 
-function savecube(){
-    hypercube = [];
-    for(var index = 0;index < hypercubearray.length;index++){
-        if(hypercubearray[index].length > 0){
-            hypercube.push("0" + index.toString(8) + ":" + hypercubearray[index]);
-        }    
     }
-    hypercubestring = JSON.stringify(hypercube,null,"    ");
-    var url = "filesaver.php";        
-    var httpc = new XMLHttpRequest();
-    httpc.open("POST", url, true);
-    httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    httpc.send("data="+encodeURIComponent(hypercubestring)+"&filename=data/hypercube.txt");//send text to filesaver.php    
 }
 
+document.getElementById("modebutton").onclick = function(){
+    modeswitch();
+}
 
-document.getElementById("rawinput").value = "";
-document.getElementById("mainimage").onload = function() {
-    canvas = document.getElementById("maincanvas");
-    ctx = canvas.getContext("2d");
-    canvas.width = this.width;
-    canvas.height = this.height;
-    img = document.getElementById("mainimage");
-    img.crossOrigin = 'Anonymous';
+document.getElementById("modebutton2").onclick = function(){
+    modeswitch();
+}
+
+modeswitch();
+function modeswitch(){
+    if(mode == "dark"){
+        mode = "light";
+        document.body.style.backgroundColor = "white";
+        document.getElementById("scrollscroll").style.backgroundColor = "#f0f0f0";
+        document.getElementById("scrollscroll").style.color = "black";
+
+        document.getElementById("scrollinput").style.color = "black";
+        document.getElementById("scrollinput").style.backgroundColor = "white";       
+        document.getElementById("scrollsbox").style.backgroundColor = "white";
+        document.getElementById("scrollsbox").style.color = "black";        
+    }
+    else{
+        mode = "dark";
+        document.body.style.backgroundColor = "#404040";
+        document.getElementById("scrollscroll").style.backgroundColor = "black";
+        document.getElementById("scrollscroll").style.color = "#00ff00";    
+        document.getElementById("scrollinput").style.color = "#303030";
+        document.getElementById("scrollinput").style.backgroundColor = "black";              
   
-    ctx.drawImage(img, 0,0,this.width,this.height);
-    document.getElementById("rawinput").value = canvas.toDataURL();
-//    foo = canvas.toDataURL('image/jpeg', 0.1);
-    
-};
+        document.getElementById("scrollsbox").style.backgroundColor = "#303030";
+        document.getElementById("scrollsbox").style.color = "#00ff00";  
 
-document.getElementById("tofile").onchange = function(){
-    tofile = this.value;
-    copylink = "copy.php?from=symbolfeed/";
-    copylink += document.getElementById("fromfile").value;
-    copylink += "&to=symbolfeed/" + tofile;
-    document.getElementById("copylink").href = copylink;
-    document.getElementById("copylink").innerHTML = copylink;
-    
+    }
 }
 
+
+
+scrolls = [];
+var httpc9 = new XMLHttpRequest();
+httpc9.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        scrolls = JSON.parse(this.responseText);
+        var newscrollbutton = document.createElement("P");
+        newscrollbutton.className = "boxlink";
+        newscrollbutton.innerHTML = "README.md";
+        document.getElementById("scrollsbox").appendChild(newscrollbutton);
+        newscrollbutton.onclick = function(){
+            currentFile = this.innerHTML;
+                loadscroll(currentFile);
+        }           
+        for(var index = 0;index < scrolls.length;index++) {
+            var newscrollbutton = document.createElement("P");
+            newscrollbutton.className = "boxlink";
+            newscrollbutton.innerHTML = "scrolls/" + scrolls[index];
+            document.getElementById("scrollsbox").appendChild(newscrollbutton);
+            newscrollbutton.onclick = function(){
+                currentFile = this.innerHTML;
+                loadscroll(currentFile);
+            }
+        }
+    };
+}
+
+httpc9.open("GET", "dir.php?filename=scrolls", true);
+httpc9.send();
+
+document.getElementById("scrollinput").value = "";
+
+document.getElementById("scrollinput").onchange = function(){
+    loadscroll(this.value);
+    this.value = "";
+}
+
+
+
+
+if(innerWidth > innerHeight){
+    codesquaresize = 100;
+}
+else{
+    codesquaresize = 80;
+}
+
+
+//globalurl = "http://www.trashrobot.org/qrcode.html";
+globalurl = window.location.href;
+
+
+qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+    
+qrcode.makeCode(globalurl);
+
+qrcode2 = new QRCode(document.getElementById("qrcode2"), {
+	text: globalurl,
+	width: codesquaresize,
+	height: codesquaresize,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+    
+qrcode2.makeCode(globalurl);
+
+
+hideportraitlist = true;
+
+document.getElementById("hidebutton").onclick = function(){
+    hideportraitlist = !hideportraitlist;
+    if(hideportraitlist){
+        document.getElementById("scrollsbox").style.display = "none";
+        document.getElementById("hideicon").src = "iconsymbols/showmenu.svg";
+    }
+    else{
+        document.getElementById("scrollsbox").style.display = "block";
+        document.getElementById("hideicon").src = "iconsymbols/hidemenu.svg";
+
+    }
+
+}
 </script>
 <style>
-#maincanvas{
-    width:10px;
-    height:10px;
-    display:none;
+.editlinks{
+/*    display:none;*/
 }
-#mainimage{
-    border:solid;
-    position:absolute;
-    right:0px;
-    top:22px;
+pre{
+  overflow:scroll;
 }
-#rawinput{
-    position:absolute;
-    right:0px;
-    top:0px;
-    height:20px;
-    font-size:18px;
+body{
+    overflow:hidden;
+    background-color:black
 }
-#toptable{
-    position:absolute;
-    left:150px;
-    top:0px;
-}
-#margin{
-    position:absolute;
-    bottom:85%;
-    top:0px;
-    left:0px;
-    right:0px;
-    overflow:scroll;
-}
-a img{
-    max-width:50px;
-}
-#linkdiv{
-    position:absolute;
-    left:0px;
-    top:0px;
-    bottom:0px;
-    right:50%;
-}
-#filediv{
-    position:absolute;
-    right:0px;
-    top:0px;
-    bottom:0px;
-    left:50%;
-}
-#symbolscroll{
-    position:absolute;
-    bottom:0px;
-    top:15%;
-    left:0px;
-    right:0px;
-    overflow:scroll;
-}
-#symbolscroll img{
-    max-width:25%;
+input{
     display:block;
     margin:auto;
+    width:90%;
+    font-family:courier;
+    font-size:1.2em;
+    background-color:white;
+    color:black;
+    border-color:#ff2cb4;
+    border-width:8px;
 }
-p img{
+.boxlink{
+    padding-left:1em;
+    cursor:pointer;
+    color:#ff2cb4;
+}
+.boxlink:hover{
+    background-color:#808080;
+}
+
+.scrolllink{
+    color:#ff2cb4;
+    cursor:pointer;
+}
+.scrolllink:hover{
+    background-color:#ff2cb490;
+}
+
+#scrollscroll{
+    text-align:justify;
+    padding-left:1em;
+    padding-right:1em;
+    position:absolute;
+    overflow:scroll;
+    background-color:black;
+    color:#00ff00;
+    font-size:2em;
+}
+#scrollscroll a{
+    color:#ff2cb4;
+}
+#scrollscroll img{
     max-width:80%;
     display:block;
     margin:auto;
+    background-color:none;
 }
-.feedimage{
-    border:solid;
-    border-width:0.5px;
+.data{
+    display:none;
+}
+h1,h2,h3,h4{
+    text-align:center;
 }
 .button{
     cursor:pointer;
@@ -316,17 +432,64 @@ p img{
 .button:active{
     background-color:yellow;
 }
-input{
-    width:20em;
+#scrollsbox{
+    position:absolute;
+    background-color:#808080;
+    color:black;
+    overflow:scroll;
 }
-.typelabel{
-    text-align:center;
-    font-size:2em;
-    font-family:courier;
+
+
+@media only screen and (orientation: landscape) {
+    
+    #scrollsbox{
+        right:0px;
+        top:0px;
+        bottom:0px;
+    }
+    #scrollscroll{
+        top:0px;
+        bottom:0px;
+    }   
+    #landscapelinks{
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    #portraitlinks{
+        display:none;
+    }
+
 }
-.filename{
-    text-align:center;
-    font-size:2em;
+
+@media only screen and (orientation: portrait) {
+    .button{
+        font-size:2em;
+    }
+    #scrollsbox{
+        height:30%;
+        right:0px;
+        left:0px;
+        bottom:0px;
+        display:none;
+    }
+    #scrollscroll{
+        top:70px;
+        left:10px;
+        right:10px;
+        bottom:10px;
+    }   
+    #landscapelinks{
+        display:none;
+    }
+    #portraitlinks{
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    table img{
+        max-width:60px;
+    }
 }
 </style>
 </body>
