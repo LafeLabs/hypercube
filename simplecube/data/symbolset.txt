@@ -1,0 +1,8 @@
+{
+    "server": "https://raw.githubusercontent.com/LafeLabs/hypercube/main/simplecube/",
+    "symbols": [
+        "bottom.svg",
+        "holeside.svg",
+        "noholeside.svg"
+    ]
+}
