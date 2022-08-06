@@ -42,8 +42,15 @@
         "webreplicator.txt"
     ],
     "scrolls": [
-        "foo",
-        "home"
+        "books",
+        "cards",
+        "cubes",
+        "home",
+        "icons",
+        "picrust",
+        "printers",
+        "shapes",
+        "simplecube"
     ],
     "web": [
         "books.html",

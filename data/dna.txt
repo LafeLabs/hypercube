@@ -263,6 +263,8 @@
         "shapes",
         "spaces",
         "stencils",
+        "tarot.txt",
+        "trashmagic",
         "xampp"
     ],
     "maps": [
